@@ -1,5 +1,5 @@
 # tools.deal_cell
-
+?
 ## 構文
 
 ## 説明

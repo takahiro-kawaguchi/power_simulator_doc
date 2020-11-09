@@ -6,5 +6,5 @@ services:
     - "8000:8000"
     volumes:
     - "./:/docs"
-    - "/$HOME/.ssh:/root/.ssh"
+    - "$HOME/.ssh:/root/.ssh"
     tty: true
