@@ -2,19 +2,26 @@
 
 バスを表すクラス
 
+## 派生クラス
+
+- [bus_non_unit](./bus_non_unit.md)
+- [bus_PQ](./bus_PQ.md)
+- [bus_PV](./bus_PV.md)
+- [bus_slack](./bus_slack.md)
+
 ## 抽象メソッド
 
 - **out = get_constraint(obj, Vr, Vi, P, Q)**  
-  潮流計算において，out=0となるべきoutを出力する
-  - Vr: バス電圧の実部
-  - Vi: バス電圧の虚部
-  - P: 複素電力の実部
-  - Q: 複素電力の虚部
+  潮流計算において，out=0(ベクトル)となるべきoutを出力する（詳細はbus_~を参照）
+    - Vr: バス電圧の実部
+    - Vi: バス電圧の虚部
+    - P: 複素電力の実部
+    - Q: 複素電力の虚部
 
 
 ## 変数
 
-- **component**: バスに接続された機器．component クラスのインスタンス
+- **component**: バスに接続された機器（component クラスのインスタンス）
 - **x**: 平衡状態におけるcomponentの状態
 - **shunt**: シャントのアドミタンスの実部と虚部を並べたベクトル
 
@@ -22,5 +29,12 @@
 ## メソッド
 
 - **obj=bus(shunt)**  
-  コンストラクタ．
-- componentクラスが持つ各種メソッドと同名のメソッド
+    コンストラクタ
+- componentクラスが持つ各種メソッドと同名のメソッド（説明はcomponentクラスを参照のこと）
+    - initialize
+    - get_nx
+    - get_dx_I
+    - get_dx_I_linear
+    - get_nu
+    - get_nu_linear
+    - get_linear_matrix
