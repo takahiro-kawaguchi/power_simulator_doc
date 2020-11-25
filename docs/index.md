@@ -1,8 +1,10 @@
 # 電力系統に対するレトロフィット制御シミュレータ
 
-- [How to Use](./how_to_use.md)
-- [Class Difinition](./Class/class.md)
-- [Modeling](./Modeling/modeling.md)
-- [Power Network](./PowerNetwork/power_network.md)
-- [System ID](./SystemID/systemID.md)
-- [Tools](./Tools/tools.md)
+power_simulator の公式ドキュメントです
+
+## Contents
+
+- [Tutorials](./Tutorials/tutorials.md)  
+    初めて利用する方向けのチュートリアル
+- [Docs](./Docs/docs.md)  
+    既存のメソッドやクラスについての情報集

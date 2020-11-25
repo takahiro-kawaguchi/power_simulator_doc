@@ -1,5 +1,5 @@
 site_name: Power Simulator Doc
-theme: 
+theme:
     name: material
     language: 'ja'
     icon:
@@ -13,50 +13,16 @@ theme:
 
 nav:
     - Home: index.md
-    - How to Use: how_to_use.md
-    - Class Definition:
-        - class_definition: Class/class.md
-        - PowerNetwork: 
-            - power_network: Class/PowerNetwork/power_network.md
-            - network_68bus: Class/PowerNetwork/network_68bus.md
-        - Bus: 
-            - bus: Class/Bus/bus.md
-            - bus_non_unit: Class/Bus/bus_non_unit.md
-            - bus_PV: Class/Bus/bus_PV.md
-            - bus_PQ: Class/Bus/bus_PQ.md
-            - bus_slack: Class/Bus/bus_slack.md
-        - Component:
-            - component: Class/Component/component.md
-            - component_empty: Class/Component/component_empty.md
-            - Generator AGC:
-              - generator_AGC: Class/Component/GeneratorAGC/generator_AGC.md
-              - generator: Class/Component/GeneratorAGC/generator.md
-            - Load Varying Impedance:
-              - load_varying_impedance: Class/Component/LoadVaryingImpedance/load_varying_impedance.md
-              - load_const_impedance: Class/Component/LoadVaryingImpedance/load_const_impedance.md
-            - Load Varying Power:
-              - load_varying_power: Class/Component/LoadVaryingPower/load_varying_power.md
-              - load_const_power: Class/Component/LoadVaryingPower/load_const_power.md
-        - Controller:
-            - controller: Class/Controller/controller.md
-            - controller_broadcast_PI: Class/Controller/controller_broadcast_PI.md
-            - ControllerRetrofitGenerator:
-              - controller_retrofit_generator: Class/Controller/ControllerRetrofitGenerator/controller_retrofit_generator.md
-              - ControllerRetrofitGeneratorNonlinear:
-                - controller_retrofit_generator_nonlinear: Class/Controller/ControllerRetrofitGenerator/ControllerRetrofitGeneratorNonlinear/controller_retrofit_generator_nonlinear.md
-                - controller_retrofit_type1: Class/Controller/ControllerRetrofitGenerator/ControllerRetrofitGeneratorNonlinear/controller_retrofit_type1.md
-    - Modeling:
-      - modeling: Modeling/modeling.md
-    - Power Network:
-      - power_network: PowerNetwork/power_network.md
-    - System ID:
-      - systemID: SystemID/systemID.md
-      - Model:
-        - model: SystemID/Model/model.md
-      - ModelSS:
-        - model_ss: SystemID/ModelSS/model_ss.md
-    - Tools:
-      - tools: Tools/tools.md
+    - Tutorials:
+        - tutorials: Tutorials/tutorials.md
+        - step1: Tutorials/step1.md
+        - step2: Tutorials/step2.md
+        - step3: Tutorials/step3.md
+        - step4: Tutorials/step4.md
+        - step5: Tutorials/step5.md
+        - step6: Tutorials/step6.md
+    - Docs:
+        - docs: Docs/docs.md
 
 extra:
     search:
