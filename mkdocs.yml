@@ -16,10 +16,10 @@ nav:
     - How to Use: how_to_use.md
     - Class Definition:
         - class_definition: Class/class.md
-        - PowerNetwork: 
+        - PowerNetwork:
             - power_network: Class/PowerNetwork/power_network.md
             - network_68bus: Class/PowerNetwork/network_68bus.md
-        - Bus: 
+        - Bus:
             - bus: Class/Bus/bus.md
             - bus_non_unit: Class/Bus/bus_non_unit.md
             - bus_PV: Class/Bus/bus_PV.md
@@ -45,6 +45,13 @@ nav:
               - ControllerRetrofitGeneratorNonlinear:
                 - controller_retrofit_generator_nonlinear: Class/Controller/ControllerRetrofitGenerator/ControllerRetrofitGeneratorNonlinear/controller_retrofit_generator_nonlinear.md
                 - controller_retrofit_type1: Class/Controller/ControllerRetrofitGenerator/ControllerRetrofitGeneratorNonlinear/controller_retrofit_type1.md
+        - GenSS:
+            - gen_ss: Class/GenSS/gen_ss.md
+            - gen_ss_diagcat: Class/GenSS/gen_ss_diagcat.md
+            - gen_ss_generator_file: Class/GenSS/gen_ss_generator_file.md
+            - gen_ss_power_area: Class/GenSS/gen_ss_power_area.md
+            - gen_ss_sym_file: Class/GenSS/gen_ss_sym_file.md
+        - Retrofit: Class/Retrofit/Retrofit.md
     - Modeling:
       - modeling: Modeling/modeling.md
     - Power Network:
