@@ -14,7 +14,7 @@ theme:
 nav:
     - Home: index.md
     - Tutorials:
-        - tutorials: Tutorials/tutorials.md
+        - "": Tutorials/tutorials.md
         - step1: Tutorials/step1.md
         - step2: Tutorials/step2.md
         - step3: Tutorials/step3.md
@@ -22,7 +22,11 @@ nav:
         - step5: Tutorials/step5.md
         - step6: Tutorials/step6.md
     - Docs:
-        - docs: Docs/docs.md
+        - "": Docs/docs.md
+        - power_network: Docs/power_network.md
+        - bus: Docs/bus.md
+        - component: Docs/component.md
+        - controller: Docs/controller.md
 
 extra:
     search:
@@ -43,6 +47,9 @@ markdown_extensions:
         noclasses: true
     - footnotes
     - admonition
+    - toc:
+        permalink: true
+        separator: '_'
 extra_javascript:
     - 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS_HTML'
 copyright: 'Copyright © 2020- Tokyo Tech, Ishizaki Lab.'
