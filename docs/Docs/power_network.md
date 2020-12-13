@@ -13,7 +13,7 @@
 
 IEEE 68bus 16machine システムの実装．  
 発電機として[generator](/Docs/component/#generator)を，負荷として[load_const_impedance](/Docs/component/#load_const_impedance), [load_const_power](/Docs/component/#load_const_power), [load_random_power](/Docs/component/#load_random_power)を導入したネットワークである．  
-ネットワーク定義の際に `net=network_68bus(load_type)`のように定義する．ここで，load_typeには1~3を代入する．負荷には，1の場合は[load_const_impedance](/Docs/component/#load_const_impedance)，2の場合は[load_const_power](/Docs/component/#load_const_power)，3の場合は[load_random_power](/Docs/component/#load_random_power)を導入する．引数が省略されている場合は[load_const_impedance](/Docs/component/#load_const_impedance)を負荷として導入する．  
+ネットワーク定義の際に `net=network_68bus(load_type)`のように定義する．ここで，load_typeには1~2を代入する．負荷には，1の場合は[load_const_impedance](/Docs/component/#load_const_impedance)，2の場合は[load_const_power](/Docs/component/#load_const_power)を導入する．引数が省略されている場合は[load_const_impedance](/Docs/component/#load_const_impedance)を負荷として導入する．[](現状、load_typeには1~3が代入できるが、3は今後削除予定なので省略した)  
 
 
 ## network_68bus_AGC_const_power
