@@ -1,4 +1,4 @@
-# （準備中）Controllerについて
+# （準備中）コントローラについて
 
 ## controller
 
