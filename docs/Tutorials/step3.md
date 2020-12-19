@@ -43,7 +43,7 @@ cg = controller_broadcast_PI_AGC_normal(net, y_idx, u_idx, Kp, Ki);
 power_simulatorではグローバルコントローラがすでにいくつか定義されている．  
 詳細は[Controller](/Docs/controller/)を参照のこと．  
 本チュートリアルでは，[controller_broadcast_PI_AGC_normal](/Docs/controller/#controller_broadcast_pi_agc_normal)を使用する．  
-[controller_broadcast_PI_AGC_normal](/Docs/controller/#controller_broadcast_pi_agc_normal)はブロードキャストAGCの実装で，ゲインを電力に比例させているもの．
+[controller_broadcast_PI_AGC_normal](/Docs/controller/#controller_broadcast_pi_agc_normal)はブロードキャストコントローラ（PIコントローラ）の実装で，ゲインを電力に比例させているものである（generatorの規模に比例して調整電力を分配している）
 
 #### コントローラの作成
 
@@ -58,16 +58,15 @@ c = controller_retrofit_generator_nonlinear_AGC_LQR(net, idx, Q, R, model_uv, vb
     出力を観測するバスを設定．
 - 第3入力引数以降は今回は使用しないので省略．[Controller](/Docs/controller/)を参照のこと．
 - 出力引数`c`  
-    - K_inter
-    - sys_design
-    - sys_fb
-    - Q
-    - R
+    - K_inter: 内部コントローラのK行列
+    - sys_design: サブシステムの状態空間モデル
+    - sys_fb: 内部コントローラとsys_designからなるフィードバックシステムの状態空間モデル
+    - Q, R: LQR設計のためのQ行列とR行列
 
 power_simulator ではコントローラがすでにいくつか定義されている．  
 詳細は[Controller](/Docs/controller/)を参照のこと．  
 本チュートリアルでは，[controller_retrofit_generator_nonlinear_AGC_LQR](/Docs/controller/#controller_retrofit_generator_nonlinear_agc_lqr)を使用した．  
-[controller_retrofit_generator_nonlinear_AGC_LQR](/Docs/controller/#controller_retrofit_generator_nonlinear_agc_lqr)は
+[controller_retrofit_generator_nonlinear_AGC_LQR](/Docs/controller/#controller_retrofit_generator_nonlinear_agc_lqr)はレトロフィットコントローラの実装で，generatorの非線形性を考慮したもののうち，コントローラ設計をLQRで行うものである．
 
 
 ### 電力系統モデルに対するコントローラの付加
@@ -93,6 +92,30 @@ net.add_controller(controller);
 - 入力引数`controller`  
     作成したコントローラを設定．`controller`は*controller*クラスのインスタンス．  
     一つのバスに複数のコントローラを付加した際には，最後に付加したコントローラが使用される．
+
+### コントローラの除去
+
+システムに付加されているコントローラの除去について説明する．
+
+#### グローバルコントローラの付加
+
+グローバルコントローラの除去は次のように行う
+```
+net.remove_controller_global(idx);
+```
+- 入力引数`idx`  
+    付加されているグローバルコントローラを除去．`idx`で除去するグローバルコントローラを指定する．  
+    `idx`をベクトル形式で指定すると複数のグローバルコントローラを除去できる．
+
+#### コントローラの追加
+
+コントローラの付加は次のように行う．
+```
+net.remove_controller(idx);
+```
+- 入力引数`idx`  
+    付加されているコントローラを除去．`idx`で除去するコントローラを指定する．  
+    `idx`をベクトル形式で指定すると複数のコントローラを除去できる．
 
 
 ### システムの状態空間モデル（線形化システム）の取得
