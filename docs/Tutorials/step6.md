@@ -44,14 +44,14 @@
 
 - 線形化関連のメソッドのオーバライド
 
-## 線形化関連のメソッドについて
+### 線形化関連のメソッドについて
 
 - `[A, BeX, BeV, Bu, C, DeX, DeV, Du] = get_linear_matrix(obj)`  
     線形化したコントローラを取得するためのメソッドで
     $$
     \dot{x}=Ax+B_X (X-X*)+B_V (V-V*)+B_u U_{global}\\
     u=Cx+D_X (X-X*)+D_V (V-V*)+D_u U_{global}
-    $$  
+    $$
     を満たす行列を返す
 
 - `[dx, u] = get_dx_u_linear(obj, t, x, X, V, U_global)`  
