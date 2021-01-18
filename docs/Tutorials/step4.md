@@ -39,18 +39,15 @@ net.bus{3} = bus_PQ(…);
 
 ### バスの変数
 
-一般的にバスに関係する変数として以下の4つのものがあります．
+一般的にバスに関係する変数として以下の6つのものがあります．
 
 - $P$: 有効電力
 - $Q$: 無効電力
 - $|V|$: 電圧
 - $\delta$: 位相角
+- $G_{shunt}, B_{shunt}$: 地面に繋がっているシャント抵抗のインピーダンス
 
-以下の３つのバスは4つのうち2つの変数を指定します．
-
-<span style="color: red; ">Todo: [G_shunt, B_shunt]について</span>
-
-<span style="color: red; ">Todo: もうちょっとなにか書いたほうがいいかも．</span>
+以下の３つのバスは$P,Q,V,\delta$のうち2つの変数とシャント抵抗の値を指定します．
 
 ### swing bus (slack bus)
 
@@ -67,6 +64,7 @@ net.bus{idx} = bus_slack(V_abs, V_angle, [G_shunt, B_shunt]);
     - V_angle
         位相角．通常0となる．
     - [G_shunt, B_shunt]
+        地面に繋がっているシャント抵抗のインピーダンスの実部と虚部．
 
 ### generator bus (PV bus)
 
@@ -80,6 +78,7 @@ net.bus{idx} = bus_PV(V_abs, P_gen, [G_shunt, B_shunt]);
     - P_gen
         有効電力
     - [G_shunt, B_shunt]
+        地面に繋がっているシャント抵抗のインピーダンスの実部と虚部．
 
 ### load bus (PQ bus)
 
@@ -93,6 +92,7 @@ net.bus{idx} = bus_non_unit([G_shunt, B_shunt]);
 
 - 入力引数
     - [G_shunt, B_shunt]
+        地面に繋がっているシャント抵抗のインピーダンスの実部と虚部．
 
 #### nagative generation
 
@@ -106,6 +106,7 @@ net.bus{idx} = bus_PQ(-Pload, -Qload, [G_shunt, B_shunt]);
     - Qload
         無効電力．
     - [G_shunt, B_shunt]
+        地面に繋がっているシャント抵抗のインピーダンスの実部と虚部．
 
 #### 例: IEEE 9busのbusの定義
 
@@ -161,7 +162,7 @@ net.branch = branch;
 - phase
 
 
-<span style="color: red; ">どこをみればわかるのか教えてほしいです</span>
+<span style="color: red; ">この辺のパラメータについて</span>
 
 ### 機器の定義
 
@@ -177,6 +178,8 @@ componentには以下のような種類のものがある
 - load_const_impedance
 - load_const_power
 - load_random_power
+
+<span style="color: red; ">ここではすべての機器について書くと厄介そうなのでgeneratorのみを書くだけにしようと思っている．</span>
 
 #### generatorの定義
 
@@ -198,7 +201,7 @@ __________    ______    ________    _____    __    _____    _____    _____    __
     1           1         1000      0.204    0     1.569    0.324    0.249    5.14    0.0437    1.548    0.918    0.248    0.5    0.07    100    2     100        1   
 ```
 
-<span style="color: red; ">どこをみればわかるのか教えてほしいです</span>
+<span style="color: red; ">この辺のパラメータについて</span>
 
 ##### exc
 
@@ -213,4 +216,8 @@ ________    ________    ________    __    ____    ________    ________    ______
     0           1          0.01      2     0.05       0           0           5           -5           0            0            0            0            0            0            0            0            0            0            0    
 ```
 
-<span style="color: red; ">どこをみればわかるのか教えてほしいです</span>
+<span style="color: red; ">この辺のパラメータについて</span>
+
+#### 例: IEEE 9busの機器の定義
+
+<span style="color: red; ">例としてIEEE9busを一から作るみたいなものを書きたいけど，いらない入力引数とかを削って整理したあとにしたほうが良さそう</span>
