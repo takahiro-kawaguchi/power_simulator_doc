@@ -11,15 +11,15 @@
 
 ネットワークの定義は次のように行う．
 ```
-net = network_68bus_AGC_varying_impedance();
+net = network_68bus();
 ```
 - 出力変数`net`  
     ネットワーク内部の情報としてbus, branch, generator, controllerなどの情報が含まれる
 
 power_simulator では電力系統モデルがすでにいくつか定義されている．  
 詳細は [Power Network](/Docs/power_network/) を参照のこと．  
-本チュートリアルでは [network_network_68bus_AGC_varying_impedance](/Docs/power_network/#network_68bus_agc_varying_impedance) を使用する．  
-[network_network_68bus_AGC_varying_impedance](/Docs/power_network/#network_68bus_agc_varying_impedance) はIEEE 68bus 16machine システムの実装で，発電機として[generator_AGC](/Docs/component/#generator_agc)を，負荷として[load_varying_impedance](/Docs/component/#load_varying_impedance)を導入したネットワークである．  
+本チュートリアルでは [network_network_68bus](/Docs/power_network/#network_68bus) を使用する．  
+[network_network_68bus](/Docs/power_network/#network_68bus) はIEEE 68bus 16machine システムの実装で，発電機として[generator_AGC](/Docs/component/#generator_agc)を，負荷として[load_varying_impedance](/Docs/component/#load_varying_impedance)を導入したネットワークである．  
 
 
 ### シミュレーションの実行
@@ -28,27 +28,18 @@ power_simulator では電力系統モデルがすでにいくつか定義され�
 ```
 out = net.simulate([0 20], option);
 ```
-- 入力変数 `[t_0 t]`  
-    シミュレーション時間の設定
-    - t_s：開始時刻(s)，t_0=0がほとんど（開始時刻を変更することは可能だが，t_0sからシミュレーションが開始する）
-    - t_f：終了時刻(s)
+- 入力変数 `[0 20]`  
+    シミュレーション時間を0~20sに設定
+- 入力変数 `u`  
+    バスへの入力
+- 入力変数 `idx_u`  
+    入力するバスの指定
 - 入力引数 `option`  
     シミュレーションのオプションを設定する  
     - x_init：  
         状態の初期値（規定値: x_ss）  
         バスごとのセル配列あるいは，すべてをスタックしたベクトル．  
         out.Xを入れると，outの最後の状態からスタートする
-    - V_init：  
-        電圧の初期値（規定値: x_init に対応した値）  
-        バスごとのセル配列あるいは，すべてをスタックしたベクトル．  
-    - xk_init：  
-        レトロフィットコントローラの状態の初期値（規定値: 0）  
-         コントローラごとのセル配列，あるいは，すべてをスタックしたベクトル．  
-          out.Xkを入れると，outの最後の状態からスタートする．
-    - xkg_init：  
-        グローバルコントローラの状態の初期値（規定値: 0）  
-        コントローラごとのセル配列，あるいは，すべてをスタックしたベクトル．  
-        out.Xk_globalを入れると，outの最後の状態からスタートする．
     - fault：  
         地絡の条件．  
         {[tstart, tend], idx_fault}というセル配列のセル配列．
@@ -70,7 +61,7 @@ out = net.simulate([0 20], option);
 バス1の初期状態のみを平衡点から少しずらした時の応答．
 ```
 % ネットワークの定義
-net = network_68bus_AGC_varying_impedance();
+net = network_68bus();
 
 % シミュレーションのためのオプションを定義・決定
 option = struct();
@@ -88,12 +79,11 @@ out = net.simulate([0 20], option);  % 0~20s
 0~0.07秒にバス1，10~10.05秒にバス10の地絡を外乱として印加した時の応答．
 ```
 % ネットワークの定義
-net = network_68bus_AGC_varying_impedance();
+net = network_68bus();
 
 % シミュレーションのためのオプションを定義・決定
 option = struct();
-option.fault = {{[0 0.07], 1}, {[10 10.05], 10}};
-% 地絡の設定
+option.fault = {{[0 0.07], 1}, {[10 10.05], 10}}; % 地絡の設定
 
 % シミュレーションの実行
 out = net.simulate([0 20], option); % 0~20s
@@ -104,7 +94,7 @@ out = net.simulate([0 20], option); % 0~20s
 バス1,10にランダムの入力を加えた時の応答．
 ```
 % ネットワークの定義
-net = network_68bus_AGC_varying_impedance();
+net = network_68bus();
 
 N = 1000; % データ数
 Ts = 0.01; % サンプリング周期
@@ -122,7 +112,7 @@ out_foh = net.simulate_foh(t, u, bus_u); % 入力を1次ホールド
 バス1の初期状態のみを平衡点から少しずらし，0~0.07秒にバス1，10~10.05秒にバス10の地絡を外乱として印加する状況で，バス1,10にランダムの入力を加えた時の応答．
 ```
 % ネットワークの定義
-net = network_68bus_AGC_varying_impedance();
+net = network_68bus();
 
 % シミュレーションのためのオプションを定義・決定
 option = struct();
@@ -154,3 +144,9 @@ for i = 1:16
 	subplot(3, 3, 9), plot(out.t, out.V{i}(:, 2)), title('Imag(V)');
 end
 ```
+## シミュレーション結果の例
+- 例1の結果として，発電機1と2の内部状態の初期値応答のグラフ  
+<img src="/Figures/tutorial1-1-1.jpg" width=45%> <img src="/Figures/tutorial1-1-2.jpg" width=45%>
+
+- 例2の結果として，発電機1と2の内部状態の外乱応答のグラフ  
+<img src="/Figures/tutorial1-2-1.jpg" width=45%> <img src="/Figures/tutorial1-2-2.jpg" width=45%>
