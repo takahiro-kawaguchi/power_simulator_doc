@@ -1,26 +1,33 @@
 # 電力系統に対するレトロフィット制御シミュレータ
 
-本サイトはpower_simulator の公式ドキュメントです
-power_simulatorでは各人で電力系統システムの設計をし、そのシステムの解析を可能とするツールです。
-具体的には、初期応答や外乱応答、線形化システムの導出などの解析を行うことで、落雷などによって地絡が起きた際の状態やコントローラを新しく設計し導入した時の安定・不安定を解析するなど様々な状況を想定した解析が可能となります。
-
-### 本サイトの構成について
-- サイトの目的  
-本サイトはpower_simulatorを利用する方の補助を目的として作られました。
-power_simulatorは「**参考書：電力システム制御理論**」の内容に即しており、こちらで紹介された理論をもとに構築されたものとなっております。理論に基づいてシュミレーションを進めて行きたい方は参考書の内容にそれぞれ対応付けながら進めていただくとわかりやすいかと思います。
-
-- Tutorialsについて  
-[Tutorials](Tutorials/tutorials.md)はボトムアップ形式で進めていくpartと、トップダウン形式で説明していくpartの２部構成になっております。この２パートは前編・後編というようなものではなく、**解説の展開が異なるだけであり同じ内容に基づいて構成されています(ほんと？)**。皆様に合う一方を読んでいただければ問題ないよう作成されております。
-    - [ボトムアップ形式の解説]()  
- 参考書の進め方に即して１から電力系統システム作っていきシュミレーションやオプションの付け方まで解説していきます。  
- [こんな人におすすめ]  
-    ・参考書と対応付けながらpower_simulatorを動かしたい方  
-    ・power_simulatorの仕組みを理解しながらシュミレーションの動かしたい方
-    - [トップダウン形式の解説]()  
-  本power_simulatorには既にいくつかの電力系統システムのパッケージが内蔵されています。それらを利用し実際にシステムの解析やシュミレーションを行い、その過程でオリジナルの電力系統システムの導入やオプションの付け方を解説していきます。  
-  [こんな人におすすめ]  
-    ・とりあえずシュミレーションを行ってみたい方  
-    ・理論よりも解析に重きを置きたい方
+本サイトはpower_simulator の公式ドキュメントです.  
+### <span style="font-size: 130%; color: black;">power_simulatorとは？</span>
+power_simulatorは、各人で電力系統システムの設計・解析するために作られたMATLAB言語のツールです。  
+具体的には、解析したい電力ネットワークを定義し、その初期応答や外乱応答、線形化システムの導出などの解析を行うことで、落雷などによって地絡が起きた際の状態やコントローラを新しく設計し導入した時の安定・不安定を解析するなど様々な状況を想定した解析を補助します。  
+power_simulatorを制作する背景に使われている数理モデル等は「**参考書：電力システム制御理論**」の内容に即しており、こちらで紹介された理論をもとに構築されたものとなっております。理論に基づいてシュミレーションを進めて行きたい方は参考書の内容にそれぞれ対応付けながら進めていただくと分かりやすいかと思います。テキストに即したTutorialは[[こちら](←久木くんが作ってくれたファイル)]()  
+  
+### <span style="font-size: 130%; color: black;">power_simulatorを使うためのステップ</span>
+power_simulatorで解析するには大きく分けて２つのステップがあります。
+<div style="text-align: center;">
+```mermaid
+graph LR
+作る((電力システム<br>を定義する))
+作る-->解析((電力システム<br>を解析する))
+```
+</div>
+以下に各ステップごとに説明していきます。
+  
+<div style="text-align: center;">
+<span style="font-size: 180%; color: black;">【電力システムって何で構成されてるの？ click↓】</span></div>
+[<img src="/Figures/index-3.jpg" width=100%; style="border: 3px pink solid;">](new_Tutorials/intro_net.md)
+  
+<div style="text-align: center;">
+<span style="font-size: 180%; color: black;">【電力システムを作成/定義する click↓】</span></div>
+[<img src="/Figures/index-1.jpg" width=100%; style="border: 3px pink solid;">](new_Tutorials/make_net.md)
+  
+<div style="text-align: center;">
+<span style="font-size: 180%; color: black;">【作成した電力システムを解析する click↓】</span></div>
+[<img src="/Figures/index-2.jpg" width=100%; style="border: 3px pink solid;">](new_Tutorials/analysis_net.md)
 
 ## Contents
 
