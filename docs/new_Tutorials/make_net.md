@@ -1,9 +1,9 @@
 <img src="/Figures/index-1.jpg" width=100%;>
 
-# <div style="text-align: center;"><span style="font-size: 130%; color: black;">解析する電力ネットワークを作成する</span></div>
+# <div style="text-align: center;"><span style="font-size: 120%; color: black;">解析する電力ネットワークを作成する</span></div>
 
 ***
-power_simulatorでは電力ネットワークの情報をクラスを用いて一つの変数に格納し定義します。(本サイトでは`net`という変数としています。)この変数の内部には、
+power_simulatorでは電力ネットワークの情報をクラスを用いて一つの変数に格納し定義します。(本サイトの解説では`net`という変数名を用いています。)この変数の内部には、
 
 - バスの情報を含む`bus`  
 - ブランチの情報を含む`branch`
@@ -24,10 +24,10 @@ power_simulatorでは電力ネットワークの情報をクラスを用いて�
 - networkクラスのインスタンスを呼び出そう。
 
 ## <span style="font-size: 100%; color: blue;">【基礎編】</span>
-- <span style="font-size: 100%; color: blue;">既存のバスやコンポーネントのパラメータを自分で設定してみよう。</span>  
-  ↑主にSTEP4の内容を貼り付ける
 - <span style="font-size: 100%; color: blue;">既存のコントローラをネットワークに付加しよう。</span>  
   ↑主にSTEP3の内容を貼り付ける
+- <span style="font-size: 100%; color: blue;">既存のバスやコンポーネントのパラメータを自分で設定してみよう。</span>  
+  ↑主にSTEP4の内容を貼り付ける
 
 ## <span style="font-size: 100%; color: red;">【応用編】</span>
 - <span style="font-size: 100%; color: red;">新しい機器を自作しよう。</span>  
