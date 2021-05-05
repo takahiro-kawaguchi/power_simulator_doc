@@ -21,19 +21,15 @@ power_simulatorでは電力ネットワークの情報をクラスを用いて�
 それでは以下に、この変数`net`を定義する方法を難易度別に解説していきます。
 
 ## <span style="font-size: 100%; color: black;">【既存のモデルを使う】</span>
-- networkクラスのインスタンスを呼び出そう。
+- [<span style="font-size: 100%; color: black;">既存のネットワークを利用しよう。</span>](./step0.md)
 
 ## <span style="font-size: 100%; color: blue;">【基礎編】</span>
-- <span style="font-size: 100%; color: blue;">既存のコントローラをネットワークに付加しよう。</span>  
-  ↑主にSTEP3の内容を貼り付ける
-- <span style="font-size: 100%; color: blue;">既存のバスやコンポーネントのパラメータを自分で設定してみよう。</span>  
-  ↑主にSTEP4の内容を貼り付ける
+- [<span style="font-size: 100%; color: blue;">既存のコントローラをネットワークに付加しよう。</span>](./step3.md)  
+- [<span style="font-size: 100%; color: blue;">既存のバスやコンポーネントのパラメータを自分で設定してみよう。</span>](./step4.md)  
 
 ## <span style="font-size: 100%; color: red;">【応用編】</span>
-- <span style="font-size: 100%; color: red;">新しい機器を自作しよう。</span>  
-  ↑主にSTEP5の内容を貼り付ける
-- <span style="font-size: 100%; color: red;">新しい制御器を自作しよう。</span>  
-  ↑主にSTEP6の内容を貼り付ける
+- [<span style="font-size: 100%; color: red;">新しい機器を自作しよう。</span>](./step5.md)  
+- [<span style="font-size: 100%; color: red;">新しい制御器を自作しよう。</span>](./step6.md)  
 
 ---
 <div style="text-align: center;">
