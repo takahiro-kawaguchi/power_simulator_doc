@@ -10,9 +10,11 @@
   - componentクラスの抽象メソッド4つを実装
 
 ## 解説：抽象メソッドについて
+新しいコンポーネントのクラスを定義する際は、以下のような関数をmethodの中に定義しておく必要がある。  
+実際にcomponentクラスのインスタンスとしてpower_simulator内に既に定義されている`generator.m` や `load_~.m` などのファイルを見ると、これらの関数が定義されていることが確認できるはずである。
 
 - __x = initialize(V, I, net)__  
-    潮流計算で決まったV,Iを受け取って初期化処理を行うメソッド
+    潮流計算で決まったV,Iを受け取って初期化処理を行い平衡状態を導出するためのメソッド
     - 入力引数
         - `V`：潮流計算の結果得られる電圧の平衡点(複素数)
         - `I`：潮流計算の結果得られる電流の平衡点(複素数)
@@ -23,10 +25,12 @@
         netにネットワークが渡されるので、その情報を使っても良い。generator_AGCではnet.omega0(基準周波数)だけ使っている。
   
 
-- __nx = get_nx()__
-    - 出力引数
+- __nx = get_nx()__  
+    クラス内に定義されている状態`x`の次数を求めるためのメソッド
+   - 出力引数
         - `nx`：状態変数の次数
-- __nu = get_nu()__
+- __nu = get_nu()__  
+    クラス内に定義されている状態`u`の次数を求めるためのメソッド
     - 出力引数
         - `nu`：入力変数の次数
 - __[dx,I] = get_dx_I(t, x, v, u)__  
@@ -41,24 +45,80 @@
         - `I`：電流（実部と虚部のベクトル）
 
 ## 実装した方が望ましいメソッド(オーバーライド推奨)
+以下の関数は`component.m`の内部で定義されている関数であるため、componentクラスのインスタンスとして新しい自作の機器を作成したとき自動的に継承されるが、各機器によって関数の内容を再定義する方が望ましい。
 
 - __[A, B, C, D, BV, DV, R, S] = get_linear_matrix()__  
     以下の式のような線形化したシステムの行列A，B，C，D，BV，DVを返すメソッド。
 
     $$
-    \Biggl(
     \begin{matrix}
-  　\dot{x}　=A(x-x^*)+Bu+B_V(V-V^*)\\
-    I-I^*=C(x-x^*)+Du+D_V(V-V^*)
+    \begin{align}
+  　\dot{x}　&=A(x-x^*)+Bu+B_V(V-V^*)＋Rd\\
+    I-I^*&=C(x-x^*)+Du+D_V(V-V^*)\\
+    ｚ&＝S(x^*-x)
+    \end{align}
     \end{matrix}
     $$
   ただしR,Sは制御系設計のために使われる外乱ポートと評価出力ポートであり機器の性質ではないため消しても構わない。  
   
 - __[dx, I] =get_dx_I_linear(obj, t, x, v, u)__  
-    [解説(抽象メソッド)](#解説抽象メソッドについて)の章で紹介したget_dx_Iの線形化バージョンである。  
+    上の「解説(抽象メソッド)」の章で紹介したget_dx_Iの線形化バージョンである。  
     現状、get_linear_matrixを実装しても自動的に反映されない。
     - `get_dx_I_linear`と`get_linear_matrix`を実装しない場合、initializeの中で  
         `obj.numerical_diff(x, [Vr; Vi]);`
-    を呼ぶと、平衡点周りでの数値積分によって２つのメソッドがつかえるようになる。
+    を呼ぶと、平衡点周りでの数値積分によって２つのメソッドがつかえるようになる。  
+  
 
-### <span style="color: red; ">コード例</span>
+  
+## コード例  
+本シュミレーター内部には既にcomponentクラスのインスタンスとしていくつかの機器が定義されている。  
+ここでは例として`generator_AGC`のステートメントについて解説していく。  
+```
+    具体的にコードを貼り付けて説明をそれぞれ書いていくと、長くなりすぎ、、、
+    検討中
+```
+他にもコンポーネントのクラスはいくつかpower_simulator内に定義されているため、新しい機器を作成する場合は実際にpower_simulator内のクラスのコードも参考になるだろう。  
+以下にcomponentクラスの継承関係を示したフローチャートを載せておく。
+```mermaid
+graph LR
+component{component.m}
+component---comイン[インスタンス]
+comイン---component_empty
+comイン---generator_AGC
+comイン---load_varying_impedance
+load_varying_impedance---load_const_impedance
+comイン---load_varying_power
+load_varying_power---load_const_power
+comイン---solor_farm
+comイン---wind_farm
+%% component---com関数[内蔵関数]
+%% com関数---initialize
+%% com関数---get_nx
+%% com関数---get_nu
+%% com関数---get_dx_I
+%% com関数---get_linear_matrix
+%% com関数---get_dx_I_linear
+
+%%subgraph 機器を自作する際に必要な抽象メソッド
+%%    com関数
+%%    initialize
+%%    get_nx
+%%    get_nu
+%%    get_dx_I
+%%    get_linear_matrix
+%%    get_dx_I_linear
+%%end
+
+
+subgraph 機器の設計/component.mの子クラス
+    comイン
+    component_empty
+    generator_AGC
+    load_varying_impedance
+    load_const_impedance
+    load_varying_power
+    load_const_power
+    solor_farm
+    wind_farm
+end
+```
