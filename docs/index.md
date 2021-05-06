@@ -1,19 +1,54 @@
-# power_simulator_doc
+# <span style="font-size: 140%; color: black;"><div style="text-align: center;">電力系統に対する</br>レトロフィット制御シミュレータ</div></span>
+本サイトはpower_simulator の公式ドキュメントです.  
+### <span style="font-size: 130%; color: black;">power_simulatorとは？</span>
+power_simulatorは、各人で電力系統システムの設計・解析するために作られたMATLAB言語のプログラムです。具体的には、以下の事などをシュミレーター上で行え様々な状況を想定した解析を補助します。
 
-power_simulator の公式ドキュメントです  
-power_simulator では主に，研究者・技術者向けに電力系統を用いたシミュレーション環境を提供しています  
-IEEE68bus system などの既存のシステムや既存のコントローラを利用した応答シミュレーションや，新たなネットワーク・機器・制御器を作成してそれぞれのニーズに合わせたシミュレーションを行うことができます  
+- 解析したい電力ネットワークを定義する
+- その初期応答や外乱応答、線形化システムの導出などの解析を行う
+     - 落雷などによって地絡が起きた際の状態の解析
+     - コントローラを新しく設計し導入した時の応答の解析
+     - etc...  
 
-## Contents
+### <span style="font-size: 130%; color: black;">参考書</span>
+power_simulatorを制作する背景に使われている数理モデル等は「**参考書：電力システム制御理論**」の内容に即しており、こちらで紹介された理論をもとに構築されたものとなっております。理論に基づいてシュミレーションを進めて行きたい方は参考書の内容にそれぞれ対応付けながら進めていくチュートリアルも設けているので、そちらを見ていただくと分かりやすいかと思います。
+  
+イラストが幼稚なのはご容赦下さい。（^-^;）
+  
+<div style="text-align: center;">
+<span style="font-size: 180%; color: black;">【そもそも電力システムって何で構成されてるの？】</span></div>
+まず、シュミレータのチュートリアルの前に電力システムについて簡単に説明します。click↓  
+[<img src="/Figures/index-3.jpg" width=100%; style="border: 3px pink solid;">](Tutorials/intro_net.md)
+  
 
-- [Tutorials](./Tutorials/tutorials.md)  
-    初めて利用する方向けのチュートリアル
-- [Docs](./Docs/docs.md)  
-    既存のメソッドやクラスについての情報集
+<div style="text-align: center;">
+<span style="font-size: 190%; color: black;">【チュートリアル】</span></div>  
+ここでは２つのタイプでのチュートリアルを用意しました。  
+どちらを先に読んでいただいても構いません。
+  
+[<img src="/Figures/tuto-withText.jpg" width=49.5%; style="border: 3px pink solid;">](Tutorials/Tutorial_withText.md)
+[<img src="/Figures/tuto-newSystem.jpg" width=49.5%; style="border: 3px pink solid;">](Tutorials/Tutorial_newSystem.md)  
 
-## Require
+「教科書に沿って学ぶ」ベースのチュートリアル(左側)
+> テキストではじめに紹介されていた3busシステムの制作と解析を目標としています。
+> 
+> - テキストを読みながら進めていく方
+> - 電力システムを定義し解析していく流れを掴みたい方  
 
-- MATLAB (ver 〇〇 以上)
-    - Optimization Toolbox
-    - Control System Toolbox
-    - Robust Control Toolbox
+「シュミレータを動かす」ベースのチュートリアル(右側)
+> 電力システムの「制作part」,「解析part」に分け各機能ごとに解析していきます。  
+> 前者のチュートリアルより、少し深く踏み込んだ内容まで示しています。  
+> 
+> - シュミレータの動かし方、仕組みの理解に重きを置きたい方
+> - 前者のチュートリアルを終え、さらに詳しいシュミレータの操作を知りたい方
+
+### <span style="font-size: 130%; color: black;">Docs</span>
+− [__既存のメソッドやクラスについての情報集__](./Docs/docs.md)  
+シュミレータ内の関数の中でも重要なものを集めた辞書のようなものです。  
+Tutorial内にDocのリンクが必要に応じてはられているので基本はそちらを見て頂き適宜このページを参照していただければいいと思います。
+
+### <span style="font-size: 130%; color: black;">Require</span>
+このシュミレータを動かすにあたって必要なToolbox。
+
+- Optimization Toolbox
+- Control System Toolbox
+- Robust Control Toolbox
