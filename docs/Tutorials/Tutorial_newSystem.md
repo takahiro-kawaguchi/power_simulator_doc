@@ -1,3 +1,8 @@
+# Tutorial
+<div style="text-align: center;">
+<img src="/Figures/tuto-newSystem.jpg" width=60%;>
+</div>
+
 ### <span style="font-size: 130%; color: black;">power_simulatorを使うためのステップ</span>
 power_simulatorで解析するには大きく分けて２つのステップがあります。
 <div style="text-align: center;">
