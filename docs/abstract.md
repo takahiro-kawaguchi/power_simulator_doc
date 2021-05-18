@@ -13,7 +13,7 @@
 - そして各バスどうしをつなぐブランチ(各バス間の線ー)  
 <div style="text-align: center;">
 <span style="font-size: 160%; color: black;">IEEE68busモデル</span>
-<img src="/Figures/IEEE68bus.png" width=100%;>
+<a href="/Figures/IEEE68bus.png" target="_blank"><img src="/Figures/IEEE68bus.png" width=100%;></a>
 </div>
 
 それでは、以下にこれらについて説明していきます。
@@ -30,7 +30,7 @@
 具体的には「発電機」や「負荷」などのバスに付加するものたちの総称のことです。  
 
 <div style="text-align: center;">
-<img src="/Figures/intro-1.jpg" width=60%;>
+<a href="/Figures/intro-1.jpg" target="_blank"><img src="/Figures/intro-1.jpg" width=60%;></a>
 </div>
 
 * コンポーネントの枠に発電機が付加されたものを**発電機バス**と呼びます。  

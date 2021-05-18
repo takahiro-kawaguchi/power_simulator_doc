@@ -13,7 +13,7 @@ power_simulatorでは電力ネットワークの情報をクラスを用いて�
 
 などがあり、さらに変数`bus`の中には各バスにおける定常状態でのパラメータやそのバスに付加されている機器の情報を含む変数`component`などがあります。図で表すと以下の様な感じに電力ネットワークの情報が格納されています。  
 <div style="text-align: center;">
-<img src="/Figures/make-1.jpg" width=100%;>
+<a href="/Figures/make-1.jpg" target="_blank"><img src="/Figures/make-1.jpg" width=100%;></a>
 </div>
 
 <span style="font-size: 130%; color: black;">__本章ではこの変数`net`を定義することが目標となります。__</span>  

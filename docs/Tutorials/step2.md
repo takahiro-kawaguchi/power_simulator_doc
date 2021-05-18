@@ -177,7 +177,10 @@ get_sysで得られるシステムは平衡点からの偏差を状態ととっ�
 
 - **出力変数**`sys`  
   出力された変数sysの中には以下のような変数が格納されている。  
-  <img src="/Figures/tutorial2-getsys-1.jpg" width=45%>  
+
+  <div style="text-align: center;">
+  <a href="/Figures/tutorial2-getsys-1.jpg" target="_blank"><img src="/Figures/tutorial2-getsys-1.jpg" width=45%;></a>
+  </div>  
   これらの変数の中には`get_sys`のスクリプト内で使用されている関数[ss(A,B,C,D)](https://jp.mathworks.com/help/control/ref/ss.html)によって自動的に生成される変数も含まれており、このうち実質的に情報を持っているのは以下に示す6つの変数のみである.
     -  __状態方程式の係数行列__`A,B,C,D`  
         線形化したシステムのA行列,B行列,C行列,D行列の各要素の情報を格納している.

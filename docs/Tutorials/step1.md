@@ -17,7 +17,9 @@
 のような状況を例示します  
 最後に，**応答結果の図示**について解説し，応答結果を示します
 <br><br><br>
-![IEEE 68bus system](../Figures/tutorial1-IEEE68bussystem.png)
+<div style="text-align: center;">
+<a href="/Figures/IEEE68bus.png" target="_blank"><img src="/Figures/IEEE68bus.png" width=100%;></a>
+</div>
 
 
 ## 解説
@@ -159,8 +161,16 @@ for i = 1:16
 end
 ```
 ## シミュレーション結果の例
-- 例1の結果として，発電機1と2の内部状態の初期値応答のグラフ  
-<img src="/Figures/tutorial1-1-1.jpg" width=45%> <img src="/Figures/tutorial1-1-2.jpg" width=45%>
+- 例1の結果として，発電機1と2の内部状態の初期値応答のグラフ
 
-- 例2の結果として，発電機1と2の内部状態の外乱応答のグラフ  
-<img src="/Figures/tutorial1-2-1.jpg" width=45%> <img src="/Figures/tutorial1-2-2.jpg" width=45%>
+<div style="text-align: center;">
+<a href="/Figures/tutorial1-1-1.jpg" target="_blank"><img src="/Figures/tutorial1-1-1.jpg" width="49.5%"></a>
+<a href="/Figures/tutorial1-1-2.jpg" target="_blank"><img src="/Figures/tutorial1-1-2.jpg" width="49.5%"></a>
+<div>
+
+- 例2の結果として，発電機1と2の内部状態の外乱応答のグラフ
+
+<div style="text-align: center;">
+<a href="/Figures/tutorial1-2-1.jpg" target="_blank"><img src="/Figures/tutorial1-2-1.jpg" width="49.5%"></a>
+<a href="/Figures/tutorial1-2-2.jpg" target="_blank"><img src="/Figures/tutorial1-2-2.jpg" width="49.5%"></a>
+<div style="text-align: center;">
