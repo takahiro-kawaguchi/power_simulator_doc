@@ -13,14 +13,20 @@ theme:
 
 nav:
     - Home: index.md
+    - Abstract: abstract.md
     - Tutorials:
         - "": Tutorials/tutorials.md
-        - step1: Tutorials/step1.md
-        - step2: Tutorials/step2.md
-        - step3: Tutorials/step3.md
-        - step4: Tutorials/step4.md
-        - step5: Tutorials/step5.md
-        - step6: Tutorials/step6.md
+        - withText: Tutorials/withText.md
+        - newSystem: Tutorials/newSystem.md
+        - Contents:
+            - make_net: Tutorials/make_net.md
+            - analysis_net: Tutorials/analysis_net.md
+            - step1: Tutorials/step1.md
+            - step2: Tutorials/step2.md
+            - step3: Tutorials/step3.md
+            - step4: Tutorials/step4.md
+            - step5: Tutorials/step5.md
+            - step6: Tutorials/step6.md
     - Docs:
         - "": Docs/docs.md
         - power_network: Docs/power_network.md
