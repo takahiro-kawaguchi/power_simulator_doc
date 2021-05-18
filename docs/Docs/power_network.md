@@ -1,40 +1,55 @@
 # （準備中）電力系統モデルについて
 
+[]( power_networkのリンクを入れる場所は"TODO_link" を挿入しておく )
+
+## クラスの全体像(再掲)
+
+まずは電力系統モデルに関するクラスの全体像を示します。
+
+[](TODO_link→以下の図のリンクを正しいリンクへ変更)
+```mermaid
+graph LR
+
+base{power_simulator}---power_network
+
+power_network---network_68bus
+power_network---network_70bus
+power_network---network_9bus
+
+click base "https://www.google.com/"
+click power_network "https://www.google.com/"
+click network_68bus "https://www.google.com/"
+click network_70bus "https://www.google.com/"
+click network_9bus "https://www.google.com/"
+```
+
 ## power_network
 
 [@power_network/power_network.m]()
 
-全ての電力系統モデルの基底クラス．  
+全ての電力系統モデルの基底クラス．
 
 ### メンバ変数
-- bus
-    - バスのセル配列
-- branch
-    - ブランチのテーブル
-- omega0(=2*pi*60)
-    - 基準角周波数（デフォルトは60Hz）
-- str_display(='none')
-    - 非線形の方程式求解の際の表示レベル（デフォルトは出力を表示しない）
-- display_simulate(=true)
-    - 常微分方程式求解の進捗の表示有無（デフォルトは表示する）
-- x_ss
-    - 状態の平衡点配列
-- V_ss
-    - 電圧の平衡点配列
-- I_ss
-    - 電流の平衡点配列
-- controllers
-    - コントローラのセル配列
-- controllers_global
-    - グローバルコントローラのセル配列
-- tol
-    - 数値計算(ode)における許容誤差
-- plotfunc(=@odephas2)
-    - 数値計算(ode)における描画処理（[]を指定することで描画しないこともできる）
-- reset_time(=5)
-    - 数値計算(ode)のタイムアウト時間（デフォルトは5秒）
-- retry(=true)
-    - 数値計算(ode)のタイムアウト時の処理（デフォルトはリトライ）
+- bus：バスのセル配列
+- branch：ブランチのテーブル
+- omega0(=2*pi*60)：  
+    基準角周波数（デフォルトは60Hz）
+- str_display(='none')：  
+    非線形の方程式求解の際の表示レベル（デフォルトは出力を表示しない）
+- display_simulate(=true)：  
+    常微分方程式求解の進捗の表示有無（デフォルトは表示する）
+- x_ss：状態の平衡点配列
+- V_ss：電圧の平衡点配列
+- I_ss：電流の平衡点配列
+- controllers：コントローラのセル配列
+- controllers_global：グローバルコントローラのセル配列
+- tol：数値計算(ode)における許容誤差
+- plotfunc(=@odephas2)：  
+    数値計算(ode)における描画処理（[]を指定することで描画しないこともできる）
+- reset_time(=5)：  
+    数値計算(ode)のタイムアウト時間（デフォルトは5秒）
+- retry(=true)  
+    数値計算(ode)のタイムアウト時の処理（デフォルトはリトライ）
 
 ### メンバ関数
 - `out = simulate(t, u, idx_u, options)`
