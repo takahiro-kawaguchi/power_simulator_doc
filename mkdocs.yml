@@ -62,6 +62,10 @@ markdown_extensions:
     - toc:
         permalink: true
         separator: '_'
+    - attr_list
+    - pymdownx.emoji:
+        emoji_index: !!python/name:materialx.emoji.twemoji
+        emoji_generator: !!python/name:materialx.emoji.to_svg
 extra_javascript:
     - 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS_HTML'
     - 'https://unpkg.com/mermaid@8.0.0/dist/mermaid.min.js'

@@ -1,6 +1,10 @@
-# <span style="font-size: 140%; color: black;"><div style="text-align: center;">電力系統に対する</br>レトロフィット制御シミュレータ</div></span>
-本サイトはpower_simulator の公式ドキュメントです.  
-### <span style="font-size: 130%; color: black;">power_simulatorとは？</span>
+# <div style="text-align: center;"><span style="font-size: 140%; color: black;">電力系統に対する</br>レトロフィット制御シミュレータ</span></div>
+本サイトはpower_simulator の公式ドキュメントです.
+
+<br>
+
+---
+### <div style="text-align: center;"><span style="font-size: 130%; color: black;">【power_simulatorとは？】</span></div>
 power_simulatorは、各人で電力系統システムの設計・解析するために作られたMATLAB言語のプログラムです。具体的には、以下の事などをシュミレーター上で行え様々な状況を想定した解析を補助します。
 
 - 解析したい電力ネットワークを定義する
@@ -9,24 +13,30 @@ power_simulatorは、各人で電力系統システムの設計・解析する�
      - コントローラを新しく設計し導入した時の応答の解析
      - etc...  
 
-### <span style="font-size: 130%; color: black;">参考書</span>
-power_simulatorを制作する背景に使われている数理モデル等は「**参考書：電力システム制御理論**」の内容に即しており、こちらで紹介された理論をもとに構築されたものとなっております。理論に基づいてシュミレーションを進めて行きたい方は参考書の内容にそれぞれ対応付けながら進めていくチュートリアルも設けているので、そちらを見ていただくと分かりやすいかと思います。
-  
-以下、イラストが幼稚なのはご容赦下さい。（^-^;）
-  
-<div style="text-align: center;">
-<span style="font-size: 180%; color: black;">【そもそも電力システムって何で構成されてるの？】</span></div>
-まず、シュミレータのチュートリアルの前に電力システムについて簡単に説明します。click↓  
-[<img src="/Figures/index-3.jpg" width=100%; style="border: 3px pink solid;">](abstract)
-  
+<br><br>
 
-<div style="text-align: center;">
-<span style="font-size: 190%; color: black;">【チュートリアル】</span></div>  
+### <div style="text-align: center;"><span style="font-size: 130%; color: black;">【power_simulatorの数理モデル】</span></div>
+power_simulatorを制作する背景に使われている数理モデル等は「**参考書：電力システム制御理論**」の内容に即しており、こちらで紹介された理論をもとに構築されたものとなっております。理論に基づいてシュミレーションを進めて行きたい方は [**参考書の内容にそれぞれ対応付けながら進めていくチュートリアル**](/Tutorials/withText) も設けているので、そちらを見ていただくと分かりやすいかと思います。
+
+<br><br>
+
+---
+以下、イラストが幼稚なのはご容赦下さい。（^-^;）
+
+### <div style="text-align: center;"><span style="font-size: 130%; color: black;">【そもそも電力システムって何で構成されてるの？】</span></div>
+まず、シュミレータのチュートリアルの前に電力システムについて簡単に説明します。click↓
+
+<br>
+[<img src="/Figures/index-3.jpg" width=100%; style="border: 3px pink solid;">](abstract)
+
+<br><br>
+
+### <div style="text-align: center;"><span style="font-size: 130%; color: black;"><div style="text-align: center;">【チュートリアル】</span></div>
 本サイトでは２つのタイプでのチュートリアルを用意しました。  
 どちらを先に読んでいただいても構いません。
   
-[<img src="/Figures/tuto-withText.jpg" width=49.5%; style="border: 3px pink solid;">](Tutorials/withText.md)
-[<img src="/Figures/tuto-newSystem.jpg" width=49.5%; style="border: 3px pink solid;">](Tutorials/newSystem.md)  
+[<img src="/Figures/tuto-withText.jpg" width=49.5%; style="border: 3px pink solid;">](/Tutorials/withText)
+[<img src="/Figures/tuto-newSystem.jpg" width=49.5%; style="border: 3px pink solid;">](/Tutorials/newSystem)  
 
 「教科書に沿って学ぶ」ベースのチュートリアル(左側)
 > テキストではじめに紹介されていた3busシステムの制作と解析を目標としています。
@@ -41,12 +51,17 @@ power_simulatorを制作する背景に使われている数理モデル等は�
 > - シュミレータの動かし方、仕組みの理解に重きを置きたい方
 > - 前者のチュートリアルを終え、さらに詳しいシュミレータの操作を知りたい方
 
-### <span style="font-size: 130%; color: black;">Docs</span>
-− [__既存のメソッドやクラスについての情報集__](Docs/docs)  
-シュミレータ内の関数の中でも重要なものを集めた辞書のようなものです。  
-Tutorial内にDocのリンクが必要に応じてはられているので基本はそちらを見て頂き適宜このページを参照していただければいいと思います。
+<br><br><br>
 
-### <span style="font-size: 130%; color: black;">Require</span>
+---
+### <div style="text-align: center;"><span style="font-size: 130%; color: black;">【Docs】</span></div>
+- [__既存のメソッドやクラスについての情報集__](/Docs/docs)  
+シュミレータ内の関数の中でも重要なものを集めた辞書のようなものです。  
+Tutorial内にDocのリンクが必要に応じて貼られているので基本はそちらを見て頂き、適宜このページを参照していただければいいと思います。
+
+<br><br>
+
+### <div style="text-align: center;"><span style="font-size: 130%; color: black;">【Require】</span><div style="text-align: center;">
 このシュミレータを動かすにあたって必要なToolbox。
 
 - Optimization Toolbox

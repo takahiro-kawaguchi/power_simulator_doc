@@ -1,16 +1,22 @@
-# Docs
+# <div style="text-align: center;"><span style="font-size: 140%; color: black;">ドキュメント一覧</span></div>
 
 既存のメソッドやクラスについての情報集
 
-- [power_network](/Docs/power_network/)  
-    電力系統モデルについて
-- [bus](/Docs/bus/)  
-    バスについて
-- [component](/Docs/component/)  
-    バスに接続する機器について
-- [controller](/Docs/controller/)  
-    コントローラについて
+### :fontawesome-solid-arrow-circle-right: **[power_network](/Docs/power_network)**：電力系統モデルについて
 
+
+### :fontawesome-solid-arrow-circle-right: **[bus](/Docs/power_network)**：バスについて
+
+
+### :fontawesome-solid-arrow-circle-right: **[component](/Docs/component)**：コンポーネント（バスに接続する機器）について
+
+
+### :fontawesome-solid-arrow-circle-right: **[controller](/Docs/controller)**：コントローラについて
+
+<br>
+
+---
+### <div style="text-align: center;"><span style="font-size: 130%; color: black;">クラスの全体構成図</span></div>
 
 以下にpower_simulator上でのクラスの全体構成を示しておきます。チュートリアルを進めていく中や作業中に自身の使っている関数が何をするためのコマンドかわからなくなった際に目次代わりに利用してください。
 

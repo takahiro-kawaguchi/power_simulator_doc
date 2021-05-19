@@ -2,7 +2,7 @@
 
 # <div style="text-align: center;"><span style="font-size: 130%; color: black;">電力ネットワークの構成について</span></div>
 
-***
+### <div style="text-align: center;"><span style="font-size: 130%; color: black;">【電力システムとはどのようなもの？】</span></div>
 まずはじめに、電力システムとはどういったものなのか？ということを、電力システムでシュミレーションをする際に使用される代表的なモデルを例にして解説していきます。  
 下の図は電力ネットワークの代表的なモデルである「IEEE68busモデル」と呼ばれるものです。  
 このモデルは以下のものによって構成されています。
@@ -16,16 +16,23 @@
 <a href="/Figures/IEEE68bus.png" target="_blank"><img src="/Figures/IEEE68bus.png" width=100%;></a>
 </div>
 
-それでは、以下にこれらについて説明していきます。
+<br>
 
-## バスとは？
+---
+以下では、電力システムの各構成要素について説明していきます。
+
+### <div style="text-align: center;"><span style="font-size: 130%; color: black;">【バスとは？】</span></div>
 バスとは発電機や負荷と送電網の中継点の様なものです。  
 電力の需給バランスを計算する潮流計算では、このバスに送られてくる(逆に送り出される)有効電力Pと無効電力Q、さらに各バスでの電圧の大きさ|V|、位相∠Vを考えることで所望の需給バランスを実現させるパラメータを導出しています。
 
-## ブランチとは？
+<br><br>
+
+### <div style="text-align: center;"><span style="font-size: 130%; color: black;">【ブランチとは？】</span></div>
 バス間の送電線のことです。現実の世界では電線などがこのブランチにあたります。
 
-## コンポーネントという概念
+<br><br>
+
+### <div style="text-align: center;"><span style="font-size: 130%; color: black;">【コンポーネントという概念は？】</span></div>
 コンポーネントとはその名の通り「機器」のことです。  
 具体的には「発電機」や「負荷」などのバスに付加するものたちの総称のことです。  
 
@@ -34,15 +41,17 @@
 </div>
 
 * コンポーネントの枠に発電機が付加されたものを**発電機バス**と呼びます。  
-     発電機バスは一般的にPVバスに分類されますが、電力ネットワーク内の発電機バスのうち1つだけslackバスという特別なバスが存在します。  
+    発電機バスは一般的にPVバスに分類されますが、電力ネットワーク内の発電機バスのうち1つだけslackバスという特別なバスが存在します。  
 * コンポーネントの枠に負荷が付加されたものを**負荷バス**と呼びます。  
-     負荷バスはPQバスに分類されます。  
+    負荷バスはPQバスに分類されます。  
 * またコンポーネントの枠に何も付加されていないバスも存在し、**non-unitバス**と呼びます。  
      このバスは負荷バスの負荷の値が無限大としたときと同じとみなせ、このバスもPQバスに分類されます。  
-  
-実際にpower_simuratorでは`componentクラス`が定義されており、その子クラスに負荷や発電機のクラスが定義されています。  
 
-## PVバス、PQバス、slackバスって？
+実際にpower_simuratorでは`componentクラス`が定義されており、その子クラスに負荷や発電機のクラスが定義されています。
+
+<br><br>
+
+### <div style="text-align: center;"><span style="font-size: 130%; color: black;">【PVバス、PQバス、slackバスって？？】</span></div>
 バスに付いての説明の際にも触れましたが、潮流計算では各バスに送られてくる(逆に送り出される)有効電力Pと無効電力Qと、各バスの電圧の大きさ|V|,位相∠Vの計4つのパラメータ、n個のバスで構成された電力ネットワークならば、計４n個のパラメータを考えます。当然この中のいくつかのパラメータを指定しないと、他のパラメータは一意に定まりません。そのため各バスの4つのパラメータのうちいくつかのパラメータを指定します。  
 この指定するパラメータが
 
@@ -52,16 +61,7 @@
 
 といいます。
 
----
-<div style="text-align: center;">
+<br><br><br>
 
-```mermaid
-graph TB
-作成(電力ネットワークの作成編のページへ)
-解析(電力ネットワークの解析編のページへ)
-style 作成 fill:#fff,stroke:#000,stroke-width:1px
-style 解析 fill:#fff,stroke:#000,stroke-width:1px
-click 作成 "./make_net.md"
-click 解析 "./analysis_net.md"
-```
-</div>
+[電力ネットワークの作成編のページへ](../Tutorials/make_net){ .md-button .left }
+[電力ネットワークの解析編のページへ](../Tutorials/analysis_net){ : .md-button .right }
