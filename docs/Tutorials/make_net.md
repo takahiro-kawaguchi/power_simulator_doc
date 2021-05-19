@@ -43,13 +43,13 @@ net = network_70bus; %70busモデルの情報をnetに格納する場合
 **それでは以下に新しい電力システムの定義やコントローラの付加をし、変数`net`を定義していく方法を難易度別に解説していきます。。**
 
 ## <span style="font-size: 100%; color: blue;">【基礎編】</span>
-- [<span style="font-size: 120%; color: blue;"><u>既存のコントローラをネットワークに付加しよう</u>。</span>](./step3.md)  
-- [<span style="font-size: 120%; color: blue;"><u>既存のバスやコンポーネントのパラメータを自分で設定してみよう</u>。</span>](./step4.md)  
+:material-arrow-right-drop-circle: [<span style="font-size: 120%; color: blue;"><u>既存のコントローラをネットワークに付加しよう</u>。</span>](./step3.md)  
+:material-arrow-right-drop-circle: [<span style="font-size: 120%; color: blue;"><u>既存のバスやコンポーネントのパラメータを自分で設定してみよう</u>。</span>](./step4.md)  
 
 ## <span style="font-size: 100%; color: red;">【応用編】</span>
 ここまでは既存の関数ファイルを用いてパラメータをセット設定し電力システムを定義する方法などを解説してきましたが、ここでは新しい機器や制御機を定義します。すなわち新たな機器や制御器を定義する`component.m`や`controller.m`の子クラスにあたるm.ファイルを作成する必要があるということです。
-- [<span style="font-size: 120%; color: red;"><u>新しい機器を自作しよう</u>。</span>](./step5.md)  
-- [<span style="font-size: 120%; color: red;"><u>新しい制御器を自作しよう</u>。</span>](./step6.md)  
+:material-arrow-right-drop-circle: [<span style="font-size: 120%; color: red;"><u>新しい機器を自作しよう</u>。</span>](./step5.md)  
+:material-arrow-right-drop-circle: [<span style="font-size: 120%; color: red;"><u>新しい制御器を自作しよう</u>。</span>](./step6.md)  
 
 ---
 <div style="text-align: center;">
