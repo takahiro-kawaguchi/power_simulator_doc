@@ -15,6 +15,7 @@
 ```
 net = network_9bus();
 ```
+
 - 出力変数`net`  
     ネットワーク内部の情報としてbus, branch, generator, controllerなどの情報が含まれる
 <br>
@@ -40,6 +41,7 @@ $$
     \end{matrix}
     $$  
 なお上の式で表される状態・入力・出力の定義は以下のようである.  
+
 - 状態$x$  
          発電機の状態パラメータ7つずつの変数をさす．  
          あるi番目の発電機の状態を$x_i$とすると、
@@ -170,9 +172,10 @@ $$
 sys =  net.get_sys(with_controller);
 ```
 get_sysで得られるシステムは平衡点からの偏差を状態ととっていることに注意．
+
 - **入力引数**`with_controller`  
     with_controllerの値が`true`の場合はコントローラが付加されたシステム，`false`の場合はコントローラなしのシステムを返す．規定値は`false`.
-    - `true`にする場合コントローラーの設定をしておく必要がある．コントローラの定義についての詳細は[STEP3](./step3.md)を参照．
+      - `true`にする場合コントローラーの設定をしておく必要がある．コントローラの定義についての詳細は[STEP3](./step3.md)を参照．
 
 
 - **出力変数**`sys`  
@@ -181,12 +184,13 @@ get_sysで得られるシステムは平衡点からの偏差を状態ととっ�
   <div style="text-align: center;">
   <a href="/Figures/tutorial2-getsys-1.jpg" target="_blank"><img src="/Figures/tutorial2-getsys-1.jpg" width=45%;></a>
   </div>  
-  これらの変数の中には`get_sys`のスクリプト内で使用されている関数[ss(A,B,C,D)](https://jp.mathworks.com/help/control/ref/ss.html)によって自動的に生成される変数も含まれており、このうち実質的に情報を持っているのは以下に示す6つの変数のみである.
-    -  __状態方程式の係数行列__`A,B,C,D`  
+  これらの変数の中には`get_sys`のスクリプト内で使用されている関数[ss(A,B,C,D)](https://jp.mathworks.com/help/control/ref/ss.html)によって自動的に生成される変数も含まれており、このうち実質的に情報を持っているのは以下に示す6つの変数のみである.  
+
+-  __状態方程式の係数行列__`A,B,C,D`  
         線形化したシステムのA行列,B行列,C行列,D行列の各要素の情報を格納している.
-    - __入力情報__`InputGroup`  
+- __入力情報__`InputGroup`  
             状態空間方程式の入力値$u$の各チャネルがどのバスの何の値に対応しているか示す．  
-    - __出力情報__`OutputGroup`  
+- __出力情報__`OutputGroup`  
             状態空間方程式の出力値$y$の各チャネルがどのバスの何の値に対応しているか示す.  
 
 ##　例１：コントローラーを追加する
@@ -209,12 +213,16 @@ sys('z1','d1')
 
 ## 例３：線形化したシステムのシミュレーション結果を見る
 
-以下のコードは68busシステムを線形化し，その出力をグラフで表示するものである．
+以下のコードは68busシステムを線形化し，その出力をグラフで表示するものです。ここでは2種類のサンプルコードを紹介します。  
+  
+
+まず1つ目のコードは、地絡応答についての応答を線形化を行ってシュミレーションしたプロットに、`get_sys`を用いて得られた状態空間モデルをもとに、`initial()`関数を用いて時間応答を求めたものを重ねたものです。下の結果を見ると2つの時間応答が一致していることがわかります。なお`initial()`は[Control System Toolbox]に標準搭載されている関数です。
 ```
 net= network_68bus();
 option_fault = struct();
 option_fault.fault = {{[0, 0.01], 1}};
-out_fault = net.simulate_linear([0, 0.01], option_fault);
+option_fault.linear = true;
+out_fault = net.simulate([0, 0.01], option_fault);
 option = struct();
 option.x_init = out_fault.X;
 opition.linear =true
@@ -224,13 +232,37 @@ x0 = horzcat(out_fault.X{:});
 x0 = x0(end, :)' - net.x_ss;
 [z, t, x] = initial(sys, x0);
 x = x+net.x_ss';
-names = {'\delta', '\Delta\omega', 'E', 'V_{fd}', '\xi_1', '\xi_2', '\xi_3'};
 for i = 1:16
 	figure
-	for j = 1:7
-		subplot(3, 3, j), plot(out_linear.t, out_linear.X{i}(:, j), 'o'), title(names{j}, 'Interpreter', 'tex');
-	end
-	subplot(3, 3, 8), plot(out_linear.t, out_linear.V{i}(:, 1)), title('Real(V)');
-	subplot(3, 3, 9), plot(out_linear.t, out_linear.V{i}(:, 2)), title('Imag(V)');
+	p = plot(out_linear.t, out_linear.X{i}(:, 2), '-',out_nonlinear.t, out_nonlinear.X{i}(:, 2), '--');
+    p(1).LineWidth = 2;
+    p(2).LineWidth = 2; 
+    title('\Delta\omega', 'Interpreter', 'tex');
+    legend('linear','nonlinear')
 end
 ```
+  
+<img src="/Figures/step2_initial_bus8.png" width=49.5%;>
+<img src="/Figures/step2_initial_bus15.png" width=49.5%;>
+  
+2つめコードは１つめと同様に地絡応答についてのシュミレーションですが、ここでは同じネットワークシステム、同じ地絡条件のもとで線形化シュミレーションと非線形のままのシュミレーションの結果を比較するコードとなっています。出力結果は下のとおりです。
+```
+net = network_68bus();
+option = struct();
+option.fault = {{[0,0.01], 1}};
+option.linear = false;
+out_nonlinear = net.simulate([0, 30], option);
+option.linear = true;
+out_linear = net.simulate([0, 30], option);
+for i = 1:16
+	figure
+	p = plot(out_linear.t, out_linear.X{i}(:, 2), '-',out_nonlinear.t, out_nonlinear.X{i}(:, 2), '--');
+    p(1).LineWidth = 2;
+    p(2).LineWidth = 2;
+    title('\Delta\omega', 'Interpreter', 'tex');
+    legend('linear','nonlinear')
+end
+```
+  
+<img src="/Figures/step2_linear_bus8.png" width=49.5%;>
+<img src="/Figures/step2_linear_bus15.png" width=49.5%;>

@@ -47,7 +47,7 @@ net = network_70bus; %70busモデルの情報をnetに格納する場合
 :material-arrow-right-drop-circle: [<span style="font-size: 120%; color: blue;"><u>既存のバスやコンポーネントのパラメータを自分で設定してみよう</u>。</span>](./step4.md)  
 
 ## <span style="font-size: 100%; color: red;">【応用編】</span>
-ここまでは既存の関数ファイルを用いてパラメータをセット設定し電力システムを定義する方法などを解説してきましたが、ここでは新しい機器や制御機を定義します。すなわち新たな機器や制御器を定義する`component.m`や`controller.m`の子クラスにあたるm.ファイルを作成する必要があるということです。
+ここまでは既存の関数ファイルを用いてパラメータをセット設定し電力システムを定義する方法などを解説してきましたが、ここでは新しい機器や制御機を定義します。すなわち新たな機器や制御器を定義する`component.m`や`controller.m`の子クラスにあたるm.ファイルを作成する必要があるということです。  
 :material-arrow-right-drop-circle: [<span style="font-size: 120%; color: red;"><u>新しい機器を自作しよう</u>。</span>](./step5.md)  
 :material-arrow-right-drop-circle: [<span style="font-size: 120%; color: red;"><u>新しい制御器を自作しよう</u>。</span>](./step6.md)  
 
