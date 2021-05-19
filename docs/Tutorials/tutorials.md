@@ -11,6 +11,7 @@ power_simulatorの全体構成については [**Abstract**](/abstract)を、チ
 ### <span style="font-size: 130%; color: black;">:material-arrow-right-bold-circle:**[「教科書に沿って学ぶ」ベース](/Tutorials/withText)**</span>
 
 - テキストで初めに紹介されていた 3bus システムの制作と解析を目標としたチュートリアルです。
+    - 定義してから解析するまでの流れが１本のストーリーとなるような構成となっています。
 - 対象者
     - テキストの内容に対応づけながら進めたい方
     - 電力システムを定義し、解析していく流れを掴みたい方
