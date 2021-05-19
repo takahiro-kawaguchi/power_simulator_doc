@@ -64,6 +64,7 @@
 本シュミレータでは後にも実行の仕方を触れますが、制御器を内蔵した発電機モデルを定義する関数`generator_AGC`という関数があります。その関数を実行する際に制御器のパラメータも引数として代入します。  
 制御器のパラメータのデータは１発電機に１つ必要になるため、今回のシステムでは２つ設定する必要があります。
 
+
 |制御機を付加する発電機が</br>接続してるバス番号|Ka|Te|Kpss|Tpss|TL|
 |:---:|:---:|:---:|:---:|:---:|:---|
 |バス１|<span style="color: red;">Ka = 2.0</span>|<span style="color: red;">Te = 0.05</span>|<span style="color: red;">Kpss = 200</span>|<span style="color: red;">Tpss = 10</span>|<span style="color: red;">TL1 = 0.015 , TL1'= 0.05</br>TL2 = 0.01 , TL2'= 0.08</span>|
