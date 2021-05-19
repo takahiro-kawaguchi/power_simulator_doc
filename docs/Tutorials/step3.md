@@ -1,9 +1,7 @@
-# Step3（制御器の導入）
+# 【第三回】制御器の導入
 
-- 対象者：レトロフィット制御の論文を読み，実際にシミュレーションを行いたい技術者．
-- 機能：  
-    既存のシステムに対して既存のコントローラを付加して，シミュレーションを実行する．  
-    既存のコントローラを付加されたシステムの状態空間表現（線形化システム）を取得する．
+- 本ステップでできるようになること  
+    システムにコントローラを導入してシミュレーションできるようになる
 
 
 ## 解説
@@ -18,6 +16,7 @@
 ```
 cg = controller_broadcast_PI_AGC_normal(net, y_idx, u_idx, Kp, Ki);
 ```
+
 - 入力引数`net`  
     作成したネットワークを設定．`net`は*power_network*クラスのインスタンス．
     詳細は[Step1](/Tutorials/step1/)・[Power Network](/Docs/power_network/)を参照のこと．
@@ -51,6 +50,7 @@ power_simulatorではグローバルコントローラがすでにいくつか�
 ```
 c = controller_retrofit_generator_nonlinear_AGC_LQR(net, idx, Q, R, model_uv, vbar, ubar, out, varargin);
 ```
+
 - 入力引数`net`  
     作成したネットワークを設定．`net`は*power_network*クラスのインスタンス．
     詳細は[Step1](/Tutorials/step1/)・[Power Network](/Docs/power_network/)を参照のこと．
@@ -79,6 +79,7 @@ power_simulator ではコントローラがすでにいくつか定義されて�
 ```
 net.add_controller_global(controller);
 ```
+
 - 入力引数`controller`  
     作成したグローバルコントローラを設定．`controller`は*controller*クラスのインスタンス．  
     一つのバスに複数のグローバルコントローラを付加することができる．
@@ -89,6 +90,7 @@ net.add_controller_global(controller);
 ```
 net.add_controller(controller);
 ```
+
 - 入力引数`controller`  
     作成したコントローラを設定．`controller`は*controller*クラスのインスタンス．  
     一つのバスに複数のコントローラを付加した際には，最後に付加したコントローラが使用される．
@@ -103,6 +105,7 @@ net.add_controller(controller);
 ```
 net.remove_controller_global(idx);
 ```
+
 - 入力引数`idx`  
     付加されているグローバルコントローラを除去．`idx`で除去するグローバルコントローラを指定する．  
     `idx`をベクトル形式で指定すると複数のグローバルコントローラを除去できる．
@@ -113,6 +116,7 @@ net.remove_controller_global(idx);
 ```
 net.remove_controller(idx);
 ```
+
 - 入力引数`idx`  
     付加されているコントローラを除去．`idx`で除去するコントローラを指定する．  
     `idx`をベクトル形式で指定すると複数のコントローラを除去できる．
@@ -124,6 +128,7 @@ net.remove_controller(idx);
 ```
 sys = net.get_sys(with_controller);
 ```
+
 - 入力引数`with_controller`  
     取得するシステムに制御器を含めるかどうかの設定．  
     *false*：コントローラなし，*true*：コントローラあり（省略した場合は*false*）

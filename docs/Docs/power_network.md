@@ -52,7 +52,8 @@ click network_9bus "https://www.google.com/"
     数値計算(ode)のタイムアウト時の処理（デフォルトはリトライ）
 
 ### メンバ関数
-- `out = simulate(t, u, idx_u, options)`
+- **`out = simulate(obj, t, u, idx_u, options)`**  
+    システムのシミュレーションを行い、その結果を出力する関数
     - 入力変数 `t`  
         シミュレーション時間の設定
     - 入力変数 `u`  
@@ -60,7 +61,7 @@ click network_9bus "https://www.google.com/"
     - 入力変数 `idx_u`  
         入力するバスの指定  
     - 入力引数 `option`  
-        シミュレーションのオプションを設定する  
+        シミュレーションのオプションを設定する（構造体）  
         - x_init：  
             状態の初期値（規定値: x_ss）  
             バスごとのセル配列あるいは，すべてをスタックしたベクトル．  
@@ -85,7 +86,7 @@ click network_9bus "https://www.google.com/"
         - linear：  
             線形化したシステムでシミュレーションを行うかどうか（規定値: false）
     - 出力引数 `out`  
-        16の機器（generator）ごとの時間応答データが含まれる  
+        16の機器（generator）ごとの時間応答データが含まれる構造体  
         - t：時刻
         - X：バスの状態（バスごとのセル配列）
         - V：バスの電圧（バスごとのセル配列）
@@ -94,12 +95,37 @@ click network_9bus "https://www.google.com/"
         - U：レトロフィットコントローラが生成した入力（コントローラごとのセル配列）
         - U_global：グローバルコントローラが生成した入力（コントローラごとのセル配列）
         - sol：ode15sが返す解sol
+-  **`add_controller_global(obj, controller)`**  
+    システムにグローバルコントローラを追加する関数
+    - 入力引数 `controller`  
+        controllerクラスのインスタンス  
+        ただし、コントローラはグローバルコントローラに限る。
+-  **`out = add_controller(obj, controller)`**  
+    - システムにコントローラを追加する関数
+    - 入力引数 `controller`  
+        controllerクラスのインスタンス  
+        ただし、追加するコントローラが指定するバスにすでにコントローラが追加されている場合は、削除してから追加する。
+-  **`out = remove_controller_global(obj, idx)`**  
+    システムのグローバルコントローラのうち、指定したバスに追加されているものを削除する関数
+    - 入力引数 `idx`：削除するグローバルコントローラの追加されているバス
+-  **`out = remove_controller(obj, idx)`**  
+    システムのコントローラのうち、指定したバスに追加されているものを削除する関数
+    - 入力引数 `idx`：削除するコントローラの追加されているバス
+-  **`[sys] = get_sys(obj, with_controller)`**  
+    システムの線形化を行い、状態空間モデルを取得するための関数  
+    `@power_network/get_sys.m`に実装されている
+    - 入力引数 `with_controller`  
+        コントローラを含めたシステムの状態空間モデルを取得するか否か（規定値: false（含めない））
+    - 出力引数 `sys`
+        線形化したシステムの状態空間モデル  
+        <font size=5 color=red>(モデルについての説明を追加する)</font>
+
 
 ## network_68bus
 
 [network_68bus.m]()
 
-IEEE 68bus 16machine システムの実装．  
+[**IEEE 68bus 16machine システム*](https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=8667520&tag=1) の実装．  
 発電機として[generatorAGC](/Docs/component/#generator_agc)を，負荷として[load_varying_impedance](/Docs/component/#load_varying_impedance) を導入したネットワークである．  
 
 
@@ -107,13 +133,15 @@ IEEE 68bus 16machine システムの実装．
 
 [network_70bus.m]()
 
-定本さんの論文(magazine)における，<font color="red">IEEE 68bus 16machineシステムへ(?)</font> solar, wind farm を導入した電力ネットワーク．  
+[**Dynamic Modeling, Stability, and Control of Power Systems With Distributed Energy Resources: Handling Faults Using Two Control Methods in Tandem**](https://ieeexplore.ieee.org/document/8667520) における，IEEE 68bus 16machineシステムへ solar, wind farm を1つづつ導入した電力ネットワークの実装．  
 発電機として[generator](/Docs/component/#generator)を，負荷として[load_const_impedance](/Docs/component/#load_const_impedance), [load_const_power](/Docs/component/#load_const_power) を導入したネットワークである．  
-発電機として[generator]ネットワーク定義の際に `net=network_70bus(load_type)`のように定義する．ここで，load_typeには1~2を代入する．負荷には，1の場合は[load_const_impedance](/Docs/component/#load_const_impedance)，2の場合は[load_const_power](/Docs/component/#load_const_power)を導入する．引数が省略されている場合は[load_const_impedance](/Docs/component/#load_const_impedance)を負荷として導入する．[](現状、load_typeには1~3が代入できるが、3は今後削除予定なので省略した)  
+ここで，ネットワーク定義の際に `net=network_70bus(load_type)`のように定義するが，load_typeには1~2を代入する．負荷には，1の場合は[load_const_impedance](/Docs/component/#load_const_impedance)，2の場合は[load_const_power](/Docs/component/#load_const_power)を導入する．引数が省略されている場合は[load_const_impedance](/Docs/component/#load_const_impedance)を負荷として導入する．  
 
 
 ## network_9bus
 
 [network_9bus.m]()
 
-<font color="red">要説明追加</font>  
+発電機数は3，負荷数は3，non-unit数は3．  
+発電機として[generatorAGC](/Docs/component/#generator_agc)を，負荷として[load_varying_impedance](/Docs/component/#load_varying_impedance) を導入したネットワークである．  
+<font size=5 color="red">(要説明追加)</font>  
