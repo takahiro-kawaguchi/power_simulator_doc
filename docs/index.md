@@ -17,7 +17,7 @@ power_simulatorを制作する背景に使われている数理モデル等は�
 <div style="text-align: center;">
 <span style="font-size: 180%; color: black;">【そもそも電力システムって何で構成されてるの？】</span></div>
 まず、シュミレータのチュートリアルの前に電力システムについて簡単に説明します。click↓  
-[<img src="/Figures/index-3.jpg" width=100%; style="border: 3px pink solid;">](Tutorials/intro_net.md)
+[<img src="/Figures/index-3.jpg" width=100%; style="border: 3px pink solid;">](abstract)
   
 
 <div style="text-align: center;">
@@ -25,8 +25,8 @@ power_simulatorを制作する背景に使われている数理モデル等は�
 本サイトでは２つのタイプでのチュートリアルを用意しました。  
 どちらを先に読んでいただいても構いません。
   
-[<img src="/Figures/tuto-withText.jpg" width=49.5%; style="border: 3px pink solid;">](Tutorials/Tutorial_withText.md)
-[<img src="/Figures/tuto-newSystem.jpg" width=49.5%; style="border: 3px pink solid;">](Tutorials/Tutorial_newSystem.md)  
+[<img src="/Figures/tuto-withText.jpg" width=49.5%; style="border: 3px pink solid;">](Tutorials/withText.md)
+[<img src="/Figures/tuto-newSystem.jpg" width=49.5%; style="border: 3px pink solid;">](Tutorials/newSystem.md)  
 
 「教科書に沿って学ぶ」ベースのチュートリアル(左側)
 > テキストではじめに紹介されていた3busシステムの制作と解析を目標としています。
@@ -42,7 +42,7 @@ power_simulatorを制作する背景に使われている数理モデル等は�
 > - 前者のチュートリアルを終え、さらに詳しいシュミレータの操作を知りたい方
 
 ### <span style="font-size: 130%; color: black;">Docs</span>
-− [__既存のメソッドやクラスについての情報集__](./Docs/docs.md)  
+− [__既存のメソッドやクラスについての情報集__](Docs/docs)  
 シュミレータ内の関数の中でも重要なものを集めた辞書のようなものです。  
 Tutorial内にDocのリンクが必要に応じてはられているので基本はそちらを見て頂き適宜このページを参照していただければいいと思います。
 
