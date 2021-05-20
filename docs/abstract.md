@@ -65,5 +65,5 @@
 
 <br><br><br>
 
-[電力ネットワークの作成編のページへ](../Tutorials/make_net){ .md-button .left }
-[電力ネットワークの解析編のページへ](../Tutorials/analysis_net){ : .md-button .right }
+[電力ネットワークの作成編のページへ](/Tutorials/make_net){ .md-button .left }
+[電力ネットワークの解析編のページへ](/Tutorials/analysis_net){ : .md-button .right }

@@ -31,15 +31,7 @@ net = network_70bus; %70busモデルの情報をnetに格納する
 
 :material-arrow-right-drop-circle: [線形化したシステムのシュミレーションを実行する。](./step2-2)  
 
----
-<div style="text-align: center;">
-```mermaid
-graph TB
-作成(電力ネットワークの構成編のページへ)
-解析(電力ネットワークの作成編のページへ)
-style 作成 fill:#fff,stroke:#000,stroke-width:1px
-style 解析 fill:#fff,stroke:#000,stroke-width:1px
-click 作成 "http://127.0.0.1:8000/new_Tutorials./make_net/"
-click 解析 "/analysis_net.md"
-```
-</div>
+<br><br><br>
+
+[電力ネットワークの構成編のページへ](/abstract){ .md-button .left }
+[電力ネットワークの作成編のページへ](/Tutorials/make_net){ : .md-button .right }

@@ -51,15 +51,7 @@ net = network_70bus; %70busモデルの情報をnetに格納する場合
 :material-arrow-right-drop-circle: [<span style="font-size: 110%; color: red;"><u>新しい機器を自作しよう</u>。</span>](./step5.md)  
 :material-arrow-right-drop-circle: [<span style="font-size: 110%; color: red;"><u>新しい制御器を自作しよう</u>。</span>](./step6.md)  
 
----
-<div style="text-align: center;">
-```mermaid
-graph TB
-作成(電力ネットワークの構成編のページへ)
-解析(電力ネットワークの解析編のページへ)
-style 作成 fill:#fff,stroke:#000,stroke-width:1px
-style 解析 fill:#fff,stroke:#000,stroke-width:1px
-click 作成 "./make_net.md"
-click 解析 "///new_Tutorials/analysis_net.md"
-```
-</div>
+<br><br><br>
+
+[電力ネットワークの構成編のページへ](/abstract){ .md-button .left }
+[電力ネットワークの解析編のページへ](/Tutorials/analysis_net){ : .md-button .right }

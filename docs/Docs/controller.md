@@ -3,10 +3,10 @@
 []( power_networkのリンクを入れる場所は"TODO_link" を挿入しておく )
 
 ## コントローラについて取り扱っているチュートリアル
-- [「教科書に沿って学ぶ」ベース(withText)](/Docs/Tutorials/withText) の制御器の付加についての節
-- [解析する電力ネットワークを作成する(make_net)](/Docs/Tutorials/make_net)
-- [【第三回】制御器の導入](/Docs/Tutorials/step3)
-- [【第六回】制御器の自作](/Docs/Tutorials/step6)
+- [「教科書に沿って学ぶ」ベース(withText)](/Tutorials/withText) の制御器の付加についての節
+- [解析する電力ネットワークを作成する(make_net)](/Tutorials/make_net)
+- [【第三回】制御器の導入](/Tutorials/step3)
+- [【第六回】制御器の自作](/Tutorials/step6)
 
 ## *controller* クラスの全体像
 

@@ -3,11 +3,11 @@
 []( power_networkのリンクを入れる場所は"TODO_link" を挿入しておく )
 
 ## バスに接続する機器について取り扱っているチュートリアル
-- [電力ネットワークの構成について](/Docs/abstract)
-- [「教科書に沿って学ぶ」ベース(withText)](/Docs/Tutorials/withText)
-- [解析する電力ネットワークを作成する(make_net)](/Docs/Tutorials/make_net)
-- [【第四回】電力系統の自作](/Docs/Tutorials/step4)
-- [【第五回】機器の自作](/Docs/Tutorials/step5)
+- [電力ネットワークの構成について](/abstract)
+- [「教科書に沿って学ぶ」ベース(withText)](/Tutorials/withText)
+- [解析する電力ネットワークを作成する(make_net)](/Tutorials/make_net)
+- [【第四回】電力系統の自作](/Tutorials/step4)
+- [【第五回】機器の自作](/Tutorials/step5)
 
 ## *component* クラスの全体像
 
