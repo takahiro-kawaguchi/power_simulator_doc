@@ -2,7 +2,13 @@
 
 []( power_networkのリンクを入れる場所は"TODO_link" を挿入しておく )
 
-## クラスの全体像
+## コントローラについて取り扱っているチュートリアル
+- [「教科書に沿って学ぶ」ベース(withText)](/Docs/Tutorials/withText) の制御器の付加についての節
+- [解析する電力ネットワークを作成する(make_net)](/Docs/Tutorials/make_net)
+- [【第三回】制御器の導入](/Docs/Tutorials/step3)
+- [【第六回】制御器の自作](/Docs/Tutorials/step6)
+
+## *controller* クラスの全体像
 
 まずはコントローラに関するクラスの全体像を示します。
 
@@ -151,18 +157,83 @@ click controller_retrofit_LQR "https://www.google.com/"
 ブロードキャストコントローラを除く全てのコントローラクラスの基底クラス（ ***controller*** クラスの派生クラス）  
 <font size=5 color="red">(要説明追加)</font>  
 
+コンストラクタ：**`obj = controller_generator(net, area, model, bus_model, X, V, I, U, AVRonly, varargin)`**
+
+- 入力引数 `net`  
+    コントローラを追加する予定のネットワークのインスタンス（ *power_network* クラス）  
+    詳細は[Step1](/Tutorials/step1/)・[Power Network](/Docs/power_network/)を参照のこと．
+- 入力引数 `area`  
+    コントローラを追加するバスの番号（ベクトル）  
+    指定したバスに入力を印加し，出力を観測できる．
+- 入力引数 `model`  
+    環境の状態空間モデル（matlab既存の ***ss*** クラスのインスタンス）  
+    環境とは全体ネットワークから`area`で指定しているバスを除くシステム全体（または一部）のモデルのこと．
+- 入力引数 `bus_model`  
+    環境のモデルが接続しているバスの番号（ベクトル）  
+    すなわち，制御器設計を行うローカルシステムと環境が相互接続しているバスを指定する．  
+    規定値：`area`で指定されているバスの中で`area`外のバスと接続されているもの．
+- 入力引数 `X`  
+    発電機の状態の平衡点（規定値：導入するネットワークにおける平衡点）
+- 入力引数 `V`  
+    電圧の平衡点（規定値：導入するネットワークにおける平衡点）
+- 入力引数 `I`  
+    電流の平衡点（規定値：導入するネットワークにおける平衡点）
+- 入力引数 `U`  
+    入力の平衡点（規定値：導入するネットワークにおける平衡点）
+- 入力引数 `AVRonly`  
+    `area`で指定したバスに接続している機器の中でgenerator_AGCを含むかどうか．含む場合は**true**，含まない場合は**false**（規定値：true）
 
 ### controller_LQR
 <font size=3>([controller_LQR.m]())</font> [](TODO_link)
 
 あるバスに対するLQRの実装（ ***controller_generator*** クラスの派生クラス）  
-rectifierの有無を比較するために使用した．  
-<font size=5 color="red">(要説明追加)</font>  
+rectifierの有無を比較するために使用した．
 
+コンストラクタ：**`obj = controller_LQR(net, area, Q, R, model, bound, varargin)`**
+
+- 入力引数 `net`  
+    コントローラを追加する予定のネットワークのインスタンス（ *power_network* クラス）  
+    詳細は[Step1](/Tutorials/step1/)・[Power Network](/Docs/power_network/)を参照のこと．
+- 入力引数 `area`  
+    コントローラを追加するバスの番号（ベクトル）  
+    指定したバスに入力を印加し，出力を観測できる．
+- 入力引数 `Q`：LQRのQゲイン（行列）
+- 入力引数 `R`：LQRのRゲイン（行列）
+- 入力引数 `model`
+    環境の状態空間モデル（matlab既存の ***ss*** クラスのインスタンス）  
+    環境とは全体ネットワークから`area`で指定しているバスを除くシステム全体（または一部）のモデルのこと．
+- 入力引数 `bound`
+    環境のモデルが接続しているバスの番号（ベクトル）  
+    すなわち，制御器設計を行うローカルシステムと環境が相互接続しているバスを指定する．  
+    規定値：`area`で指定されているバスの中で`area`外のバスと接続されているもの．
 
 ## controller_retrofit_LQR
 <font size=3>([controller_retrofit_LQR.m]())</font> [](TODO_link)
 
-レトロフィットコントローラの実装で，コントローラ設計をLQRで行うもの（ ***controller_genarator*** クラスの派生クラス）  
-<font size=5 color="red">(要説明追加)</font>
+レトロフィットコントローラの実装で，コントローラ設計をLQRで行うもの（ ***controller_genarator*** クラスの派生クラス）
 
+コンストラクタ：**`obj = controller_retrofit_LQR(net, area, Q, R, model, bound, X, V, I, U, varargin)`**
+
+- 入力引数 `net`  
+    コントローラを追加する予定のネットワークのインスタンス（ *power_network* クラス）  
+    詳細は[Step1](/Tutorials/step1/)・[Power Network](/Docs/power_network/)を参照のこと．
+- 入力引数 `area`  
+    コントローラを追加するバスの番号（ベクトル）  
+    指定したバスに入力を印加し，出力を観測できる．
+- 入力引数 `Q`：LQRのQゲイン（行列）
+- 入力引数 `R`：LQRのRゲイン（行列）
+- 入力引数 `model`
+    環境の状態空間モデル（matlab既存の ***ss*** クラスのインスタンス）  
+    環境とは全体ネットワークから`area`で指定しているバスを除くシステム全体（または一部）のモデルのこと．
+- 入力引数 `bound`
+    環境のモデルが接続しているバスの番号（ベクトル）  
+    すなわち，制御器設計を行うローカルシステムと環境が相互接続しているバスを指定する．  
+    規定値：`area`で指定されているバスの中で`area`外のバスと接続されているもの．
+- 入力引数 `X`  
+    発電機の状態の平衡点（規定値：導入するネットワークにおける平衡点）
+- 入力引数 `V`  
+    電圧の平衡点（規定値：導入するネットワークにおける平衡点）
+- 入力引数 `I`  
+    電流の平衡点（規定値：導入するネットワークにおける平衡点）
+- 入力引数 `U`  
+    入力の平衡点（規定値：導入するネットワークにおける平衡点）

@@ -2,7 +2,16 @@
 
 []( power_networkのリンクを入れる場所は"TODO_link" を挿入しておく )
 
-## クラスの全体像
+## 電力系統モデルについて取り扱っているチュートリアル
+- [電力ネットワークの構成について](/Docs/abstract)
+- [「教科書に沿って学ぶ」ベース(withText)](/Docs/Tutorials/withText)
+- [解析する電力ネットワークを作成する(make_net)](/Docs/Tutorials/make_net)
+- [電力ネットワークの解析(analysis_net)](/Docs/Tutorials/analysis_net)
+- [【第一回】既存系統モデルのシミュレーション](/Docs/Tutorials/step1)
+- [シミュレーション結果のデータの読み方](/Docs/Tutorials/step1-2)
+- [【第二回】線形化したシステムを使う](/Docs/Tutorials/step2)
+
+## *power_network* クラスの全体像
 
 まずは電力系統モデルに関するクラスの全体像を示します。
 
@@ -14,13 +23,13 @@ base{power_simulator}---power_network
 
 power_network---network_68bus
 power_network---network_70bus
-power_network---network_9bus
+power_network---network_3bus
 
 click base "https://www.google.com/"
 click power_network "https://www.google.com/"
 click network_68bus "https://www.google.com/"
 click network_70bus "https://www.google.com/"
-click network_9bus "https://www.google.com/"
+click network_3bus "https://www.google.com/"
 ```
 
 ## power_network
@@ -135,9 +144,8 @@ click network_9bus "https://www.google.com/"
 ここで，ネットワーク定義の際に `net=network_70bus(load_type)`のように定義するが，load_typeには1~2を代入する．負荷には，1の場合は[load_const_impedance](/Docs/component/#load_const_impedance)，2の場合は[load_const_power](/Docs/component/#load_const_power)を導入する．引数が省略されている場合は[load_const_impedance](/Docs/component/#load_const_impedance)を負荷として導入する．  
 
 
-## network_9bus
-<font size=3>([network_68bus.m]())</font> [](TODO_link)
+<font size=5 color="red">(ひとまず削除)</font>  
 
-発電機数は3，負荷数は3，non-unit数は3の電力ネットワークの実装（ ***power_network*** クラスの派生クラス）  
-発電機として[generatorAGC](/Docs/component/#generator_agc)を，負荷として[load_varying_impedance](/Docs/component/#load_varying_impedance) を導入したネットワークである．  
-<font size=5 color="red">(要説明追加)</font>  
+## network_3bus
+
+<font size=5 color="red">(追加予定)</font>

@@ -2,7 +2,14 @@
 
 []( power_networkのリンクを入れる場所は"TODO_link" を挿入しておく )
 
-## クラスの全体像
+## バスに接続する機器について取り扱っているチュートリアル
+- [電力ネットワークの構成について](/Docs/abstract)
+- [「教科書に沿って学ぶ」ベース(withText)](/Docs/Tutorials/withText)
+- [解析する電力ネットワークを作成する(make_net)](/Docs/Tutorials/make_net)
+- [【第四回】電力系統の自作](/Docs/Tutorials/step4)
+- [【第五回】機器の自作](/Docs/Tutorials/step5)
+
+## *component* クラスの全体像
 
 まずは機器に関するクラスの全体像を示します。
 
@@ -75,10 +82,10 @@ click wind_farm "https://www.google.com"
 <font size=3>([solar_farm.m]())</font> [](TODO_link)
 
 風力発電機の実装（ ***component*** クラスの派生クラス）  
-<font size=5 color="red">(削除 or 要説明追加)</font>
+<font size=5 color="red">(ひとまず削除)</font>
 
 ## wind_farm
 <font size=3>([wind_farm.m]())</font> [](TODO_link)
 
 風力発電機の実装（ ***component*** クラスの派生クラス）  
-<font size=5 color="red">(削除 or 要説明追加)</font>
+<font size=5 color="red">(ひとまず削除)</font>
