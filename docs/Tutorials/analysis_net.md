@@ -22,11 +22,13 @@ net = network_70bus; %70busモデルの情報をnetに格納する
 
 ## <span style="font-size: 100%; color: black;">【定義した電力モデルのシュミレーション】</span>
 
-:material-arrow-right-drop-circle: [シュミレーションの実行方法とオプションの設定方法。](./step1.md)
-:material-arrow-right-drop-circle: [シュミレーションの結果データの構造と見方。](./step1-2.md)
+:material-arrow-right-drop-circle: [シュミレーションの実行方法とオプションの設定方法。](./step1.md)  
+
+:material-arrow-right-drop-circle: [シュミレーションの結果データの構造と見方。](./step1-2.md)  
 
 ## <span style="font-size: 100%; color: black;">【定義した電力モデルの線形化】</span>
-:material-arrow-right-drop-circle: [対象の電力システムを数理モデルとして線形化し状態空間表現を得る。](./step2.md)
+:material-arrow-right-drop-circle: [対象の電力システムを数理モデルとして線形化し状態空間表現を得る。](./step2.md)  
+
 :material-arrow-right-drop-circle: [線形化したシステムのシュミレーションを実行する。](./step2-2)  
 
 ---
