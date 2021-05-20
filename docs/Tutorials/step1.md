@@ -23,12 +23,6 @@
 
 
 ## 解説
-### ネットワークの定義
-
-今回は68busのシステムを使うので、本ページで扱うサンプルコード内の変数`net`は以下の様に定義しておきました。
-```
-net = network_68bus();
-```
 
 ### シミュレーションの実行
 
@@ -37,18 +31,20 @@ net = network_68bus();
 out = net.simulate(t, u, idx_u, option);
 ```
 
+- (クラス)インスタンス`net`  
+    *power_network*クラスのインスタンスを使用する．
 - 入力変数 `t`  
-    シミュレーション時間を設定（例えば `t=[0 20]` で0~20秒に設定できる）
+    シミュレーション時間（例えば `t=[0 20]` で0~20秒に設定できる）
 - 入力変数 `u`  
     バスへの入力
 - 入力変数 `idx_u`  
-    入力するバスの指定
+    入力を印加するバスの番号
 - 入力引数 `option`  
-    シミュレーションのオプションを設定する  
+    シミュレーションのオプション  
     - x_init：  
         状態の初期値（規定値: x_ss）  
         バスごとのセル配列あるいは，すべてをスタックしたベクトル．  
-        out.Xを入れると，outの最後の状態からスタートする
+        行列（時系列データを想定）で指定すると，最終行の各列の値が抽出される．
     - fault：  
         地絡の条件．  
         {[tstart, tend], idx_fault}というセル配列のセル配列．
@@ -57,13 +53,6 @@ out = net.simulate(t, u, idx_u, option);
     - t：時刻
     - X：バスの状態（バスごとのセル配列）
     - V：バスの電圧（バスごとのセル配列）
-    - Xk：レトロフィットコントローラの状態（コントローラごとのセル配列）
-    - Xk_global：グローバルコントローラの状態（コントローラごとのセル配列）
-    - U：レトロフィットコントローラが生成した入力（コントローラごとのセル配列）
-    - U_global：グローバルコントローラが生成した入力（コントローラごとのセル配列）
-    - signals：コントローラが定義した信号を格納した構造体（コントローラごとのセル配列）
-    - sol：ode15sが返す解sol
-
 
 ## 例1：初期値応答
 
@@ -138,9 +127,8 @@ out = net.simulate(t, u, 18);
 このコードではバス18の負荷を以下のグラフのような変化率で変化させたときのシュミレーションを行っていることになります。  
 
 <div style="text-align: center;">
-<img src="/Figures/tutorial1-1-3.jpg" width=60%>
+<a href="/Figures/tutorial1-1-3.jpg"  target="_brank"><img src="/Figures/tutorial1-1-3.jpg" width=60%></a>
 </div>
-  
 
 ## 例4：初期値・外乱・入出力応答（組み合わせ）
 
@@ -185,11 +173,12 @@ end
 <div style="text-align: center;">
 <a href="/Figures/tutorial1-1-1.jpg" target="_blank"><img src="/Figures/tutorial1-1-1.jpg" width="49.5%"></a>
 <a href="/Figures/tutorial1-1-2.jpg" target="_blank"><img src="/Figures/tutorial1-1-2.jpg" width="49.5%"></a>
-<div>
+</div>
+
 
 - 例2の結果として，発電機1と2の内部状態の外乱応答のグラフ
 
 <div style="text-align: center;">
 <a href="/Figures/tutorial1-2-1.jpg" target="_blank"><img src="/Figures/tutorial1-2-1.jpg" width="49.5%"></a>
 <a href="/Figures/tutorial1-2-2.jpg" target="_blank"><img src="/Figures/tutorial1-2-2.jpg" width="49.5%"></a>
-<div style="text-align: center;">
+</div>

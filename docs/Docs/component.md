@@ -2,7 +2,7 @@
 
 []( power_networkのリンクを入れる場所は"TODO_link" を挿入しておく )
 
-## クラスの全体像(再掲)
+## クラスの全体像
 
 まずは機器に関するクラスの全体像を示します。
 
@@ -36,52 +36,49 @@ click wind_farm "https://www.google.com"
 ```
 
 ## component
-
-[component.m]()
+<font size=3>([component.m]())</font> [](TODO_link)
 
 全てのComponentクラスの基底クラス．  
 
-## component_empty
 
-[component_empty.m]()
+## component_empty
+<font size=3>([component_empty.m]())</font> [](TODO_link)
+
+
 
 
 ## generator_AGC
+<font size=3>([generator_AGC.m]())</font> [](TODO_link)
 
-[gennerator_AGC.m]()
 
-
-### generator
-
-[generator.m]()
+## generator
+<font size=3> ([generator.m]())</font> [](TODO_link)
 
 
 ## load_varying_impedance
+<font size=3>([load_varying_impedance.m]())</font> [](TODO_link)
 
-[load_varying_impedance.m]()
 
-
-### load_const_impedance
-
-[load_const_impedance.m]()
+## load_const_impedance
+<font size=3>([load_const_impedance.m]())</font> [](TODO_link)
 
 
 ## load_varying_power
+<font size=3>([load_varying_power.m]())</font> [](TODO_link)
 
-[load_varying_power.m]()
 
-
-### load_const_power
-
-[load_const_power.m]()
+## load_const_power
+<font size=3>([load_const_power.m]())</font> [](TODO_link)
 
 
 ## solar_farm
+<font size=3>([solar_farm.m]())</font> [](TODO_link)
 
-[solar_farm.m]()
-
+風力発電機の実装（ ***component*** クラスの派生クラス）  
+<font size=5 color="red">(削除 or 要説明追加)</font>
 
 ## wind_farm
+<font size=3>([wind_farm.m]())</font> [](TODO_link)
 
-[wind_farm.m]()
-
+風力発電機の実装（ ***component*** クラスの派生クラス）  
+<font size=5 color="red">(削除 or 要説明追加)</font>

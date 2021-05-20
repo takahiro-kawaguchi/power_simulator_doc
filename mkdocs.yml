@@ -22,6 +22,7 @@ nav:
             - make_net: Tutorials/make_net.md
             - analysis_net: Tutorials/analysis_net.md
             - step1: Tutorials/step1.md
+            - step1-2: Tutorials/step1-2.md
             - step2: Tutorials/step2.md
             - step3: Tutorials/step3.md
             - step4: Tutorials/step4.md

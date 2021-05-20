@@ -1,8 +1,8 @@
-# （準備中）電力系統モデルについて
+# 電力系統モデルについて
 
 []( power_networkのリンクを入れる場所は"TODO_link" を挿入しておく )
 
-## クラスの全体像(再掲)
+## クラスの全体像
 
 まずは電力系統モデルに関するクラスの全体像を示します。
 
@@ -24,8 +24,7 @@ click network_9bus "https://www.google.com/"
 ```
 
 ## power_network
-
-[@power_network/power_network.m]()
+<font size=3>([@power_network/power_network.m]())</font> [](TODO_link)
 
 全ての電力系統モデルの基底クラス．
 
@@ -122,26 +121,23 @@ click network_9bus "https://www.google.com/"
 
 
 ## network_68bus
+<font size=3>([network_68bus.m]())</font> [](TODO_link)
 
-[network_68bus.m]()
-
-[**IEEE 68bus 16machine システム*](https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=8667520&tag=1) の実装．  
+[**IEEE 68bus 16machine システム**](https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=8667520&tag=1) の実装（ ***power_network*** クラスの派生クラス）  
 発電機として[generatorAGC](/Docs/component/#generator_agc)を，負荷として[load_varying_impedance](/Docs/component/#load_varying_impedance) を導入したネットワークである．  
 
 
 ## network_70bus
+<font size=3>([network_68bus.m]())</font> [](TODO_link)
 
-[network_70bus.m]()
-
-[**Dynamic Modeling, Stability, and Control of Power Systems With Distributed Energy Resources: Handling Faults Using Two Control Methods in Tandem**](https://ieeexplore.ieee.org/document/8667520) における，IEEE 68bus 16machineシステムへ solar, wind farm を1つづつ導入した電力ネットワークの実装．  
+[**Dynamic Modeling, Stability, and Control of Power Systems With Distributed Energy Resources: Handling Faults Using Two Control Methods in Tandem**](https://ieeexplore.ieee.org/document/8667520) における，IEEE 68bus 16machineシステムへ solar, wind farm を1つづつ導入した電力ネットワークの実装（ ***power_network*** クラスの派生クラス）  
 発電機として[generator](/Docs/component/#generator)を，負荷として[load_const_impedance](/Docs/component/#load_const_impedance), [load_const_power](/Docs/component/#load_const_power) を導入したネットワークである．  
 ここで，ネットワーク定義の際に `net=network_70bus(load_type)`のように定義するが，load_typeには1~2を代入する．負荷には，1の場合は[load_const_impedance](/Docs/component/#load_const_impedance)，2の場合は[load_const_power](/Docs/component/#load_const_power)を導入する．引数が省略されている場合は[load_const_impedance](/Docs/component/#load_const_impedance)を負荷として導入する．  
 
 
 ## network_9bus
+<font size=3>([network_68bus.m]())</font> [](TODO_link)
 
-[network_9bus.m]()
-
-発電機数は3，負荷数は3，non-unit数は3．  
+発電機数は3，負荷数は3，non-unit数は3の電力ネットワークの実装（ ***power_network*** クラスの派生クラス）  
 発電機として[generatorAGC](/Docs/component/#generator_agc)を，負荷として[load_varying_impedance](/Docs/component/#load_varying_impedance) を導入したネットワークである．  
 <font size=5 color="red">(要説明追加)</font>  

@@ -25,9 +25,7 @@ click bus_PV "https://www.google.com/"
 click bus_slack "https://www.google.com/"
 ```
 
-## bus
-
-[bus.m]()
+## bus <font size=3>([bus.m]())</font> [](TODO_link)
 
 全てのBusクラスの基底クラス．
 
@@ -45,21 +43,19 @@ click bus_slack "https://www.google.com/"
         例えば、load, controller, generator など
 
 
-## bus_non_unit
+## bus_non_unit <font size=3>([bus_non_unit.m]())</font> [](TODO_link)
 
-[bus_non_unit.m]()
+[bus_non_unit.m]() [](TODO_link)
 
-non-unit Busの実装．
+non-unit Busの実装（ ***bus*** クラスの派生クラス）
 
 ### メンバ関数
 - **`obj = bus_non_unit(shunt)`**  
     - 入力引数 `shunt`：シャント抵抗値（複素数値）
 
-## bus_PQ
+## bus_PQ <font size=3>([bus_PQ.m]())</font> [](TODO_link)
 
-[bus_PQ.m]()
-
-PQ Busの実装．
+PQ Busの実装（ ***bus*** クラスの派生クラス）
 
 ### メンバ変数
 - P：バスの有効電力
@@ -72,11 +68,9 @@ PQ Busの実装．
     - 入力引数 `Q`：無効電力の指定
     - 入力引数 `shunt`：シャント抵抗値（複素数値）
 
-## bus_PV
+## bus_PV <font size=3>([bus_PV.m]())</font> [](TODO_link)
 
-[bus_PV.m]()
-
-PV Busの実装．
+PV Busの実装（ ***bus*** クラスの派生クラス）
 
 ### メンバ変数
 - Vabs：バスの電圧の絶対値
@@ -89,11 +83,9 @@ PV Busの実装．
     - 入力引数 `P`：有効電力の指定
     - 入力引数 `shunt`：シャント抵抗値（複素数値）
 
-## bus_slack
+## bus_slack <font size=3>([bus_slack.m]())</font> [](TODO_link)
 
-[bus_slack.m]()
-
-slack (swing) Busの実装．
+slack (swing) Busの実装（ ***bus*** クラスの派生クラス）
 
 ### メンバ変数
 - Vabs：バスの電圧の絶対値

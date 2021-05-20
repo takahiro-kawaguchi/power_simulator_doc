@@ -18,26 +18,17 @@ cg = controller_broadcast_PI_AGC_normal(net, y_idx, u_idx, Kp, Ki);
 ```
 
 - 入力引数`net`  
-    作成したネットワークを設定．`net`は*power_network*クラスのインスタンス．
+    コントローラを追加する予定のネットワークのインスタンス（ *power_network* クラス）  
     詳細は[Step1](/Tutorials/step1/)・[Power Network](/Docs/power_network/)を参照のこと．
 - 入力引数`y_idx`  
-    出力を観測するバスを設定．
+    出力を観測するバスの番号．
 - 入力引数`u_idx`  
-    入力を印加するバスを設定．
+    入力を印加するバスの番号．
 - 入力引数`Kp` `Ki`  
     コントローラのPIゲイン．
 - 出力引数`cg`  
-    コントローラの状態空間モデルなどの情報が含まれる．
-    - idx：入力を引火するバス（入力引数の`u_idx`と同じ）
-    - net：コントローラを付加するネットワーク（入力引数の`net`と同じ）
-    - A：コントローラのA行列
-    - BeX：コントローラのB行列（観測するバスの状態をスタックしたベクトルに関する）
-    - BeV：コントローラのB行列（全てのバスの電圧をスタックしたベクトルに関する）
-    - Bu：コントローラのB行列（グローバルコントローラが生成する全てのバスへの入力信号をスタックしたベクトルに関する）
-    - C：コントローラのC行列
-    - DeX：コントローラのD行列（観測するバスの状態ベクトルに関する）
-    - DeV：コントローラのD行列（全てのバスの電圧をスタックしたベクトルに関する）
-    - Du：コントローラのD行列（グローバルコントローラが生成する全てのバスへの入力信号をスタックしたベクトルに関する）
+    コントローラの状態空間モデルなどの情報が含まれるインスタンス（*controller*クラス）  
+    詳細は[controller_broadcast_PI_AGC_normal](/Docs/controller/#controller_broadcast_pi_agc_normal)を参照のこと
 
 power_simulatorではグローバルコントローラがすでにいくつか定義されている．  
 詳細は[Controller](/Docs/controller/)を参照のこと．  
@@ -48,16 +39,17 @@ power_simulatorではグローバルコントローラがすでにいくつか�
 
 コントローラの作成は次のように行う．
 ```
-c = controller_retrofit_generator_nonlinear_AGC_LQR(net, idx, Q, R, model_uv, vbar, ubar, out, varargin);
+c = controller_retrofit_LQR(net, idx, Q, R, model_uv, vbar, ubar, out, varargin);
 ```
 
 - 入力引数`net`  
-    作成したネットワークを設定．`net`は*power_network*クラスのインスタンス．
-    詳細は[Step1](/Tutorials/step1/)・[Power Network](/Docs/power_network/)を参照のこと．
+    コントローラを追加する予定のネットワークのインスタンス（ *power_network* クラス）  
+    詳細は[Step1](/Tutorials/step1/)・[Power Network](/Docs/power_network/)を参照のこ
 - 入力引数`idx`  
-    出力を観測するバスを設定．
-- 第3入力引数以降は今回は使用しないので省略．[Controller](/Docs/controller/)を参照のこと．
+    出力を観測するバスの番号．
+- 第3入力引数以降は今回は使用しないので省略．[controller_retrofit_LQR](/Docs/controller/#controller_retrofit_lqr)を参照のこと．
 - 出力引数`c`  
+    コントローラの状態空間モデルなどの情報が含まれるインスタンス（*controller*クラス）
     - K_inter: 内部コントローラのK行列
     - sys_design: サブシステムの状態空間モデル
     - sys_fb: 内部コントローラとsys_designからなるフィードバックシステムの状態空間モデル
@@ -65,23 +57,25 @@ c = controller_retrofit_generator_nonlinear_AGC_LQR(net, idx, Q, R, model_uv, vb
 
 power_simulator ではコントローラがすでにいくつか定義されている．  
 詳細は[Controller](/Docs/controller/)を参照のこと．  
-本チュートリアルでは，[controller_retrofit_generator_nonlinear_AGC_LQR](/Docs/controller/#controller_retrofit_generator_nonlinear_agc_lqr)を使用した．  
-[controller_retrofit_generator_nonlinear_AGC_LQR](/Docs/controller/#controller_retrofit_generator_nonlinear_agc_lqr)はレトロフィットコントローラの実装で，generatorの非線形性を考慮したもののうち，コントローラ設計をLQRで行うものである．
+本チュートリアルでは，[controller_retrofit_LQR](/Docs/controller/#controller_retrofit_lqr)を使用した．  
+[controller_retrofit_LQR](/Docs/controller/#controller_retrofit_lqr)はレトロフィットコントローラの実装で，コントローラ設計をLQRで行うものである．
 
 
-### 電力系統モデルに対するコントローラの付加
+### 電力系統モデルに対するコントローラの追加
 
-システムに対するコントローラの付加について説明する．
+システムに対するコントローラの追加について説明する．
 
-#### グローバルコントローラの付加
+#### グローバルコントローラの追加
 
 グローバルコントローラの付加は次のように行う
 ```
 net.add_controller_global(controller);
 ```
 
+- (クラス)インスタンス `net`  
+    *power_network* クラスのインスタンスを使用する
 - 入力引数`controller`  
-    作成したグローバルコントローラを設定．`controller`は*controller*クラスのインスタンス．  
+    作成したグローバルコントローラのインスタンス（ *controller* クラス）  
     一つのバスに複数のグローバルコントローラを付加することができる．
 
 #### コントローラの追加
@@ -91,34 +85,40 @@ net.add_controller_global(controller);
 net.add_controller(controller);
 ```
 
+- (クラス)インスタンス `net`  
+    *power_network* クラスのインスタンスを使用する
 - 入力引数`controller`  
-    作成したコントローラを設定．`controller`は*controller*クラスのインスタンス．  
+    作成したコントローラのインスタンス（ *controller* クラス）  
     一つのバスに複数のコントローラを付加した際には，最後に付加したコントローラが使用される．
 
 ### コントローラの除去
 
 システムに付加されているコントローラの除去について説明する．
 
-#### グローバルコントローラの付加
+#### グローバルコントローラの除去
 
 グローバルコントローラの除去は次のように行う
 ```
 net.remove_controller_global(idx);
 ```
 
+- (クラス)インスタンス `net`  
+    *power_network* クラスのインスタンスを使用する
 - 入力引数`idx`  
-    付加されているグローバルコントローラを除去．`idx`で除去するグローバルコントローラを指定する．  
+    除去するグローバルコントローラが追加されているバスの番号  
     `idx`をベクトル形式で指定すると複数のグローバルコントローラを除去できる．
 
-#### コントローラの追加
+#### コントローラの除去
 
-コントローラの付加は次のように行う．
+コントローラの除去は次のように行う．
 ```
 net.remove_controller(idx);
 ```
 
+- (クラス)インスタンス `net`  
+    *power_network* クラスのインスタンスを使用する
 - 入力引数`idx`  
-    付加されているコントローラを除去．`idx`で除去するコントローラを指定する．  
+    除去するコントローラが追加されているバスの番号  
     `idx`をベクトル形式で指定すると複数のコントローラを除去できる．
 
 
@@ -130,9 +130,11 @@ sys = net.get_sys(with_controller);
 ```
 
 - 入力引数`with_controller`  
-    取得するシステムに制御器を含めるかどうかの設定．  
-    *false*：コントローラなし，*true*：コントローラあり（省略した場合は*false*）
-- 出力引数`sys`
+    取得するシステムに制御器を含めるかどうか．  
+    *false*：コントローラなし，*true*：コントローラあり（省略した場合は*false*）  
+    今回はコントローラを含めたモデルを取得したいので、**true** で設定．
+- 出力引数`sys`  
+    システムの状態空間モデル（matlab既存の ***ss*** クラスのインスタンス）  
     詳細は[Step2](/Tutorials/step2/)・[Power Network](/Docs/power_network/)を参照のこと．
 
 
