@@ -18,7 +18,7 @@ power_simulatorの全体構成については [**Abstract**](/abstract)を、チ
 
 <br><br>
 
-### <span style="font-size: 130%; color: black;">:material-arrow-right-bold-circle:**[「シミュレータを動かす」ベース](/Tutorials/newSystem)**</span>
+### <span style="font-size: 130%; color: black;">:material-arrow-right-bold-circle:**[「シミュレータを動かす」ベース](/Tutorials/withSimulation)**</span>
 
 - 電力システムの「制作part」,「解析part」に分け各機能の操作方法を解説するチュートリアルです。
     - 前者のチュートリアルより、少し深く踏み込んだ内容まで示しています。

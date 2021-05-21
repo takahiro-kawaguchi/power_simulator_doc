@@ -17,7 +17,7 @@ nav:
     - Tutorials:
         - "": Tutorials/tutorials.md
         - withText: Tutorials/withText.md
-        - newSystem: Tutorials/newSystem.md
+        - withSimulation: Tutorials/withSimulation.md
         - Contents:
             - make_net: Tutorials/make_net.md
             - analysis_net: Tutorials/analysis_net.md

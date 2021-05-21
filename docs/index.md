@@ -35,7 +35,7 @@ power_simulatorを制作する背景に使われている数理モデル等は�
 どちらを先に読んでいただいても構いません。(__イラストをclick↓__)
 
 [<img src="/Figures/tuto-withText.jpg" width=49.5%; style="border: 3px pink solid;">](/Tutorials/withText)
-[<img src="/Figures/tuto-newSystem.jpg" width=49.5%; style="border: 3px pink solid;">](/Tutorials/newSystem)
+[<img src="/Figures/tuto-newSystem.jpg" width=49.5%; style="border: 3px pink solid;">](/Tutorials/withSimulation)
 
 「教科書に沿って学ぶ」ベースのチュートリアル(左側)
 > テキストではじめに紹介されていた3busシステムの制作と解析を目標とする、定義してから解析するまでの流れが１本のストーリーとなるような構成となっています。

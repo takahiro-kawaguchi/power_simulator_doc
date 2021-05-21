@@ -31,7 +31,8 @@ click bus_PV "https://www.google.com/"
 click bus_slack "https://www.google.com/"
 ```
 
-## **bus** <font size=3>([bus.m]())</font> [](TODO_link)
+## **bus**
+<font size=3>([bus.m]())</font> [](TODO_link)
 
 全てのBusクラスの基底クラス．
 
@@ -49,7 +50,8 @@ click bus_slack "https://www.google.com/"
         例えば、load, controller, generator など
 
 
-## **bus_non_unit** <font size=3>([bus_non_unit.m]())</font> [](TODO_link)
+## **bus_non_unit**
+<font size=3>([bus_non_unit.m]())</font> [](TODO_link)
 
 [bus_non_unit.m]() [](TODO_link)
 
@@ -59,7 +61,8 @@ non-unit Busの実装（ ***bus*** クラスの派生クラス）
 - **`obj = bus_non_unit(shunt)`**  
     - 入力引数 `shunt`：シャント抵抗値（複素数値）
 
-## **bus_PQ** <font size=3>([bus_PQ.m]())</font> [](TODO_link)
+## **bus_PQ**
+<font size=3>([bus_PQ.m]())</font> [](TODO_link)
 
 PQ Busの実装（ ***bus*** クラスの派生クラス）
 
@@ -74,7 +77,8 @@ PQ Busの実装（ ***bus*** クラスの派生クラス）
     - 入力引数 `Q`：無効電力の指定
     - 入力引数 `shunt`：シャント抵抗値（複素数値）
 
-## **bus_PV** <font size=3>([bus_PV.m]())</font> [](TODO_link)
+## **bus_PV**
+<font size=3>([bus_PV.m]())</font> [](TODO_link)
 
 PV Busの実装（ ***bus*** クラスの派生クラス）
 
