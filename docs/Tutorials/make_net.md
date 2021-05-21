@@ -33,8 +33,8 @@ net = network_70bus; %70busモデルの情報をnetに格納する場合
   
 新しく設計した電力システムを定義する場合は、バスやブランチ、発電機、制御器などの接続関係やパラメータをそれぞれ代入していくことで定義していくことになり、実際に
 
-- <u> __<span style="font-size: 90%; color: black;">「参考書の流れに沿って進めていくタイプのTutorial」</span>__</u> [[Link]](./Tutorial_withText)  
-- <u>__<span style="font-size: 90%; color: black;">下の</span><span style="font-size: 90%; color: blue;">[基礎編]</span><span style="font-size: 90%; color: black;">の「パラメータを自分で設定してみよう」の章</span>__</u> [[Link]](./step4.md)  
+- <u> __<span style="font-size: 90%; color: black;">「参考書の流れに沿って進めていくタイプのTutorial」</span>__</u> [[Link]](/Tutorials/withText)  
+- <u>__<span style="font-size: 90%; color: black;">下の</span><span style="font-size: 90%; color: blue;">[基礎編]</span><span style="font-size: 90%; color: black;">の「パラメータを自分で設定してみよう」の章</span>__</u> [[Link]](/Tutorials/step4)  
 
 などの解説では、そのような工程を行っています。    
 
@@ -43,13 +43,13 @@ net = network_70bus; %70busモデルの情報をnetに格納する場合
 **それでは以下に新しい電力システムの定義やコントローラの付加をし、変数`net`を定義していく方法を難易度別に解説していきます。。**
 
 ## <span style="font-size: 100%; color: blue;">【基礎編】</span>
-:material-arrow-right-drop-circle: [<span style="font-size: 110%; color: blue;"><u>既存のコントローラをネットワークに付加しよう</u>。</span>](./step3.md)  
-:material-arrow-right-drop-circle: [<span style="font-size: 110%; color: blue;"><u>既存のバスやコンポーネントのパラメータを自分で設定してみよう</u>。</span>](./step4.md)  
+:material-arrow-right-drop-circle: [<span style="font-size: 110%; color: blue;"><u>既存のコントローラをネットワークに付加しよう</u>。</span>](/Tutorials/step3)  
+:material-arrow-right-drop-circle: [<span style="font-size: 110%; color: blue;"><u>既存のバスやコンポーネントのパラメータを自分で設定してみよう</u>。</span>](/Tutorials/step4)  
 
 ## <span style="font-size: 100%; color: red;">【応用編】</span>
 ここまでは既存の関数ファイルを用いてパラメータをセット設定し電力システムを定義する方法などを解説してきましたが、ここでは新しい機器や制御機を定義します。すなわち新たな機器や制御器を定義する`component.m`や`controller.m`の子クラスにあたるm.ファイルを作成する必要があるということです。  
-:material-arrow-right-drop-circle: [<span style="font-size: 110%; color: red;"><u>新しい機器を自作しよう</u>。</span>](./step5.md)  
-:material-arrow-right-drop-circle: [<span style="font-size: 110%; color: red;"><u>新しい制御器を自作しよう</u>。</span>](./step6.md)  
+:material-arrow-right-drop-circle: [<span style="font-size: 110%; color: red;"><u>新しい機器を自作しよう</u>。</span>](/Tutorials/step5)  
+:material-arrow-right-drop-circle: [<span style="font-size: 110%; color: red;"><u>新しい制御器を自作しよう</u>。</span>](/Tutorials/step6)  
 
 <br><br><br>
 

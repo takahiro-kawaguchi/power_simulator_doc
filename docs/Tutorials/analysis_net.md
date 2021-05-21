@@ -10,7 +10,7 @@
 <span style="font-size: 125%; color: black;">__本章を始めるにあたって用意するもの：`電力ネットワークの情報を格納した変数net`__</span>  
   
 <br>
-まだ変数`net`を定義していなくて、取り敢えず解析をしてみたいという方は「電力ネットワークの作成編」の【既存のモデルを使う】の章で書かれているインスタンスを用いる方法が良いかと思います。詳しくは[doc](../Docs/docs.md)のページも参考にしてください。  
+まだ変数`net`を定義していなくて、取り敢えず解析をしてみたいという方は「電力ネットワークの作成編」の【既存のモデルを使う】の章で書かれているインスタンスを用いる方法が良いかと思います。詳しくは[doc](/Docs/docs)のページも参考にしてください。  
 
 ```matlab
 %サンプルコード
@@ -22,14 +22,14 @@ net = network_70bus; %70busモデルの情報をnetに格納する
 
 ## <span style="font-size: 100%; color: black;">【定義した電力モデルのシュミレーション】</span>
 
-:material-arrow-right-drop-circle: [シュミレーションの実行方法とオプションの設定方法。](./step1.md)  
+:material-arrow-right-drop-circle: [シュミレーションの実行方法とオプションの設定方法。](/Tutorials/step1)  
 
-:material-arrow-right-drop-circle: [シュミレーションの結果データの構造と見方。](./step1-2.md)  
+:material-arrow-right-drop-circle: [シュミレーションの結果データの構造と見方。](/Tutorials/step1-2)  
 
 ## <span style="font-size: 100%; color: black;">【定義した電力モデルの線形化】</span>
-:material-arrow-right-drop-circle: [対象の電力システムを数理モデルとして線形化し状態空間表現を得る。](./step2.md)  
+:material-arrow-right-drop-circle: [対象の電力システムを数理モデルとして線形化し状態空間表現を得る。](/Tutorials/step2)  
 
-:material-arrow-right-drop-circle: [線形化したシステムのシュミレーションを実行する。](./step2-2)  
+:material-arrow-right-drop-circle: [線形化したシステムのシュミレーションを実行する。](/Tutorials/step2-2)  
 
 <br><br><br>
 

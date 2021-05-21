@@ -19,8 +19,8 @@ graph LR
 
 <div style="text-align: center;">
 <span style="font-size: 180%; color: black;">【電力システムを作成/定義する click↓】</span></div>
-[<img src="/Figures/index-1.jpg" width=100%; style="border: 3px pink solid;">](./make_net.md)
+[<img src="/Figures/index-1.jpg" width=100%; style="border: 3px pink solid;">](/Tutorials/make_net.md)
 
 <div style="text-align: center;">
 <span style="font-size: 180%; color: black;">【作成した電力システムを解析する click↓】</span></div>
-[<img src="/Figures/index-2.jpg" width=100%; style="border: 3px pink solid;">](./analysis_net.md)
+[<img src="/Figures/index-2.jpg" width=100%; style="border: 3px pink solid;">](/Tutorials/analysis_net.md)

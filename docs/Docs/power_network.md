@@ -32,7 +32,7 @@ click network_70bus "https://www.google.com/"
 click network_3bus "https://www.google.com/"
 ```
 
-## power_network
+## **power_network**
 <font size=3>([@power_network/power_network.m]())</font> [](TODO_link)
 
 全ての電力系統モデルの基底クラス．
@@ -129,14 +129,14 @@ click network_3bus "https://www.google.com/"
         <font size=5 color=red>(モデルについての説明を追加する)</font>
 
 
-## network_68bus
+## **network_68bus**
 <font size=3>([network_68bus.m]())</font> [](TODO_link)
 
-[**IEEE 68bus 16machine システム**](https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=8667520&tag=1) の実装（ ***power_network*** クラスの派生クラス）  
+**IEEE 68bus 16machine システム**（[引用元](https://www.springer.com/gp/book/9780387259499)）の実装（ ***power_network*** クラスの派生クラス）  
 発電機として[generatorAGC](/Docs/component/#generator_agc)を，負荷として[load_varying_impedance](/Docs/component/#load_varying_impedance) を導入したネットワークである．  
 
 
-## network_70bus
+## **network_70bus**
 <font size=3>([network_68bus.m]())</font> [](TODO_link)
 
 [**Dynamic Modeling, Stability, and Control of Power Systems With Distributed Energy Resources: Handling Faults Using Two Control Methods in Tandem**](https://ieeexplore.ieee.org/document/8667520) における，IEEE 68bus 16machineシステムへ solar, wind farm を1つづつ導入した電力ネットワークの実装（ ***power_network*** クラスの派生クラス）  
@@ -146,6 +146,6 @@ click network_3bus "https://www.google.com/"
 
 <font size=5 color="red">(ひとまず削除)</font>  
 
-## network_3bus
+## **network_3bus** <font size=3>([network_3bus.m]())</font> [](TODO_link)
 
 <font size=5 color="red">(追加予定)</font>
