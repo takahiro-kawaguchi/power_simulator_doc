@@ -3,10 +3,10 @@
 []( power_networkのリンクを入れる場所は"TODO_link" を挿入しておく )
 
 ## コントローラについて取り扱っているチュートリアル
-- [「教科書に沿って学ぶ」ベース(withText)](/Tutorials/withText)
-- [解析する電力ネットワークを作成する(make_net)](/Tutorials/make_net)
-- [【第三回】制御器の導入](/Tutorials/step3)
-- [【第六回】制御器の自作](/Tutorials/step6)
+- [「教科書に沿って学ぶ」ベース(withText)](../../Tutorials/withText)
+- [解析する電力ネットワークを作成する(make_net)](../../Tutorials/make_net)
+- [【第三回】制御器の導入](../../Tutorials/step3)
+- [【第六回】制御器の自作](../../Tutorials/step6)
 
 ## *controller* クラスの全体像
 
@@ -102,7 +102,7 @@ click controller_retrofit_LQR "https://www.google.com/"
 <font size=3>([controller_broadcast_PI_AGC.m]())</font> [](TODO_link)
 
 ブロードキャストコントローラ（PIコントローラ）の実装（ ***controller*** クラスの派生クラス）  
-発電機として[generator_AGC](/Docs/component/#generator_agc)を想定している．  
+発電機として[generator_AGC](../component/#generator_agc)を想定している．  
 
 ### メンバ変数
 
@@ -118,7 +118,7 @@ click controller_retrofit_LQR "https://www.google.com/"
 
 - 入力引数`net`  
     コントローラを追加する予定のネットワークのインスタンス（ *power_network* クラス）  
-    詳細は[Step1](/Tutorials/step1/)・[Power Network](/Docs/power_network/)を参照のこと．
+    詳細は[Step1](../../Tutorials/step1/)・[Power Network](../power_network/)を参照のこと．
 - 入力引数`y_idx`  
     出力を観測するバスの番号．
 - 入力引数`u_idx`  
@@ -130,8 +130,8 @@ click controller_retrofit_LQR "https://www.google.com/"
 <font size=3>([controller_broadcast_PI_AGC_normal.m]())</font> [](TODO_link)
 
 ブロードキャストコントローラ（PIコントローラ）の実装（ ***controller_broadcast_PI_AGC*** クラスの派生クラス）  
-発電機として[generator_AGC](/Docs/component/#generator_agc)を想定している．  
-[controller_broadcast_PI_AGC](/Docs/controller/#controller_broadcast_pi_agc)との違いは，ゲインを電力に比例した形，すなわち，generatorの規模に比例して調整電力を分配していること（[controller_broadcast_PI_AGC](/Docs/controller/#controller_broadcast_pi_agc)では全て等しいゲインとしている）  
+発電機として[generator_AGC](../component/#generator_agc)を想定している．  
+[controller_broadcast_PI_AGC](../controller/#controller_broadcast_pi_agc)との違いは，ゲインを電力に比例した形，すなわち，generatorの規模に比例して調整電力を分配していること（[controller_broadcast_PI_AGC](../controller/#controller_broadcast_pi_agc)では全て等しいゲインとしている）  
 
 ### メンバ変数
 
@@ -147,7 +147,7 @@ click controller_retrofit_LQR "https://www.google.com/"
 
 - 入力引数`net`  
     コントローラを追加する予定のネットワークのインスタンス（ *power_network* クラス）  
-    詳細は[Step1](/Tutorials/step1/)・[Power Network](/Docs/power_network/)を参照のこと．
+    詳細は[Step1](../../Tutorials/step1/)・[Power Network](../power_network/)を参照のこと．
 - 入力引数`y_idx`  
     出力を観測するバスの番号．
 - 入力引数`u_idx`  
@@ -166,7 +166,7 @@ click controller_retrofit_LQR "https://www.google.com/"
 
 - 入力引数 `net`  
     コントローラを追加する予定のネットワークのインスタンス（ *power_network* クラス）  
-    詳細は[Step1](/Tutorials/step1/)・[Power Network](/Docs/power_network/)を参照のこと．
+    詳細は[Step1](../../Tutorials/step1/)・[Power Network](../power_network/)を参照のこと．
 - 入力引数 `area`  
     コントローラを追加するバスの番号（ベクトル）  
     指定したバスに入力を印加し，出力を観測できる．
@@ -199,7 +199,7 @@ rectifierの有無を比較するために使用した．
 
 - 入力引数 `net`  
     コントローラを追加する予定のネットワークのインスタンス（ *power_network* クラス）  
-    詳細は[Step1](/Tutorials/step1/)・[Power Network](/Docs/power_network/)を参照のこと．
+    詳細は[Step1](../../Tutorials/step1/)・[Power Network](../power_network/)を参照のこと．
 - 入力引数 `area`  
     コントローラを追加するバスの番号（ベクトル）  
     指定したバスに入力を印加し，出力を観測できる．
@@ -223,7 +223,7 @@ rectifierの有無を比較するために使用した．
 
 - 入力引数 `net`  
     コントローラを追加する予定のネットワークのインスタンス（ *power_network* クラス）  
-    詳細は[Step1](/Tutorials/step1/)・[Power Network](/Docs/power_network/)を参照のこと．
+    詳細は[Step1](../../Tutorials/step1/)・[Power Network](../power_network/)を参照のこと．
 - 入力引数 `area`  
     コントローラを追加するバスの番号（ベクトル）  
     指定したバスに入力を印加し，出力を観測できる．

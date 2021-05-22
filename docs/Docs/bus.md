@@ -3,10 +3,10 @@
 []( power_networkのリンクを入れる場所は"TODO_link" を挿入しておく )
 
 ## 電力系統モデルについて取り扱っているチュートリアル
-- [電力ネットワークの構成について](/abstract)
-- [「教科書に沿って学ぶ」ベース(withText)](/Tutorials/withText)
-- [解析する電力ネットワークを作成する(make_net)](/Tutorials/make_net)
-- [【第四回】電力系統の自作](/Tutorials/step4)
+- [電力ネットワークの構成について](../../abstract)
+- [「教科書に沿って学ぶ」ベース(withText)](../../Tutorials/withText)
+- [解析する電力ネットワークを作成する(make_net)](../../Tutorials/make_net)
+- [【第四回】電力系統の自作](../../Tutorials/step4)
 
 ## *bus* クラスの全体像
 
@@ -52,8 +52,6 @@ click bus_slack "https://www.google.com/"
 
 ## **bus_non_unit**
 <font size=3>([bus_non_unit.m]())</font> [](TODO_link)
-
-[bus_non_unit.m]() [](TODO_link)
 
 non-unit Busの実装（ ***bus*** クラスの派生クラス）
 

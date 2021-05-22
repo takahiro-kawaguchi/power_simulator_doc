@@ -20,13 +20,13 @@
 out.X{1}
 ```
 
-<div style="text-align: center;"><img src="/Figures/analysis-1.jpg" width=90%;></div>  
+<div style="text-align: center;"><img src="../../Figures/analysis-1.jpg" width=90%;></div>  
 
 以上のことをまとめると各データを  
 「out.t」「out.X{1}・・・out.X{16}」「out.V{1}・・・out.V{68}」「out.I{1}・・・out.I{68}」  
 と並べると縦が時間軸、横が各バスのデータを表す表のようになる関係ということなります。
 
-<div style="text-align: center;"><img src="/Figures/analysis-2.jpg" width=90%;></div>
+<div style="text-align: center;"><img src="../../Figures/analysis-2.jpg" width=90%;></div>
 
 ### データのグラフ表示
 これらのデータの並び方をもとに出力データをグラフとして出力する方法を示します。  
@@ -71,7 +71,7 @@ for i = 1:num_generator
     sgtitle([num2str(i),'番目のバスのデータ']);
 end
 ```
-<img src="/Figures/tutorial1-1-1.jpg" width=45%> <img src="/Figures/tutorial1-1-2.jpg" width=45%>
+<img src="../../Figures/tutorial1-1-1.jpg" width=45%> <img src="../../Figures/tutorial1-1-2.jpg" width=45%>
 
 ## 結果から考察できること
 

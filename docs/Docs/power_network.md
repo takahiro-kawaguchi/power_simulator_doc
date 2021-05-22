@@ -3,13 +3,13 @@
 []( power_networkのリンクを入れる場所は"TODO_link" を挿入しておく )
 
 ## 電力系統モデルについて取り扱っているチュートリアル
-- [電力ネットワークの構成について](/abstract)
-- [「教科書に沿って学ぶ」ベース(withText)](/Tutorials/withText)
-- [解析する電力ネットワークを作成する(make_net)](/Tutorials/make_net)
-- [電力ネットワークの解析(analysis_net)](/Tutorials/analysis_net)
-- [【第一回】既存系統モデルのシミュレーション](/Tutorials/step1)
-- [シミュレーション結果のデータの読み方](/Tutorials/step1-2)
-- [【第二回】線形化したシステムを使う](/Tutorials/step2)
+- [電力ネットワークの構成について](../../abstract)
+- [「教科書に沿って学ぶ」ベース(withText)](../../Tutorials/withText)
+- [解析する電力ネットワークを作成する(make_net)](../../Tutorials/make_net)
+- [電力ネットワークの解析(analysis_net)](../../Tutorials/analysis_net)
+- [【第一回】既存系統モデルのシミュレーション](../../Tutorials/step1)
+- [シミュレーション結果のデータの読み方](../../Tutorials/step1-2)
+- [【第二回】線形化したシステムを使う](../../Tutorials/step2)
 
 ## *power_network* クラスの全体像
 
@@ -133,15 +133,15 @@ click network_3bus "https://www.google.com/"
 <font size=3>([network_68bus.m]())</font> [](TODO_link)
 
 **IEEE 68bus 16machine システム**（[引用元](https://www.springer.com/gp/book/9780387259499)）の実装（ ***power_network*** クラスの派生クラス）  
-発電機として[generatorAGC](/Docs/component/#generator_agc)を，負荷として[load_varying_impedance](/Docs/component/#load_varying_impedance) を導入したネットワークである．  
+発電機として[generatorAGC](../component/#generator_agc)を，負荷として[load_varying_impedance](../component/#load_varying_impedance) を導入したネットワークである．  
 
 
 ## **network_70bus**
 <font size=3>([network_68bus.m]())</font> [](TODO_link)
 
 [**Dynamic Modeling, Stability, and Control of Power Systems With Distributed Energy Resources: Handling Faults Using Two Control Methods in Tandem**](https://ieeexplore.ieee.org/document/8667520) における，IEEE 68bus 16machineシステムへ solar, wind farm を1つづつ導入した電力ネットワークの実装（ ***power_network*** クラスの派生クラス）  
-発電機として[generator](/Docs/component/#generator)を，負荷として[load_const_impedance](/Docs/component/#load_const_impedance), [load_const_power](/Docs/component/#load_const_power) を導入したネットワークである．  
-ここで，ネットワーク定義の際に `net=network_70bus(load_type)`のように定義するが，load_typeには1~2を代入する．負荷には，1の場合は[load_const_impedance](/Docs/component/#load_const_impedance)，2の場合は[load_const_power](/Docs/component/#load_const_power)を導入する．引数が省略されている場合は[load_const_impedance](/Docs/component/#load_const_impedance)を負荷として導入する．  
+発電機として[generator](../component/#generator)を，負荷として[load_const_impedance](../component/#load_const_impedance), [load_const_power](../component/#load_const_power) を導入したネットワークである．  
+ここで，ネットワーク定義の際に `net=network_70bus(load_type)`のように定義するが，load_typeには1~2を代入する．負荷には，1の場合は[load_const_impedance](../component/#load_const_impedance)，2の場合は[load_const_power](../component/#load_const_power)を導入する．引数が省略されている場合は[load_const_impedance](../component/#load_const_impedance)を負荷として導入する．  
 
 
 <font size=5 color="red">(ひとまず削除)</font>  

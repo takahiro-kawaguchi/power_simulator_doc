@@ -16,7 +16,7 @@ power_simulatorは、各人で電力系統システムの設計・解析する�
 <br><br>
 
 ### <div style="text-align: center;"><span style="font-size: 130%; color: black;">【power_simulatorの数理モデル】</span></div>
-power_simulatorを制作する背景に使われている数理モデル等は「**参考書：電力システム制御理論**」の内容に即しており、こちらで紹介された理論をもとに構築されたものとなっております。理論に基づいてシュミレーションを進めて行きたい方は [**参考書の内容にそれぞれ対応付けながら進めていくチュートリアル**](/Tutorials/withText) も設けているので、そちらを見ていただくと分かりやすいかと思います。
+power_simulatorを制作する背景に使われている数理モデル等は「**参考書：電力システム制御理論**」の内容に即しており、こちらで紹介された理論をもとに構築されたものとなっております。理論に基づいてシュミレーションを進めて行きたい方は [**参考書の内容にそれぞれ対応付けながら進めていくチュートリアル**](./Tutorials/withText) も設けているので、そちらを見ていただくと分かりやすいかと思います。
 
 <br><br>
 
@@ -26,7 +26,7 @@ power_simulatorを制作する背景に使われている数理モデル等は�
 まず、シュミレータのチュートリアルの前に電力システムについて簡単に説明します。(__イラストをclick↓__)
 
 <br>
-[<img src="/Figures/index-3.jpg" width=100%; style="border: 3px pink solid;">](abstract)
+[<img src="./Figures/index-3.jpg" width=100%; style="border: 3px pink solid;">](./abstract)
 
 <br><br>
 
@@ -34,8 +34,8 @@ power_simulatorを制作する背景に使われている数理モデル等は�
 本サイトでは２つのタイプでのチュートリアルを用意しました。  
 どちらを先に読んでいただいても構いません。(__イラストをclick↓__)
 
-[<img src="/Figures/tuto-withText.jpg" width=49.5%; style="border: 3px pink solid;">](/Tutorials/withText)
-[<img src="/Figures/tuto-newSystem.jpg" width=49.5%; style="border: 3px pink solid;">](/Tutorials/withSimulation)
+[<img src="./Figures/tuto-withText.jpg" width=49.5%; style="border: 3px pink solid;">](./Tutorials/withText)
+[<img src="./Figures/tuto-newSystem.jpg" width=49.5%; style="border: 3px pink solid;">](./Tutorials/withSimulation)
 
 「教科書に沿って学ぶ」ベースのチュートリアル(左側)
 > テキストではじめに紹介されていた3busシステムの制作と解析を目標とする、定義してから解析するまでの流れが１本のストーリーとなるような構成となっています。
@@ -52,7 +52,7 @@ power_simulatorを制作する背景に使われている数理モデル等は�
 
 ---
 ### <div style="text-align: center;"><span style="font-size: 130%; color: black;">【Docs】</span></div>
-- [__既存のメソッドやクラスについての情報集__](/Docs/docs)  
+- [__既存のメソッドやクラスについての情報集__](./Docs/docs)  
 Tutorial内にDocのリンクが必要に応じて貼られているので基本はそちらを見て頂き、適宜このページを参照していただければいいと思います。
 
 <br><br>

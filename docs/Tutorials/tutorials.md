@@ -1,14 +1,14 @@
 # <div style="text-align: center;"><span style="font-size: 140%; color: black;">チュートリアル一覧</span></div>
 
 以下に本サイトで紹介しているチュートリアルの一覧をまとめておきます。  
-power_simulatorの全体構成については [**Abstract**](/abstract)を、チュートリアル内で使用するメソッドやクラスなどの詳しい説明は [**Docs**](/Docs/docs)をご覧ください。
+power_simulatorの全体構成については [**Abstract**](../../abstract)を、チュートリアル内で使用するメソッドやクラスなどの詳しい説明は [**Docs**](../../Docs/docs)をご覧ください。
 
 <br><br>
 
 ---
 まずは、power_simulatorの一連の流れを追うことができる2種類のチュートリアルはこちら
 
-### <span style="font-size: 130%; color: black;">:material-arrow-right-bold-circle:**[「教科書に沿って学ぶ」ベース](/Tutorials/withText)**</span>
+### <span style="font-size: 130%; color: black;">:material-arrow-right-bold-circle:**[「教科書に沿って学ぶ」ベース](../withText)**</span>
 
 - テキストで初めに紹介されていた 3bus システムの制作と解析を目標としたチュートリアルです。
     - 定義してから解析するまでの流れが１本のストーリーとなるような構成となっています。
@@ -18,7 +18,7 @@ power_simulatorの全体構成については [**Abstract**](/abstract)を、チ
 
 <br><br>
 
-### <span style="font-size: 130%; color: black;">:material-arrow-right-bold-circle:**[「シミュレータを動かす」ベース](/Tutorials/withSimulation)**</span>
+### <span style="font-size: 130%; color: black;">:material-arrow-right-bold-circle:**[「シミュレータを動かす」ベース](../withSimulation)**</span>
 
 - 電力システムの「制作part」,「解析part」に分け各機能の操作方法を解説するチュートリアルです。
     - 前者のチュートリアルより、少し深く踏み込んだ内容まで示しています。
@@ -31,7 +31,7 @@ power_simulatorの全体構成については [**Abstract**](/abstract)を、チ
 ---
 次に、テーマ別のチュートリアルはこちら
 
-### <span style="font-size: 130%; color: black;">:material-arrow-right-drop-circle:**[【第一回】既存の系統モデルのシミュレーション](/Tutorials/step1)**</span>
+### <span style="font-size: 130%; color: black;">:material-arrow-right-drop-circle:**[【第一回】既存の系統モデルのシミュレーション](../step1)**</span>
 
 - 対象者：制御工学についての知識はあるが，電力系統については知識がない技術者
 - できるようになること：
@@ -39,7 +39,7 @@ power_simulatorの全体構成については [**Abstract**](/abstract)を、チ
 
 <br><br>
 
-### <span style="font-size: 130%; color: black;">:material-arrow-right-drop-circle:**[【第二回】線形化したシステムを使う](/Tutorials/step2)**</span>
+### <span style="font-size: 130%; color: black;">:material-arrow-right-drop-circle:**[【第二回】線形化したシステムを使う](../step2)**</span>
 
 - 対象者：制御工学の技術者
 - できるようになること：
@@ -48,7 +48,7 @@ power_simulatorの全体構成については [**Abstract**](/abstract)を、チ
 
 <br><br>
 
-### <span style="font-size: 130%; color: black;">:material-arrow-right-drop-circle:**[【第三回】制御器の導入](/Tutorials/step3)**</span>
+### <span style="font-size: 130%; color: black;">:material-arrow-right-drop-circle:**[【第三回】制御器の導入](../step3)**</span>
 
 - 対象者：レトロフィット制御の論文を読み，実際にシミュレーションを行いたい技術者
 - できるようになること：
@@ -57,7 +57,7 @@ power_simulatorの全体構成については [**Abstract**](/abstract)を、チ
 
 <br><br>
 
-### <span style="font-size: 130%; color: black;">:material-arrow-right-drop-circle:**[【第四回】電力系統の自作](/Tutorials/step4)**</span>
+### <span style="font-size: 130%; color: black;">:material-arrow-right-drop-circle:**[【第四回】電力系統の自作](../step4)**</span>
 
 - 対象者：シミュレーション用の電力系統を自作したい技術者
 - できるようになること：
@@ -68,7 +68,7 @@ power_simulatorの全体構成については [**Abstract**](/abstract)を、チ
 
 <br><br>
 
-### <span style="font-size: 130%; color: black;">:material-arrow-right-drop-circle:**[【第五回】機器の自作](/Tutorials/step5)**</span>
+### <span style="font-size: 130%; color: black;">:material-arrow-right-drop-circle:**[【第五回】機器の自作](../step5)**</span>
 
 - 対象者：既存の種類以外の機器を使用したい技術者
 - できるようになること：
@@ -76,7 +76,7 @@ power_simulatorの全体構成については [**Abstract**](/abstract)を、チ
 
 <br><br>
 
-### <span style="font-size: 130%; color: black;">:material-arrow-right-drop-circle:**[【第六回】制御器の自作](/Tutorials/step6)**</span>
+### <span style="font-size: 130%; color: black;">:material-arrow-right-drop-circle:**[【第六回】制御器の自作](../step6)**</span>
 
 - 対象者：既存の種類以外の制御器を使いたい技術者
 - できるようになること：

@@ -18,7 +18,7 @@
 最後に，**応答結果の図示**について解説し，応答結果を示します
 <br><br><br>
 <div style="text-align: center;">
-<a href="/Figures/IEEE68bus.png" target="_blank"><img src="/Figures/IEEE68bus.png" width=100%;></a>
+<a href="../../Figures/IEEE68bus.png" target="_blank"><img src="../../Figures/IEEE68bus.png" width=100%;></a>
 </div>
 
 
@@ -114,7 +114,7 @@ out = net.simulate(t, u, bus_u); % 入力を0次ホールド
 ```
   
 次に、負荷バスへ入力を入れる場合の例を示します。下の例では負荷バスであるbus18に入力を入れています。  
-まず前提として、負荷バスに入力を入れられるのは、指定した負荷バスのコンポーネントが`load_varying_impedance`の場合のみです。各バスのコンポーネントの指定の仕方は[ネットワークの定義編](./make_net.md)を参照してください。  
+まず前提として、負荷バスに入力を入れられるのは、指定した負荷バスのコンポーネントが`load_varying_impedance`の場合のみです。各バスのコンポーネントの指定の仕方は[ネットワークの定義編](../make_net)を参照してください。  
 負荷バスへの入力も各バスごとに２つずつあり、対応するバスのアドミタンスの実部と虚部のそれぞれの変化率を指定します。例えばバス18に[0.01,0.02]と入力を入れると、バス18の負荷の値はもともとの値に比べ実部が(1+0.01)倍、虚部が(1+0.02)倍に変化させることができます。
 ```
 net = network_68bus;% ネットワークの定義
@@ -127,7 +127,7 @@ out = net.simulate(t, u, 18);
 このコードではバス18の負荷を以下のグラフのような変化率で変化させたときのシュミレーションを行っていることになります。  
 
 <div style="text-align: center;">
-<a href="/Figures/tutorial1-1-3.jpg"  target="_brank"><img src="/Figures/tutorial1-1-3.jpg" width=60%></a>
+<a href="../../Figures/tutorial1-1-3.jpg"  target="_brank"><img src="../../Figures/tutorial1-1-3.jpg" width=60%></a>
 </div>
 
 ## 例4：初期値・外乱・入出力応答（組み合わせ）
@@ -171,14 +171,14 @@ end
 - 例1の結果として，発電機1と2の内部状態の初期値応答のグラフ
 
 <div style="text-align: center;">
-<a href="/Figures/tutorial1-1-1.jpg" target="_blank"><img src="/Figures/tutorial1-1-1.jpg" width="49.5%"></a>
-<a href="/Figures/tutorial1-1-2.jpg" target="_blank"><img src="/Figures/tutorial1-1-2.jpg" width="49.5%"></a>
+<a href="../../Figures/tutorial1-1-1.jpg" target="_blank"><img src="../../Figures/tutorial1-1-1.jpg" width="49.5%"></a>
+<a href="../../Figures/tutorial1-1-2.jpg" target="_blank"><img src="../../Figures/tutorial1-1-2.jpg" width="49.5%"></a>
 </div>
 
 
 - 例2の結果として，発電機1と2の内部状態の外乱応答のグラフ
 
 <div style="text-align: center;">
-<a href="/Figures/tutorial1-2-1.jpg" target="_blank"><img src="/Figures/tutorial1-2-1.jpg" width="49.5%"></a>
-<a href="/Figures/tutorial1-2-2.jpg" target="_blank"><img src="/Figures/tutorial1-2-2.jpg" width="49.5%"></a>
+<a href="../../Figures/tutorial1-2-1.jpg" target="_blank"><img src="../../Figures/tutorial1-2-1.jpg" width="49.5%"></a>
+<a href="../../Figures/tutorial1-2-2.jpg" target="_blank"><img src="../../Figures/tutorial1-2-2.jpg" width="49.5%"></a>
 </div>

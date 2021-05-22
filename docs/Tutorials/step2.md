@@ -24,7 +24,7 @@ option.linear=true;
 out = net.simulate([0 20], option)
 ```
 `option.linear`が`true`の場合はシステムを線形化してシミュレーションを行い、`faulse`の場合は線形化を行わずにシュミレーションを行う.  
-それ以外の変数の設定や実行については、[STEP1](./step1.md)に示されている`net.simulate(t,option)`と同様であるため，そちらを参照されたい.
+それ以外の変数の設定や実行については、[STEP1](../step1)に示されている`net.simulate(t,option)`と同様であるため，そちらを参照されたい.
 <br>
 
 ### __線形化したシステムの状態空間表現を得る__
@@ -171,14 +171,14 @@ get_sysで得られるシステムは平衡点からの偏差を状態ととっ�
 
 - **入力引数**`with_controller`  
     with_controllerの値が`true`の場合はコントローラが付加されたシステム，`false`の場合はコントローラなしのシステムを返す．規定値は`false`.
-      - `true`にする場合コントローラーの設定をしておく必要がある．コントローラの定義についての詳細は[STEP3](./step3.md)を参照．
+      - `true`にする場合コントローラーの設定をしておく必要がある．コントローラの定義についての詳細は[STEP3](../step3)を参照．
 
 
 - **出力変数**`sys`  
   出力された変数sysの中には以下のような変数が格納されている。  
 
   <div style="text-align: center;">
-  <a href="/Figures/tutorial2-getsys-1.jpg" target="_blank"><img src="/Figures/tutorial2-getsys-1.jpg" width=45%;></a>
+  <a href="../../Figures/tutorial2-getsys-1.jpg" target="_blank"><img src="../../Figures/tutorial2-getsys-1.jpg" width=45%;></a>
   </div>  
   これらの変数の中には`get_sys`のスクリプト内で使用されている関数[ss(A,B,C,D)](https://jp.mathworks.com/help/control/ref/ss.html)によって自動的に生成される変数も含まれており、このうち実質的に情報を持っているのは以下に示す6つの変数のみである.  
 
@@ -194,7 +194,7 @@ get_sysで得られるシステムは平衡点からの偏差を状態ととっ�
 sys =  net.get_sys(true);
 ```
 この関数を実行するにはnetクラスの中にすでにコントローラーの情報が格納されている必要がある.  
-power_networkのインスタンスを用いている場合、そのクラスの内部にはすでにブロードキャストのコントローラーなどが定義されている。それに加えてレトロフィットコントローラーなどを追加して定義しておくと、それらのコントローラを含めたシステムの状態空間方程式を導出させることができる。コントローラの設定については[STEP3](./step3.md)を参照.  
+power_networkのインスタンスを用いている場合、そのクラスの内部にはすでにブロードキャストのコントローラーなどが定義されている。それに加えてレトロフィットコントローラーなどを追加して定義しておくと、それらのコントローラを含めたシステムの状態空間方程式を導出させることができる。コントローラの設定については[STEP3](../step3)を参照.  
 なお、`get_sys(false)`とするとコントローラーを除いたシステムの状態空間方程式を導出するということになる.
 
 
@@ -238,8 +238,8 @@ for i = 1:16
 end
 ```
   
-<img src="/Figures/step2_initial_bus8.png" width=49.5%;>
-<img src="/Figures/step2_initial_bus15.png" width=49.5%;>
+<img src="../../Figures/step2_initial_bus8.png" width=49.5%;>
+<img src="../../Figures/step2_initial_bus15.png" width=49.5%;>
   
 2つめコードは１つめと同様に地絡応答についてのシュミレーションですが、ここでは同じネットワークシステム、同じ地絡条件のもとで線形化シュミレーションと非線形のままのシュミレーションの結果を比較するコードとなっています。出力結果は下のとおりです。
 ```
@@ -260,5 +260,5 @@ for i = 1:16
 end
 ```
   
-<img src="/Figures/step2_linear_bus8.png" width=49.5%;>
-<img src="/Figures/step2_linear_bus15.png" width=49.5%;>
+<img src="../../Figures/step2_linear_bus8.png" width=49.5%;>
+<img src="../../Figures/step2_linear_bus15.png" width=49.5%;>

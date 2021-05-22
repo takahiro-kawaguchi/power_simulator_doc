@@ -19,7 +19,7 @@ cg = controller_broadcast_PI_AGC_normal(net, y_idx, u_idx, Kp, Ki);
 
 - 入力引数`net`  
     コントローラを追加する予定のネットワークのインスタンス（ *power_network* クラス）  
-    詳細は[Step1](/Tutorials/step1/)・[Power Network](/Docs/power_network/)を参照のこと．
+    詳細は[Step1](../step1)・[Power Network](../../Docs/power_network)を参照のこと．
 - 入力引数`y_idx`  
     出力を観測するバスの番号．
 - 入力引数`u_idx`  
@@ -28,12 +28,12 @@ cg = controller_broadcast_PI_AGC_normal(net, y_idx, u_idx, Kp, Ki);
     コントローラのPIゲイン．
 - 出力引数`cg`  
     コントローラの状態空間モデルなどの情報が含まれるインスタンス（*controller*クラス）  
-    詳細は[controller_broadcast_PI_AGC_normal](/Docs/controller/#controller_broadcast_pi_agc_normal)を参照のこと
+    詳細は[controller_broadcast_PI_AGC_normal](../../Docs/controller/#controller_broadcast_pi_agc_normal)を参照のこと
 
 power_simulatorではグローバルコントローラがすでにいくつか定義されている．  
-詳細は[Controller](/Docs/controller/)を参照のこと．  
-本チュートリアルでは，[controller_broadcast_PI_AGC_normal](/Docs/controller/#controller_broadcast_pi_agc_normal)を使用する．  
-[controller_broadcast_PI_AGC_normal](/Docs/controller/#controller_broadcast_pi_agc_normal)はブロードキャストコントローラ（PIコントローラ）の実装で，ゲインを電力に比例させているものである（generatorの規模に比例して調整電力を分配している）
+詳細は[Controller](../../Docs/controller)を参照のこと．  
+本チュートリアルでは，[controller_broadcast_PI_AGC_normal](../../Docs/controller/#controller_broadcast_pi_agc_normal)を使用する．  
+[controller_broadcast_PI_AGC_normal](../../Docs/controller/#controller_broadcast_pi_agc_normal)はブロードキャストコントローラ（PIコントローラ）の実装で，ゲインを電力に比例させているものである（generatorの規模に比例して調整電力を分配している）
 
 #### コントローラの作成
 
@@ -44,10 +44,10 @@ c = controller_retrofit_LQR(net, idx, Q, R, model_uv, vbar, ubar, out, varargin)
 
 - 入力引数`net`  
     コントローラを追加する予定のネットワークのインスタンス（ *power_network* クラス）  
-    詳細は[Step1](/Tutorials/step1/)・[Power Network](/Docs/power_network/)を参照のこ
+    詳細は[Step1](../step1)・[Power Network](../../Docs/power_network)を参照のこ
 - 入力引数`idx`  
     出力を観測するバスの番号．
-- 第3入力引数以降は今回は使用しないので省略．[controller_retrofit_LQR](/Docs/controller/#controller_retrofit_lqr)を参照のこと．
+- 第3入力引数以降は今回は使用しないので省略．[controller_retrofit_LQR](../../Docs/controller/#controller_retrofit_lqr)を参照のこと．
 - 出力引数`c`  
     コントローラの状態空間モデルなどの情報が含まれるインスタンス（*controller*クラス）
     - K_inter: 内部コントローラのK行列
@@ -56,9 +56,9 @@ c = controller_retrofit_LQR(net, idx, Q, R, model_uv, vbar, ubar, out, varargin)
     - Q, R: LQR設計のためのQ行列とR行列
 
 power_simulator ではコントローラがすでにいくつか定義されている．  
-詳細は[Controller](/Docs/controller/)を参照のこと．  
-本チュートリアルでは，[controller_retrofit_LQR](/Docs/controller/#controller_retrofit_lqr)を使用した．  
-[controller_retrofit_LQR](/Docs/controller/#controller_retrofit_lqr)はレトロフィットコントローラの実装で，コントローラ設計をLQRで行うものである．
+詳細は[Controller](../../Docs/controller)を参照のこと．  
+本チュートリアルでは，[controller_retrofit_LQR](../../Docs/controller/#controller_retrofit_lqr)を使用した．  
+[controller_retrofit_LQR](../../Docs/controller/#controller_retrofit_lqr)はレトロフィットコントローラの実装で，コントローラ設計をLQRで行うものである．
 
 
 ### 電力系統モデルに対するコントローラの追加
@@ -135,7 +135,7 @@ sys = net.get_sys(with_controller);
     今回はコントローラを含めたモデルを取得したいので、**true** で設定．
 - 出力引数`sys`  
     システムの状態空間モデル（matlab既存の ***ss*** クラスのインスタンス）  
-    詳細は[Step2](/Tutorials/step2/)・[Power Network](/Docs/power_network/)を参照のこと．
+    詳細は[Step2](../step2)・[Power Network](../../Docs/power_network)を参照のこと．
 
 
 ## 例1：コントローラを付加したシミュレーション

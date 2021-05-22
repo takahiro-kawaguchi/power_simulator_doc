@@ -3,11 +3,11 @@
 []( power_networkのリンクを入れる場所は"TODO_link" を挿入しておく )
 
 ## バスに接続する機器について取り扱っているチュートリアル
-- [電力ネットワークの構成について](/abstract)
-- [「教科書に沿って学ぶ」ベース(withText)](/Tutorials/withText)
-- [解析する電力ネットワークを作成する(make_net)](/Tutorials/make_net)
-- [【第四回】電力系統の自作](/Tutorials/step4)
-- [【第五回】機器の自作](/Tutorials/step5)
+- [電力ネットワークの構成について](../../abstract)
+- [「教科書に沿って学ぶ」ベース(withText)](../../Tutorials/withText)
+- [解析する電力ネットワークを作成する(make_net)](../../Tutorials/make_net)
+- [【第四回】電力系統の自作](../../Tutorials/step4)
+- [【第五回】機器の自作](../../Tutorials/step5)
 
 ## *component* クラスの全体像
 
@@ -130,7 +130,7 @@ AVRポートとAGCポートの二種類のポートがある．
 <font size=3> ([generator.m]())</font> [](TODO_link)
 
 発電機の実装（ ***generator*** クラスの派生クラス）  
-[generator_AGC](/Docs/component/#generator_agc) との違いは発電機にAGCポートを用意しているかどうか（*genator* クラスはAGCポートを用意していない）
+[generator_AGC](../component/#generator_agc) との違いは発電機にAGCポートを用意しているかどうか（*genator* クラスはAGCポートを用意していない）
 
 ## load_varying_impedance
 <font size=3>([load_varying_impedance.m]())</font> [](TODO_link)
@@ -147,7 +147,7 @@ AVRポートとAGCポートの二種類のポートがある．
 <font size=3>([load_const_impedance.m]())</font> [](TODO_link)
 
 定インピーダンス負荷の実装（ ***load_varying_impedance*** クラスの派生クラス）
-[load_varying_impedance](/Docs/component/#load_varying_impedance) との違いは入力ポートを用意しているかどうか（*load_const_impedance* クラスは入力ポートを用意していないので静的な機器）
+[load_varying_impedance](../component/#load_varying_impedance) との違いは入力ポートを用意しているかどうか（*load_const_impedance* クラスは入力ポートを用意していないので静的な機器）
 
 ## load_varying_power
 <font size=3>([load_varying_power.m]())</font> [](TODO_link)
@@ -164,7 +164,7 @@ AVRポートとAGCポートの二種類のポートがある．
 <font size=3>([load_const_power.m]())</font> [](TODO_link)
 
 定電力負荷の実装（ ***load_varying_power*** クラスの派生クラス）
-[load_varying_power](/Docs/component/#load_varying_power) との違いは入力ポートを用意しているかどうか（*load_const_power* クラスは入力ポートを用意していないので静的な機器）
+[load_varying_power](../component/#load_varying_power) との違いは入力ポートを用意しているかどうか（*load_const_power* クラスは入力ポートを用意していないので静的な機器）
 
 ## solar_farm
 <font size=3>([solar_farm.m]())</font> [](TODO_link)

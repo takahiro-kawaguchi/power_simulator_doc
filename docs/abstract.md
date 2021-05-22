@@ -1,4 +1,4 @@
-<img src="/Figures/index-3.jpg" width=100%;>
+<img src="../Figures/index-3.jpg" width=100%;>
 
 # <div style="text-align: center;"><span style="font-size: 130%; color: black;">電力ネットワークの構成について</span></div>
 
@@ -13,7 +13,7 @@
 - そして各バスどうしをつなぐブランチ(各バス間の線ー)  
 <div style="text-align: center;">
 <span style="font-size: 160%; color: black;">IEEE68busモデル</span>
-<a href="/Figures/IEEE68bus.png" target="_blank"><img src="/Figures/IEEE68bus.png" width=100%;></a>
+<a href="../Figures/IEEE68bus.png" target="_blank"><img src="../Figures/IEEE68bus.png" width=100%;></a>
 </div>
 
 <br>
@@ -37,7 +37,7 @@
 具体的には「発電機」や「負荷」などのバスに付加するものたちの総称のことです。  
 
 <div style="text-align: center;">
-<a href="/Figures/intro-1.jpg" target="_blank"><img src="/Figures/intro-1.jpg" width=60%;></a>
+<a href="../Figures/intro-1.jpg" target="_blank"><img src="../Figures/intro-1.jpg" width=60%;></a>
 </div>
 
 * コンポーネントの枠に発電機が付加されたものを**発電機バス**と呼びます。  
@@ -65,5 +65,5 @@
 
 <br><br><br>
 
-[電力ネットワークの作成編のページへ](/Tutorials/make_net){ .md-button .left }
-[電力ネットワークの解析編のページへ](/Tutorials/analysis_net){ : .md-button .right }
+[電力ネットワークの作成編のページへ](../Tutorials/make_net){ .md-button .left }
+[電力ネットワークの解析編のページへ](../Tutorials/analysis_net){ : .md-button .right }

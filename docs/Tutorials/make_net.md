@@ -1,4 +1,4 @@
-<img src="/Figures/index-1.jpg" width=100%;>
+<img src="../../Figures/index-1.jpg" width=100%;>
 
 # <div style="text-align: center;"><span style="font-size: 120%; color: black;">解析する電力ネットワークを作成する</span></div>
 
@@ -13,7 +13,7 @@ power_simulatorでは電力ネットワークの情報をクラスを用いて�
 
 などがあり、さらに変数`bus`の中には各バスにおける定常状態でのパラメータやそのバスに付加されている機器の情報を含む変数`component`などがあります。図で表すと以下の様な感じに電力ネットワークの情報が格納されています。  
 <div style="text-align: center;">
-<a href="/Figures/make-1.jpg" target="_blank"><img src="/Figures/make-1.jpg" width=100%;></a>
+<a href="../../Figures/make-1.jpg" target="_blank"><img src="../../Figures/make-1.jpg" width=100%;></a>
 </div>
 
 <span style="font-size: 130%; color: black;">__本章ではこの変数`net`を定義することが目標となります。__</span>  
@@ -33,8 +33,8 @@ net = network_70bus; %70busモデルの情報をnetに格納する場合
   
 新しく設計した電力システムを定義する場合は、バスやブランチ、発電機、制御器などの接続関係やパラメータをそれぞれ代入していくことで定義していくことになり、実際に
 
-- <u> __<span style="font-size: 90%; color: black;">「参考書の流れに沿って進めていくタイプのTutorial」</span>__</u> [[Link]](/Tutorials/withText)  
-- <u>__<span style="font-size: 90%; color: black;">下の</span><span style="font-size: 90%; color: blue;">[基礎編]</span><span style="font-size: 90%; color: black;">の「パラメータを自分で設定してみよう」の章</span>__</u> [[Link]](/Tutorials/step4)  
+- <u> __<span style="font-size: 90%; color: black;">「参考書の流れに沿って進めていくタイプのTutorial」</span>__</u> [[Link]](../withText)  
+- <u>__<span style="font-size: 90%; color: black;">下の</span><span style="font-size: 90%; color: blue;">[基礎編]</span><span style="font-size: 90%; color: black;">の「パラメータを自分で設定してみよう」の章</span>__</u> [[Link]](../step4)  
 
 などの解説では、そのような工程を行っています。    
 
@@ -43,15 +43,15 @@ net = network_70bus; %70busモデルの情報をnetに格納する場合
 **それでは以下に新しい電力システムの定義やコントローラの付加をし、変数`net`を定義していく方法を難易度別に解説していきます。。**
 
 ## <span style="font-size: 100%; color: blue;">【基礎編】</span>
-:material-arrow-right-drop-circle: [<span style="font-size: 110%; color: blue;"><u>既存のコントローラをネットワークに付加しよう</u>。</span>](/Tutorials/step3)  
-:material-arrow-right-drop-circle: [<span style="font-size: 110%; color: blue;"><u>既存のバスやコンポーネントのパラメータを自分で設定してみよう</u>。</span>](/Tutorials/step4)  
+:material-arrow-right-drop-circle: [<span style="font-size: 110%; color: blue;"><u>既存のコントローラをネットワークに付加しよう</u>。</span>](../step3)  
+:material-arrow-right-drop-circle: [<span style="font-size: 110%; color: blue;"><u>既存のバスやコンポーネントのパラメータを自分で設定してみよう</u>。</span>](../step4)  
 
 ## <span style="font-size: 100%; color: red;">【応用編】</span>
 ここまでは既存の関数ファイルを用いてパラメータをセット設定し電力システムを定義する方法などを解説してきましたが、ここでは新しい機器や制御機を定義します。すなわち新たな機器や制御器を定義する`component.m`や`controller.m`の子クラスにあたるm.ファイルを作成する必要があるということです。  
-:material-arrow-right-drop-circle: [<span style="font-size: 110%; color: red;"><u>新しい機器を自作しよう</u>。</span>](/Tutorials/step5)  
-:material-arrow-right-drop-circle: [<span style="font-size: 110%; color: red;"><u>新しい制御器を自作しよう</u>。</span>](/Tutorials/step6)  
+:material-arrow-right-drop-circle: [<span style="font-size: 110%; color: red;"><u>新しい機器を自作しよう</u>。</span>](../step5)  
+:material-arrow-right-drop-circle: [<span style="font-size: 110%; color: red;"><u>新しい制御器を自作しよう</u>。</span>](../step6)  
 
 <br><br><br>
 
-[電力ネットワークの構成編のページへ](/abstract){ .md-button .left }
-[電力ネットワークの解析編のページへ](/Tutorials/analysis_net){ : .md-button .right }
+[電力ネットワークの構成編のページへ](../../abstract){ .md-button .left }
+[電力ネットワークの解析編のページへ](../analysis_net){ : .md-button .right }
