@@ -977,10 +977,10 @@
 <p><a href="power_networkのリンクを入れる場所は&quot;TODO_link&quot; を挿入しておく"></a></p>
 <h2 id="_2">コントローラについて取り扱っているチュートリアル<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
 <ul>
-<li><a href="/Tutorials/withText">「教科書に沿って学ぶ」ベース(withText)</a></li>
-<li><a href="/Tutorials/make_net">解析する電力ネットワークを作成する(make_net)</a></li>
-<li><a href="/Tutorials/step3">【第三回】制御器の導入</a></li>
-<li><a href="/Tutorials/step6">【第六回】制御器の自作</a></li>
+<li><a href="../../Tutorials/withText">「教科書に沿って学ぶ」ベース(withText)</a></li>
+<li><a href="../../Tutorials/make_net">解析する電力ネットワークを作成する(make_net)</a></li>
+<li><a href="../../Tutorials/step3">【第三回】制御器の導入</a></li>
+<li><a href="../../Tutorials/step6">【第六回】制御器の自作</a></li>
 </ul>
 <h2 id="controller"><em>controller</em> クラスの全体像<a class="headerlink" href="#controller" title="Permanent link">&para;</a></h2>
 <p>まずはコントローラに関するクラスの全体像を示します。</p>
@@ -1084,7 +1084,7 @@ click controller_retrofit_LQR "https://www.google.com/"</div></p>
 <h2 id="controller_broadcast_pi_agc"><strong>controller_broadcast_PI_AGC</strong><a class="headerlink" href="#controller_broadcast_pi_agc" title="Permanent link">&para;</a></h2>
 <p><font size=3>(<a href="">controller_broadcast_PI_AGC.m</a>)</font> <a href="TODO_link"></a></p>
 <p>ブロードキャストコントローラ（PIコントローラ）の実装（ <strong><em>controller</em></strong> クラスの派生クラス）<br />
-発電機として<a href="/Docs/component/#generator_agc">generator_AGC</a>を想定している．  </p>
+発電機として<a href="../component/#generator_agc">generator_AGC</a>を想定している．  </p>
 <h3 id="_7">メンバ変数<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h3>
 <ul>
 <li>idx_observe：コントローラが観測できるバスの番号（ベクトル）</li>
@@ -1099,7 +1099,7 @@ click controller_retrofit_LQR "https://www.google.com/"</div></p>
 <ul>
 <li>入力引数<code>net</code><br />
     コントローラを追加する予定のネットワークのインスタンス（ <em>power_network</em> クラス）<br />
-    詳細は<a href="/Tutorials/step1/">Step1</a>・<a href="/Docs/power_network/">Power Network</a>を参照のこと．</li>
+    詳細は<a href="../../Tutorials/step1/">Step1</a>・<a href="../power_network/">Power Network</a>を参照のこと．</li>
 <li>入力引数<code>y_idx</code><br />
     出力を観測するバスの番号．</li>
 <li>入力引数<code>u_idx</code><br />
@@ -1110,8 +1110,8 @@ click controller_retrofit_LQR "https://www.google.com/"</div></p>
 <h2 id="controller_broadcast_pi_agc_normal"><strong>controller_broadcast_PI_AGC_normal</strong><a class="headerlink" href="#controller_broadcast_pi_agc_normal" title="Permanent link">&para;</a></h2>
 <p><font size=3>(<a href="">controller_broadcast_PI_AGC_normal.m</a>)</font> <a href="TODO_link"></a></p>
 <p>ブロードキャストコントローラ（PIコントローラ）の実装（ <strong><em>controller_broadcast_PI_AGC</em></strong> クラスの派生クラス）<br />
-発電機として<a href="/Docs/component/#generator_agc">generator_AGC</a>を想定している．<br />
-<a href="/Docs/controller/#controller_broadcast_pi_agc">controller_broadcast_PI_AGC</a>との違いは，ゲインを電力に比例した形，すなわち，generatorの規模に比例して調整電力を分配していること（<a href="/Docs/controller/#controller_broadcast_pi_agc">controller_broadcast_PI_AGC</a>では全て等しいゲインとしている）  </p>
+発電機として<a href="../component/#generator_agc">generator_AGC</a>を想定している．<br />
+<a href="../controller/#controller_broadcast_pi_agc">controller_broadcast_PI_AGC</a>との違いは，ゲインを電力に比例した形，すなわち，generatorの規模に比例して調整電力を分配していること（<a href="../controller/#controller_broadcast_pi_agc">controller_broadcast_PI_AGC</a>では全て等しいゲインとしている）  </p>
 <h3 id="_9">メンバ変数<a class="headerlink" href="#_9" title="Permanent link">&para;</a></h3>
 <ul>
 <li>idx_observe：コントローラが観測できるバスの番号（ベクトル）</li>
@@ -1126,7 +1126,7 @@ click controller_retrofit_LQR "https://www.google.com/"</div></p>
 <ul>
 <li>入力引数<code>net</code><br />
     コントローラを追加する予定のネットワークのインスタンス（ <em>power_network</em> クラス）<br />
-    詳細は<a href="/Tutorials/step1/">Step1</a>・<a href="/Docs/power_network/">Power Network</a>を参照のこと．</li>
+    詳細は<a href="../../Tutorials/step1/">Step1</a>・<a href="../power_network/">Power Network</a>を参照のこと．</li>
 <li>入力引数<code>y_idx</code><br />
     出力を観測するバスの番号．</li>
 <li>入力引数<code>u_idx</code><br />
@@ -1143,7 +1143,7 @@ click controller_retrofit_LQR "https://www.google.com/"</div></p>
 <ul>
 <li>入力引数 <code>net</code><br />
     コントローラを追加する予定のネットワークのインスタンス（ <em>power_network</em> クラス）<br />
-    詳細は<a href="/Tutorials/step1/">Step1</a>・<a href="/Docs/power_network/">Power Network</a>を参照のこと．</li>
+    詳細は<a href="../../Tutorials/step1/">Step1</a>・<a href="../power_network/">Power Network</a>を参照のこと．</li>
 <li>入力引数 <code>area</code><br />
     コントローラを追加するバスの番号（ベクトル）<br />
     指定したバスに入力を印加し，出力を観測できる．</li>
@@ -1174,7 +1174,7 @@ rectifierの有無を比較するために使用した．</p>
 <ul>
 <li>入力引数 <code>net</code><br />
     コントローラを追加する予定のネットワークのインスタンス（ <em>power_network</em> クラス）<br />
-    詳細は<a href="/Tutorials/step1/">Step1</a>・<a href="/Docs/power_network/">Power Network</a>を参照のこと．</li>
+    詳細は<a href="../../Tutorials/step1/">Step1</a>・<a href="../power_network/">Power Network</a>を参照のこと．</li>
 <li>入力引数 <code>area</code><br />
     コントローラを追加するバスの番号（ベクトル）<br />
     指定したバスに入力を印加し，出力を観測できる．</li>
@@ -1196,7 +1196,7 @@ rectifierの有無を比較するために使用した．</p>
 <ul>
 <li>入力引数 <code>net</code><br />
     コントローラを追加する予定のネットワークのインスタンス（ <em>power_network</em> クラス）<br />
-    詳細は<a href="/Tutorials/step1/">Step1</a>・<a href="/Docs/power_network/">Power Network</a>を参照のこと．</li>
+    詳細は<a href="../../Tutorials/step1/">Step1</a>・<a href="../power_network/">Power Network</a>を参照のこと．</li>
 <li>入力引数 <code>area</code><br />
     コントローラを追加するバスの番号（ベクトル）<br />
     指定したバスに入力を印加し，出力を観測できる．</li>

@@ -960,7 +960,7 @@
                   <h1>withText</h1>
                 
                 <div style="text-align: center;">
-<img src="/Figures/tuto-withText.jpg" width=60%;>
+<img src="../../Figures/tuto-withText.jpg" width=60%;>
 </div>
 
 <p>このチュートリアルではテキストの内容に沿って電力系統システムを自分で定義し，その制御シミュレーションを行う方法を解説します．  </p>
@@ -972,7 +972,7 @@
 <p>といった流れで進めていこうと思います。</p>
 <h2 id="_1"><strong><em><span style="color: purple;">対象となるシステムの設定</span></em></strong><a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
 <p>本チュートリアルにおいては以下の図ような単純な電力系統システムを自作します．</p>
-<p><img alt="" src="/Figures/write_3bus.png" /></p>
+<p><img alt="" src="../../Figures/write_3bus.png" /></p>
 <p>この電力系統システムでは３つのバスと機器が繋がっているシステムです．<br />
 ここで上の３busシステムをシュミレータ上で定義するにあたり、一度情報を表にして以下にまとめてみます。(<span style="font-size: 80%; color: red;">※表中の赤字のパラメータの値は適当に決めています。</span>)</p>
 <h4 id="_2">・バスの情報<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h4>
@@ -1003,7 +1003,7 @@
 </tr>
 </tbody>
 </table>
-<p>表中のP、Q、|V|、∠V はそれぞれ「有効電力」「無効電力」「電圧の大きさ」「電圧の偏角」を指しています。これに関しては<a href="/Tutorials/intro_net">電力ネットワークの解説ページ</a>でも触れているので参考にして下さい。</p>
+<p>表中のP、Q、|V|、∠V はそれぞれ「有効電力」「無効電力」「電圧の大きさ」「電圧の偏角」を指しています。これに関しては<a href="../intro_net">電力ネットワークの解説ページ</a>でも触れているので参考にして下さい。</p>
 <h4 id="_3">・ブランチの情報<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h4>
 <p>このシステムではバス間をつなぐブランチは2本あることが分かります。</p>
 <table>
@@ -1326,7 +1326,7 @@ generatorを自作するためには以下のような関数を用います．</
 <hr />
 <h2 id="_12"><strong><em><span style="color: purple;">シュミレーションの実行</span></em></strong><a class="headerlink" href="#_12" title="Permanent link">&para;</a></h2>
 <p>自作したシステムに対しシュミレーションを行ってみましょう。<br />
-シュミレーションの実行は<code>simulate</code>という関数を用います。入力引数の<code>option</code>を設定することで、地絡応答や初期値応答、外乱応答などを行うことができます。ここでは地絡を加えたシミュレーションを実行してみましょう。初期値応答や外乱応答などの他のシュミレーションの実行は<a href="/Tutorials/withSimulation">シュミレータベースのTutorial</a>を参照して下さい。  </p>
+シュミレーションの実行は<code>simulate</code>という関数を用います。入力引数の<code>option</code>を設定することで、地絡応答や初期値応答、外乱応答などを行うことができます。ここでは地絡を加えたシミュレーションを実行してみましょう。初期値応答や外乱応答などの他のシュミレーションの実行は<a href="../withSimulation">シュミレータベースのTutorial</a>を参照して下さい。  </p>
 <p>以下がコード例です．</p>
 <p><div class="highlight"><pre><span></span><code><span class="n">option</span> <span class="p">=</span> <span class="n">struct</span><span class="p">();</span>
 <span class="n">option</span><span class="p">.</span><span class="n">fault</span> <span class="p">=</span> <span class="p">{{[</span><span class="mi">0</span><span class="p">,</span> <span class="mf">0.01</span><span class="p">],</span> <span class="mi">1</span><span class="p">},</span> <span class="p">{[</span><span class="mi">10</span><span class="p">,</span> <span class="mf">10.01</span><span class="p">],</span> <span class="mi">2</span><span class="p">}};</span>
@@ -1341,7 +1341,7 @@ generatorを自作するためには以下のような関数を用います．</
     <span class="n">title</span><span class="p">(</span><span class="n">names</span><span class="p">{</span><span class="nb">j</span><span class="p">},</span> <span class="s">&#39;Interpreter&#39;</span><span class="p">,</span> <span class="s">&#39;tex&#39;</span><span class="p">);</span>
 <span class="n">end</span>
 </code></pre></div>
-<p><img alt="" src="/Figures/Tuto_text_result1.png" /></p>
+<p><img alt="" src="../../Figures/Tuto_text_result1.png" /></p>
 <h2 id="_13"><strong><em><span style="color: purple;">制御器の付加</span></em></strong><a class="headerlink" href="#_13" title="Permanent link">&para;</a></h2>
 <p>power_simulatorで用意している制御器は以下のような様々なものがあります．</p>
 <ul>
@@ -1357,7 +1357,7 @@ generatorを自作するためには以下のような関数を用います．</
 <span class="n">net</span><span class="p">.</span><span class="n">add_controller_global</span><span class="p">(</span><span class="n">cg</span><span class="p">)</span>
 </code></pre></div>
 <p>このように、電力システムにコントローラを付加した後、先程と同じようにシュミレーションを実行し、同様に２つ目のgeneratorのシミュレーション結果をグラフとして表示したものが以下となります．</p>
-<p><img alt="" src="/Figures/Tuto_text_result2.png" /></p>
+<p><img alt="" src="../../Figures/Tuto_text_result2.png" /></p>
 <hr />
 <p><span style="color: red">完成後削除</span></p>
 <h2 id="doc"><strong>docを参照している部分</strong><a class="headerlink" href="#doc" title="Permanent link">&para;</a></h2>

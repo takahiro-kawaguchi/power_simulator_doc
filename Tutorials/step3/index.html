@@ -882,7 +882,7 @@
 <ul>
 <li>入力引数<code>net</code><br />
     コントローラを追加する予定のネットワークのインスタンス（ <em>power_network</em> クラス）<br />
-    詳細は<a href="/Tutorials/step1/">Step1</a>・<a href="/Docs/power_network/">Power Network</a>を参照のこと．</li>
+    詳細は<a href="../step1">Step1</a>・<a href="../../Docs/power_network">Power Network</a>を参照のこと．</li>
 <li>入力引数<code>y_idx</code><br />
     出力を観測するバスの番号．</li>
 <li>入力引数<code>u_idx</code><br />
@@ -891,12 +891,12 @@
     コントローラのPIゲイン．</li>
 <li>出力引数<code>cg</code><br />
     コントローラの状態空間モデルなどの情報が含まれるインスタンス（<em>controller</em>クラス）<br />
-    詳細は<a href="/Docs/controller/#controller_broadcast_pi_agc_normal">controller_broadcast_PI_AGC_normal</a>を参照のこと</li>
+    詳細は<a href="../../Docs/controller/#controller_broadcast_pi_agc_normal">controller_broadcast_PI_AGC_normal</a>を参照のこと</li>
 </ul>
 <p>power_simulatorではグローバルコントローラがすでにいくつか定義されている．<br />
-詳細は<a href="/Docs/controller/">Controller</a>を参照のこと．<br />
-本チュートリアルでは，<a href="/Docs/controller/#controller_broadcast_pi_agc_normal">controller_broadcast_PI_AGC_normal</a>を使用する．<br />
-<a href="/Docs/controller/#controller_broadcast_pi_agc_normal">controller_broadcast_PI_AGC_normal</a>はブロードキャストコントローラ（PIコントローラ）の実装で，ゲインを電力に比例させているものである（generatorの規模に比例して調整電力を分配している）</p>
+詳細は<a href="../../Docs/controller">Controller</a>を参照のこと．<br />
+本チュートリアルでは，<a href="../../Docs/controller/#controller_broadcast_pi_agc_normal">controller_broadcast_PI_AGC_normal</a>を使用する．<br />
+<a href="../../Docs/controller/#controller_broadcast_pi_agc_normal">controller_broadcast_PI_AGC_normal</a>はブロードキャストコントローラ（PIコントローラ）の実装で，ゲインを電力に比例させているものである（generatorの規模に比例して調整電力を分配している）</p>
 <h4 id="_5">コントローラの作成<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h4>
 <p>コントローラの作成は次のように行う．
 <div class="highlight"><pre><span></span><code>c = controller_retrofit_LQR(net, idx, Q, R, model_uv, vbar, ubar, out, varargin);
@@ -904,10 +904,10 @@
 <ul>
 <li>入力引数<code>net</code><br />
     コントローラを追加する予定のネットワークのインスタンス（ <em>power_network</em> クラス）<br />
-    詳細は<a href="/Tutorials/step1/">Step1</a>・<a href="/Docs/power_network/">Power Network</a>を参照のこ</li>
+    詳細は<a href="../step1">Step1</a>・<a href="../../Docs/power_network">Power Network</a>を参照のこ</li>
 <li>入力引数<code>idx</code><br />
     出力を観測するバスの番号．</li>
-<li>第3入力引数以降は今回は使用しないので省略．<a href="/Docs/controller/#controller_retrofit_lqr">controller_retrofit_LQR</a>を参照のこと．</li>
+<li>第3入力引数以降は今回は使用しないので省略．<a href="../../Docs/controller/#controller_retrofit_lqr">controller_retrofit_LQR</a>を参照のこと．</li>
 <li>出力引数<code>c</code><br />
     コントローラの状態空間モデルなどの情報が含まれるインスタンス（<em>controller</em>クラス）<ul>
 <li>K_inter: 内部コントローラのK行列</li>
@@ -918,9 +918,9 @@
 </li>
 </ul>
 <p>power_simulator ではコントローラがすでにいくつか定義されている．<br />
-詳細は<a href="/Docs/controller/">Controller</a>を参照のこと．<br />
-本チュートリアルでは，<a href="/Docs/controller/#controller_retrofit_lqr">controller_retrofit_LQR</a>を使用した．<br />
-<a href="/Docs/controller/#controller_retrofit_lqr">controller_retrofit_LQR</a>はレトロフィットコントローラの実装で，コントローラ設計をLQRで行うものである．</p>
+詳細は<a href="../../Docs/controller">Controller</a>を参照のこと．<br />
+本チュートリアルでは，<a href="../../Docs/controller/#controller_retrofit_lqr">controller_retrofit_LQR</a>を使用した．<br />
+<a href="../../Docs/controller/#controller_retrofit_lqr">controller_retrofit_LQR</a>はレトロフィットコントローラの実装で，コントローラ設計をLQRで行うものである．</p>
 <h3 id="_6">電力系統モデルに対するコントローラの追加<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h3>
 <p>システムに対するコントローラの追加について説明する．</p>
 <h4 id="_7">グローバルコントローラの追加<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h4>
@@ -980,7 +980,7 @@
     今回はコントローラを含めたモデルを取得したいので、<strong>true</strong> で設定．</li>
 <li>出力引数<code>sys</code><br />
     システムの状態空間モデル（matlab既存の <strong><em>ss</em></strong> クラスのインスタンス）<br />
-    詳細は<a href="/Tutorials/step2/">Step2</a>・<a href="/Docs/power_network/">Power Network</a>を参照のこと．</li>
+    詳細は<a href="../step2">Step2</a>・<a href="../../Docs/power_network">Power Network</a>を参照のこと．</li>
 </ul>
 <h2 id="1">例1：コントローラを付加したシミュレーション<a class="headerlink" href="#1" title="Permanent link">&para;</a></h2>
 <p>コントローラを付加したシステムに対して，外乱を印加した時の応答．

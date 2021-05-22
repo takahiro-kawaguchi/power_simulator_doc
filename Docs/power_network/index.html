@@ -763,13 +763,13 @@
 <p><a href="power_networkのリンクを入れる場所は&quot;TODO_link&quot; を挿入しておく"></a></p>
 <h2 id="_2">電力系統モデルについて取り扱っているチュートリアル<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
 <ul>
-<li><a href="/abstract">電力ネットワークの構成について</a></li>
-<li><a href="/Tutorials/withText">「教科書に沿って学ぶ」ベース(withText)</a></li>
-<li><a href="/Tutorials/make_net">解析する電力ネットワークを作成する(make_net)</a></li>
-<li><a href="/Tutorials/analysis_net">電力ネットワークの解析(analysis_net)</a></li>
-<li><a href="/Tutorials/step1">【第一回】既存系統モデルのシミュレーション</a></li>
-<li><a href="/Tutorials/step1-2">シミュレーション結果のデータの読み方</a></li>
-<li><a href="/Tutorials/step2">【第二回】線形化したシステムを使う</a></li>
+<li><a href="../../abstract">電力ネットワークの構成について</a></li>
+<li><a href="../../Tutorials/withText">「教科書に沿って学ぶ」ベース(withText)</a></li>
+<li><a href="../../Tutorials/make_net">解析する電力ネットワークを作成する(make_net)</a></li>
+<li><a href="../../Tutorials/analysis_net">電力ネットワークの解析(analysis_net)</a></li>
+<li><a href="../../Tutorials/step1">【第一回】既存系統モデルのシミュレーション</a></li>
+<li><a href="../../Tutorials/step1-2">シミュレーション結果のデータの読み方</a></li>
+<li><a href="../../Tutorials/step2">【第二回】線形化したシステムを使う</a></li>
 </ul>
 <h2 id="power_network"><em>power_network</em> クラスの全体像<a class="headerlink" href="#power_network" title="Permanent link">&para;</a></h2>
 <p>まずは電力系統モデルに関するクラスの全体像を示します。</p>
@@ -902,12 +902,12 @@ click network_3bus "https://www.google.com/"</div></p>
 <h2 id="network_68bus"><strong>network_68bus</strong><a class="headerlink" href="#network_68bus" title="Permanent link">&para;</a></h2>
 <p><font size=3>(<a href="">network_68bus.m</a>)</font> <a href="TODO_link"></a></p>
 <p><strong>IEEE 68bus 16machine システム</strong>（<a href="https://www.springer.com/gp/book/9780387259499">引用元</a>）の実装（ <strong><em>power_network</em></strong> クラスの派生クラス）<br />
-発電機として<a href="/Docs/component/#generator_agc">generatorAGC</a>を，負荷として<a href="/Docs/component/#load_varying_impedance">load_varying_impedance</a> を導入したネットワークである．  </p>
+発電機として<a href="../component/#generator_agc">generatorAGC</a>を，負荷として<a href="../component/#load_varying_impedance">load_varying_impedance</a> を導入したネットワークである．  </p>
 <h2 id="network_70bus"><strong>network_70bus</strong><a class="headerlink" href="#network_70bus" title="Permanent link">&para;</a></h2>
 <p><font size=3>(<a href="">network_68bus.m</a>)</font> <a href="TODO_link"></a></p>
 <p><a href="https://ieeexplore.ieee.org/document/8667520"><strong>Dynamic Modeling, Stability, and Control of Power Systems With Distributed Energy Resources: Handling Faults Using Two Control Methods in Tandem</strong></a> における，IEEE 68bus 16machineシステムへ solar, wind farm を1つづつ導入した電力ネットワークの実装（ <strong><em>power_network</em></strong> クラスの派生クラス）<br />
-発電機として<a href="/Docs/component/#generator">generator</a>を，負荷として<a href="/Docs/component/#load_const_impedance">load_const_impedance</a>, <a href="/Docs/component/#load_const_power">load_const_power</a> を導入したネットワークである．<br />
-ここで，ネットワーク定義の際に <code>net=network_70bus(load_type)</code>のように定義するが，load_typeには1~2を代入する．負荷には，1の場合は<a href="/Docs/component/#load_const_impedance">load_const_impedance</a>，2の場合は<a href="/Docs/component/#load_const_power">load_const_power</a>を導入する．引数が省略されている場合は<a href="/Docs/component/#load_const_impedance">load_const_impedance</a>を負荷として導入する．  </p>
+発電機として<a href="../component/#generator">generator</a>を，負荷として<a href="../component/#load_const_impedance">load_const_impedance</a>, <a href="../component/#load_const_power">load_const_power</a> を導入したネットワークである．<br />
+ここで，ネットワーク定義の際に <code>net=network_70bus(load_type)</code>のように定義するが，load_typeには1~2を代入する．負荷には，1の場合は<a href="../component/#load_const_impedance">load_const_impedance</a>，2の場合は<a href="../component/#load_const_power">load_const_power</a>を導入する．引数が省略されている場合は<a href="../component/#load_const_impedance">load_const_impedance</a>を負荷として導入する．  </p>
 <p><font size=5 color="red">(ひとまず削除)</font>  </p>
 <h2 id="network_3bus"><strong>network_3bus</strong><a class="headerlink" href="#network_3bus" title="Permanent link">&para;</a></h2>
 <p><font size=3>(<a href="">network_3bus.m</a>)</font> <a href="TODO_link"></a></p>

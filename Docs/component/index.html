@@ -925,11 +925,11 @@
 <p><a href="power_networkのリンクを入れる場所は&quot;TODO_link&quot; を挿入しておく"></a></p>
 <h2 id="_2">バスに接続する機器について取り扱っているチュートリアル<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
 <ul>
-<li><a href="/abstract">電力ネットワークの構成について</a></li>
-<li><a href="/Tutorials/withText">「教科書に沿って学ぶ」ベース(withText)</a></li>
-<li><a href="/Tutorials/make_net">解析する電力ネットワークを作成する(make_net)</a></li>
-<li><a href="/Tutorials/step4">【第四回】電力系統の自作</a></li>
-<li><a href="/Tutorials/step5">【第五回】機器の自作</a></li>
+<li><a href="../../abstract">電力ネットワークの構成について</a></li>
+<li><a href="../../Tutorials/withText">「教科書に沿って学ぶ」ベース(withText)</a></li>
+<li><a href="../../Tutorials/make_net">解析する電力ネットワークを作成する(make_net)</a></li>
+<li><a href="../../Tutorials/step4">【第四回】電力系統の自作</a></li>
+<li><a href="../../Tutorials/step5">【第五回】機器の自作</a></li>
 </ul>
 <h2 id="component"><em>component</em> クラスの全体像<a class="headerlink" href="#component" title="Permanent link">&para;</a></h2>
 <p>まずは機器に関するクラスの全体像を示します。</p>
@@ -1060,7 +1060,7 @@ AVRポートとAGCポートの二種類のポートがある．
 <h2 id="generator">generator<a class="headerlink" href="#generator" title="Permanent link">&para;</a></h2>
 <p><font size=3> (<a href="">generator.m</a>)</font> <a href="TODO_link"></a></p>
 <p>発電機の実装（ <strong><em>generator</em></strong> クラスの派生クラス）<br />
-<a href="/Docs/component/#generator_agc">generator_AGC</a> との違いは発電機にAGCポートを用意しているかどうか（<em>genator</em> クラスはAGCポートを用意していない）</p>
+<a href="../component/#generator_agc">generator_AGC</a> との違いは発電機にAGCポートを用意しているかどうか（<em>genator</em> クラスはAGCポートを用意していない）</p>
 <h2 id="load_varying_impedance">load_varying_impedance<a class="headerlink" href="#load_varying_impedance" title="Permanent link">&para;</a></h2>
 <p><font size=3>(<a href="">load_varying_impedance.m</a>)</font> <a href="TODO_link"></a></p>
 <p>定インピーダンス負荷の実装（ <strong><em>component</em></strong> クラスの派生クラス）
@@ -1071,7 +1071,7 @@ AVRポートとAGCポートの二種類のポートがある．
 <h2 id="load_const_impedance">load_const_impedance<a class="headerlink" href="#load_const_impedance" title="Permanent link">&para;</a></h2>
 <p><font size=3>(<a href="">load_const_impedance.m</a>)</font> <a href="TODO_link"></a></p>
 <p>定インピーダンス負荷の実装（ <strong><em>load_varying_impedance</em></strong> クラスの派生クラス）
-<a href="/Docs/component/#load_varying_impedance">load_varying_impedance</a> との違いは入力ポートを用意しているかどうか（<em>load_const_impedance</em> クラスは入力ポートを用意していないので静的な機器）</p>
+<a href="../component/#load_varying_impedance">load_varying_impedance</a> との違いは入力ポートを用意しているかどうか（<em>load_const_impedance</em> クラスは入力ポートを用意していないので静的な機器）</p>
 <h2 id="load_varying_power">load_varying_power<a class="headerlink" href="#load_varying_power" title="Permanent link">&para;</a></h2>
 <p><font size=3>(<a href="">load_varying_power.m</a>)</font> <a href="TODO_link"></a></p>
 <p>定電力負荷の実装（ <strong><em>component</em></strong> クラスの派生クラス）
@@ -1082,7 +1082,7 @@ AVRポートとAGCポートの二種類のポートがある．
 <h2 id="load_const_power">load_const_power<a class="headerlink" href="#load_const_power" title="Permanent link">&para;</a></h2>
 <p><font size=3>(<a href="">load_const_power.m</a>)</font> <a href="TODO_link"></a></p>
 <p>定電力負荷の実装（ <strong><em>load_varying_power</em></strong> クラスの派生クラス）
-<a href="/Docs/component/#load_varying_power">load_varying_power</a> との違いは入力ポートを用意しているかどうか（<em>load_const_power</em> クラスは入力ポートを用意していないので静的な機器）</p>
+<a href="../component/#load_varying_power">load_varying_power</a> との違いは入力ポートを用意しているかどうか（<em>load_const_power</em> クラスは入力ポートを用意していないので静的な機器）</p>
 <h2 id="solar_farm">solar_farm<a class="headerlink" href="#solar_farm" title="Permanent link">&para;</a></h2>
 <p><font size=3>(<a href="">solar_farm.m</a>)</font> <a href="TODO_link"></a></p>
 <p>風力発電機の実装（ <strong><em>component</em></strong> クラスの派生クラス）<br />
