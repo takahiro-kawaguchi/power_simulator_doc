@@ -2,8 +2,8 @@ site_name: Power Simulator Doc
 theme:
     name: material
     language: 'ja'
-    icon:
-        logo: material/book-open-page-variant
+    logo: Figures/modularsmall.png
+    favicon: Figures/modularsmall.png
     features:
         - navigation.tabs
     palette:
