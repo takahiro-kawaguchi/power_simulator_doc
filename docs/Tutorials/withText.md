@@ -28,7 +28,7 @@
 |バス２|<span style="font-size: 100%; color: red;"> P = 1.0 , ｜V｜=1.7 </span>|PVバス|
 |バス３|<span style="font-size: 100%; color: red;"> P = -1.25 , Q = -0.5 </span>|PQバス|
 
-表中のP、Q、|V|、∠V はそれぞれ「有効電力」「無効電力」「電圧の大きさ」「電圧の偏角」を指しています。これに関しては[電力ネットワークの解説ページ](../intro_net)でも触れているので参考にして下さい。
+表中のP、Q、|V|、∠V はそれぞれ「有効電力」「無効電力」「電圧の大きさ」「電圧の偏角」を指しています。これに関しては[電力ネットワークの解説ページ](../abstract.md)でも触れているので参考にして下さい。
 
 #### ・ブランチの情報
 このシステムではバス間をつなぐブランチは2本あることが分かります。
@@ -103,7 +103,7 @@ branch =
 ```matlab
 net.branch = branch;
 ```
-各送電網のパラメーターについては詳しくは[power_network branchについて](path_to_doc_powernetwork_branch)を参照してください
+各送電網のパラメーターについては詳しくは[power_network branchについて](../../Docs/power_network/#branch)を参照してください
 
 
 ### __バスの定義__
@@ -116,7 +116,7 @@ slackバス(swingバス)とは[潮流計算](https://en.wikipedia.org/wiki/Power
 net.bus{1} = bus_slack(1.0, 0.0, [0, 0]);
 ```
 
-引数・各パラメーターについては[bus_slack](path_to_doc_bus_slack)を参照してください．
+引数・各パラメーターについては[bus_slack](../../Docs/bus/#bus_slack)を参照してください．
 
 #### ・Generatorバス
 
@@ -125,7 +125,7 @@ Generatorバスとは発電機(Generator)を接続するためのバスです．
 ```matlab
 net.bus{2} = bus_PV(1.0, 1.7, [0, 0]);
 ```
-引数・各パラメーターについては[bus_PV](path_to_doc_bus_PV)を参照してください．
+引数・各パラメーターについては[bus_PV](../../Docs/bus/#bus_PV)を参照してください．
 
 #### ・Loadバス
 
@@ -134,7 +134,7 @@ Loadバスとは負荷を接続するためのバスです．プログラム上�
 ```matlab
 net.bus{3} = bus_PQ(-1.25, -0.5, [0, 0]);
 ```
-引数・各パラメーターについては[bus_PQ](path_to_doc_bus_PQ)を参照してください．
+引数・各パラメーターについては[bus_PQ](../../Docs/bus/#bus_PQ)を参照してください．
 
 ### __機器の定義__
 
@@ -153,7 +153,7 @@ generatorを自作するためには以下のような関数を用います．
 generator_AGC(mac, exc, pss)
 ```
 
-各引数,mac,exc,pssはgeneratorのパラメーターに関する[table](https://jp.mathworks.com/help/matlab/tables.html)オブジェクトです．詳しくは，[generator](path_to_doc_generator)を参照してください．
+各引数,mac,exc,pssはgeneratorのパラメーターに関する[table](https://jp.mathworks.com/help/matlab/tables.html)オブジェクトです．詳しくは，[generator](../../Docs/component/#generator_AGC)を参照してください．
 
 以下，generatorを生成しslackバスに接続するまでのコード例を示します．
 ```matlab
@@ -187,12 +187,12 @@ net.bus{1}.add_component(generator_AGC(mac, exc, pss));
 
 power_simulator内には以下の4つのloadが用意されています．
 
-- [load_const_impedance](path_to_load_const_impedance)
-- [load_const_power](path_to_load_const_power)
-- [load_varying_impedance](path_to_load_varying_impedance)
-- [load_varying_power](path_to_load_varying_power)
+- [load_const_impedance](../../Docs/component/#load_const_impedance)
+- [load_const_power](../../Docs/component/#load_const_power)
+- [load_varying_impedance](../../Docs/component/#load_varying_impedance)
+- [load_varying_power](../../Docs/component/#load_varying_power)
 
-本チュートリアルにおいては，[load_varying_impedance](path_to_load_varying_impedance)を用います．
+本チュートリアルにおいては，[load_varying_impedance](../../Docs/component/#load_varying_impedance)を用います．
 
 ```
 net.bus{3}.add_component(load_varying_impedance())
@@ -382,14 +382,14 @@ end
 
 power_simulatorで用意している制御器は以下のような様々なものがあります．
 
-- [controller_broadcast_PI_AGC](path_to_doc_controller_broadcast_PI_AGC)
-- [controller_broadcast_PI_AGC_normal](path_to_doc_controller_broadcast_PI_AGC_normal)
-- [controller_LQR](path_to_doc_controller_LQR)
-- [controller_retrofit_generator_UKF](path_to_doc_controller_retrofit_generator_UKF)
-- [controller_retrofit_generator_UKF_LQR](path_to_doc_controller_retrofit_generator_UKF_LQR)
-- [controller_retrofit_LQR](path_to_doc_controller_retrofit_LQR)
+- [controller_broadcast_PI_AGC](../../Docs/controller/#controller_broadcast_PI_AGC)
+- [controller_broadcast_PI_AGC_normal](../../Docs/controller/#controller_broadcast_PI_AGC_normal)
+- [controller_LQR](../../Docs/controller/#controller_LQR)
+- [controller_retrofit_generator_UKF](../../Docs/controller/#controller_retrofit_generator_UKF)
+- [controller_retrofit_generator_UKF_LQR](../../Docs/controller/#controller_retrofit_generator_UKF_LQR)
+- [controller_retrofit_LQR](../../Docs/controller/#controller_retrofit_LQR)
 
-本チュートリアルにおいては[controller_broadcast_PI_AGC_normal](path_to_doc_controller_broadcast_PI_AGC_normal)を用いて制御シミュレーションを行います．地絡などは先程と同じ条件で以下のように制御器をくみこみます．
+本チュートリアルにおいては[controller_broadcast_PI_AGC_normal](../../Docs/controller/#controller_broadcast_PI_AGC_normal)を用いて制御シミュレーションを行います．地絡などは先程と同じ条件で以下のように制御器をくみこみます．
 
 ```matlab
 cg = controller_broadcast_PI_AGC_normal(net, [2], [2], -10, -5000);
@@ -399,12 +399,3 @@ net.add_controller_global(cg)
 このように、電力システムにコントローラを付加した後、先程と同じようにシュミレーションを実行し、同様に２つ目のgeneratorのシミュレーション結果をグラフとして表示したものが以下となります．
 
 ![](../../Figures/Tuto_text_result2.png)
-
-
----
-<span style="color: red">完成後削除</span>
-## __docを参照している部分__
-```
-[hoge](path_to_doc_hoge)
-```
-というかんじで未完成のdocを参照している部分が多々ありあます．docが完成したあとこの部分を書き換えていただけると有り難いです．

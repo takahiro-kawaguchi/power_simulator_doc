@@ -5,7 +5,7 @@
 ### :fontawesome-solid-arrow-circle-right: **[power_network](../power_network)**：電力系統モデルについて
 
 
-### :fontawesome-solid-arrow-circle-right: **[bus](../power_network)**：バスについて
+### :fontawesome-solid-arrow-circle-right: **[bus](../Docs/bus.md)**：バスについて
 
 
 ### :fontawesome-solid-arrow-circle-right: **[component](../component)**：コンポーネント（バスに接続する機器）について

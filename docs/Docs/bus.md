@@ -91,7 +91,8 @@ PV Busの実装（ ***bus*** クラスの派生クラス）
     - 入力引数 `P`：有効電力の指定
     - 入力引数 `shunt`：シャント抵抗値（複素数値）
 
-## **bus_slack** <font size=3>([bus_slack.m]())</font> [](TODO_link)
+## **bus_slack** 
+<font size=3>([bus_slack.m]())</font> [](TODO_link)
 
 slack (swing) Busの実装（ ***bus*** クラスの派生クラス）
 

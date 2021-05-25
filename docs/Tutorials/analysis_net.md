@@ -27,9 +27,8 @@ net = network_70bus; %70busモデルの情報をnetに格納する
 :material-arrow-right-drop-circle: [シュミレーションの結果データの構造と見方。](../step1-2)  
 
 ## <span style="font-size: 100%; color: black;">【定義した電力モデルの線形化】</span>
-:material-arrow-right-drop-circle: [対象の電力システムを数理モデルとして線形化し状態空間表現を得る。](../step2)  
+:material-arrow-right-drop-circle: [対象の電力システムを線形化し状態空間表現を得る。また線形化シュミレーションを行う。](../step2)  
 
-:material-arrow-right-drop-circle: [線形化したシステムのシュミレーションを実行する。](../step2-2)  
 
 <br><br><br>
 
