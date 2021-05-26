@@ -14,9 +14,8 @@
 
 ```matlab
 %サンプルコード
-net = network_9bus;  %9busモデルの情報をnetに格納する
+net = network_3bus;  %3busモデルの情報をnetに格納する
 net = network_68bus; %68busモデルの情報をnetに格納する
-net = network_70bus; %70busモデルの情報をnetに格納する
 
 ```
 

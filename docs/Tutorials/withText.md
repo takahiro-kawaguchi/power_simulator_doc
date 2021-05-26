@@ -68,9 +68,11 @@
 |バス１|<span style="color: red;">Ka = 2.0</span>|<span style="color: red;">Te = 0.05</span>|<span style="color: red;">Kpss = 200</span>|<span style="color: red;">Tpss = 10</span>|<span style="color: red;">TL1 = 0.015 , TL1'= 0.05</br>TL2 = 0.01 , TL2'= 0.08</span>|
 |バス２|<span style="color: red;">Ka = 2.0</span>|<span style="color: red;">Te = 0.05</span>|<span style="color: red;">Kpss = 200</span>|<span style="color: red;">Tpss = 10</span>|<span style="color: red;">TL1 = 0.015 , TL1'= 0.05</br>TL2 = 0.01 , TL2'= 0.08</span>|
 
-<span style="font-size: 140%; color: green;">この表の変数が何を指しているのか分からなかったです。</span>
+このパラメータの説明についてはここでは割愛させていただきます。  
+こちらに本シュミレータ内のPSSやAVRを設計する際の参考文献を載せておきます。[[引用元](https://ieeexplore.ieee.org/document/8667520)]  
   
-といったように先に紹介した3busシステムでもこれだけの情報が割り当てられています。  
+---
+以上のように先に紹介した3busシステムでもこれだけの情報が割り当てられています。  
 それでは実際に以下にこれらの情報をもとにシュミレータ内でこの3busシステムを定義していきましょう。
 
 ## ___<span style="color: purple;">電力系統システムの定義</span>___

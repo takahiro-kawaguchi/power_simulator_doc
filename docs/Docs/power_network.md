@@ -149,4 +149,8 @@ click network_3bus "https://www.google.com/"
 ## **network_3bus**
 <font size=3>([network_3bus.m]())</font> [](TODO_link)
 
-<font size=5 color="red">(追加予定)</font>
+Tutorial「[with_text編](../Tutorials/withText.md)」にて作成した、バス１(発電機バス)、バス２(発電機バス)、バス３(負荷バス)の３つのバスを下の図のようにつないだシステム。細かなパラメータは「[with_text編](../Tutorials/withText.md)」を参照。   
+
+![](../../Figures/write_3bus.png)  
+
+
