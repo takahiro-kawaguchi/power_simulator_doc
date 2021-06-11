@@ -1,12 +1,12 @@
 # <div style="text-align: center;"><span style="font-size: 140%; color: black;">チュートリアル一覧</span></div>
 
 以下に本サイトで紹介しているチュートリアルの一覧をまとめておきます。  
-power_simulatorの全体構成については [**Abstract**](../../abstract)を、チュートリアル内で使用するメソッドやクラスなどの詳しい説明は [**Docs**](../../Docs/docs)をご覧ください。
+GUILDAの全体構成については [**Abstract**](../../abstract)を、チュートリアル内で使用するメソッドやクラスなどの詳しい説明は [**Docs**](../../Docs/docs)をご覧ください。
 
 <br><br>
 
 ---
-まずは、power_simulatorの一連の流れを追うことができる2種類のチュートリアルはこちら
+まずは、GUILDAの一連の流れを追うことができる2種類のチュートリアルはこちら
 
 ### <span style="font-size: 130%; color: black;">:material-arrow-right-bold-circle:**[「教科書に沿って学ぶ」ベース](../withText)**</span>
 

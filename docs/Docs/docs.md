@@ -18,13 +18,13 @@
 ---
 ### <div style="text-align: center;"><span style="font-size: 130%; color: black;">クラスの全体構成図</span></div>
 
-以下にpower_simulator上でのクラスの全体構成を示しておきます。チュートリアルを進めていく中や作業中に自身の使っている関数が何をするためのコマンドかわからなくなった際に目次代わりに利用してください。
+以下にGUILDA上でのクラスの全体構成を示しておきます。チュートリアルを進めていく中や作業中に自身の使っている関数が何をするためのコマンドかわからなくなった際に目次代わりに利用してください。
 
 [](TODO_link→以下の図のリンクを正しいリンクへ変更)
 ```mermaid
 graph LR
 
-base{power_simulator}---power_network
+base{GUILDA}---power_network
 base---bus
 base---component
 base---controller

@@ -1,6 +1,6 @@
 # バスについて
 
-[]( power_networkのリンクを入れる場所は"TODO_link" を挿入しておく )
+[]( GUILDAのリンクを入れる場所は"TODO_link" を挿入しておく )
 
 ## 電力系統モデルについて取り扱っているチュートリアル
 - [電力ネットワークの構成について](../../abstract)
@@ -16,7 +16,7 @@
 ```mermaid
 graph LR
 
-base{power_simulator}---bus
+base{GUILDA}---bus
 
 bus---bus_non_unit
 bus---bus_PQ

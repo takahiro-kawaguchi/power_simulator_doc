@@ -1,6 +1,6 @@
 # 電力系統モデルについて
 
-[]( power_networkのリンクを入れる場所は"TODO_link" を挿入しておく )
+[]( GUILDAのリンクを入れる場所は"TODO_link" を挿入しておく )
 
 ## 電力系統モデルについて取り扱っているチュートリアル
 - [電力ネットワークの構成について](../../abstract)
@@ -19,7 +19,7 @@
 ```mermaid
 graph LR
 
-base{power_simulator}---power_network
+base{GUILDA}---power_network
 
 power_network---network_68bus
 power_network---network_70bus

@@ -1,6 +1,6 @@
 # バスに接続する機器について
 
-[]( power_networkのリンクを入れる場所は"TODO_link" を挿入しておく )
+[]( GUILDAのリンクを入れる場所は"TODO_link" を挿入しておく )
 
 ## バスに接続する機器について取り扱っているチュートリアル
 - [電力ネットワークの構成について](../../abstract)
@@ -17,7 +17,7 @@
 ```mermaid
 graph LR
 
-base{power_simulator}---component
+base{GUILDA}---component
 
 component---component_empty
 component---generator_AGC

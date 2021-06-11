@@ -185,7 +185,7 @@ net.bus{1}.add_component(generator_AGC(mac, exc, pss));
 
 #### ・load
 
-power_simulator内には以下の4つのloadが用意されています．
+GUILDA内には以下の4つのloadが用意されています．
 
 - [load_const_impedance](path_to_load_const_impedance)
 - [load_const_power](path_to_load_const_power)
@@ -380,7 +380,7 @@ end
 
 ## ___<span style="color: purple;">制御器の付加</span>___
 
-power_simulatorで用意している制御器は以下のような様々なものがあります．
+GUILDAで用意している制御器は以下のような様々なものがあります．
 
 - [controller_broadcast_PI_AGC](path_to_doc_controller_broadcast_PI_AGC)
 - [controller_broadcast_PI_AGC_normal](path_to_doc_controller_broadcast_PI_AGC_normal)

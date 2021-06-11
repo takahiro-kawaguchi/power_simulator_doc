@@ -30,7 +30,7 @@ cg = controller_broadcast_PI_AGC_normal(net, y_idx, u_idx, Kp, Ki);
     コントローラの状態空間モデルなどの情報が含まれるインスタンス（*controller*クラス）  
     詳細は[controller_broadcast_PI_AGC_normal](../../Docs/controller/#controller_broadcast_pi_agc_normal)を参照のこと
 
-power_simulatorではグローバルコントローラがすでにいくつか定義されている．  
+GUILDAではグローバルコントローラがすでにいくつか定義されている．  
 詳細は[Controller](../../Docs/controller)を参照のこと．  
 本チュートリアルでは，[controller_broadcast_PI_AGC_normal](../../Docs/controller/#controller_broadcast_pi_agc_normal)を使用する．  
 [controller_broadcast_PI_AGC_normal](../../Docs/controller/#controller_broadcast_pi_agc_normal)はブロードキャストコントローラ（PIコントローラ）の実装で，ゲインを電力に比例させているものである（generatorの規模に比例して調整電力を分配している）
@@ -55,7 +55,7 @@ c = controller_retrofit_LQR(net, idx, Q, R, model_uv, vbar, ubar, out, varargin)
     - sys_fb: 内部コントローラとsys_designからなるフィードバックシステムの状態空間モデル
     - Q, R: LQR設計のためのQ行列とR行列
 
-power_simulator ではコントローラがすでにいくつか定義されている．  
+GUILDA ではコントローラがすでにいくつか定義されている．  
 詳細は[Controller](../../Docs/controller)を参照のこと．  
 本チュートリアルでは，[controller_retrofit_LQR](../../Docs/controller/#controller_retrofit_lqr)を使用した．  
 [controller_retrofit_LQR](../../Docs/controller/#controller_retrofit_lqr)はレトロフィットコントローラの実装で，コントローラ設計をLQRで行うものである．

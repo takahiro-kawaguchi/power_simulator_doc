@@ -1,6 +1,6 @@
 # コントローラについて
 
-[]( power_networkのリンクを入れる場所は"TODO_link" を挿入しておく )
+[]( GUILDAのリンクを入れる場所は"TODO_link" を挿入しておく )
 
 ## コントローラについて取り扱っているチュートリアル
 - [「教科書に沿って学ぶ」ベース(withText)](../../Tutorials/withText)
@@ -16,7 +16,7 @@
 ```mermaid
 graph LR
 
-base{power_simulator}---controller
+base{GUILDA}---controller
 
 controller---controller_broadcast_PI_AGC
 controller_broadcast_PI_AGC---controller_broadcast_PI_AGC_normal
